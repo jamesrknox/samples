@@ -4,14 +4,49 @@ This example contains the following :
 
 * EventFlow hello world application that simply writes input data to log adapter
 
-* sbunit test case
-
 ![Application](https://raw.githubusercontent.com/plord12/samples/master/fragments/eventflow/helloworld/src/site/resources/images/HelloWorld.png)
 
-* Codeline
+* Junit test case
 
-  The following are snippets of files checked into this codeline.
+* Codeline structure
 
-* Pom definition 
-
-![pom](https://raw.githubusercontent.com/plord12/samples/master/fragments/eventflow/helloworld/pom.xml)
+```
+helloworld
+├── src
+│   ├── main
+│   │   ├── configurations
+│   │   ├── eventflow
+│   │   │   └── com
+│   │   │       └── tibco
+│   │   │           └── ep
+│   │   │               └── samples
+│   │   │                   └── helloworld
+│   │   │                       ├── helloworld.sbapp
+│   │   │                       └── helloworld.sblayout
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── tibco
+│   │   │           └── ep
+│   │   │               └── samples
+│   │   │                   └── helloworld
+│   │   └── resources
+│   ├── site
+│   │   ├── markdown
+│   │   │   ├── index.md
+│   │   │   └── using.md
+│   │   ├── resources
+│   │   │   └── images
+│   │   │       └── HelloWorld.png
+│   │   └── site.xml
+│   └── test
+│       ├── configurations
+│       ├── java
+│       │   └── com
+│       │       └── tibco
+│       │           └── ep
+│       │               └── samples
+│       │                   └── helloworld
+│       │                       └── TestCase.java
+│       └── resources
+└── pom.xml
+```
