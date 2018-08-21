@@ -1,8 +1,9 @@
-# samples
-StreamBase 10 samples
+# StreamBase 10 samples
 
-## Fragments
+This github repository contains a number of StreamBase 10 samples that can cloned
+to your local workspace.
 
-### Eventflow
-
-* [hellow world](fragments/eventflow/helloworld/src/site/markdown/index.md)
+* [Using in Studio](docs/studio.md)
+* [Index of samples](docs/samples.md)
+* [Contributing](docs/contributing.md)
+* [Issue tracking](docs/issues.md)
