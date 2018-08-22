@@ -21,6 +21,8 @@
 
         ![egit](egit.png)
 
+        :heavy_exclamation_mark: I found this works with standard eclipse but not Studio
+
     * markdown editor
         1. Help -> Install new software
         2. Set **Work with** to https://www.winterwell.com/software/updatesite/
@@ -45,6 +47,24 @@
 
 * Import samples using egit 5.0 ( currently in studio builds )
 
+    * Window -> Show view -> Other -> Git -> Git Repositories
+    * Click **Clone a Git repository**
+
+    ![egit50 import](egit50-clone.png)
+
+    * Set **URI** to https://github.com/plord12/samples.git
+
+    ![egit50 select](egit50-select.png)
+
+    * Next -> Next -> Finish
+    * Expand Working Tree and select sample and Import Projects
+
+    ![egit50 import projects](egit50-importprojects.png)
+
+    * Finish
+
+    ![egit50 import](egit50-import.png)
+
 * Import samples using m2e-git ( not currently in studio builds )
 
     * Import -> Maven -> Check out Maven Projects from SCM
@@ -57,4 +77,3 @@
     * Choose what sample(s) to import
 
     ![m2e-git import](m2e-git-import.png)
-
