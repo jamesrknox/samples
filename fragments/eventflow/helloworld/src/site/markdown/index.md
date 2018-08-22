@@ -1,6 +1,6 @@
 # Introduction
 
-This example contains the following :
+This eventflow fragment contains the following :
 
 * EventFlow hello world application that simply writes input data to log adapter
 
