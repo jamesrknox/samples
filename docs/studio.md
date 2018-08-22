@@ -21,24 +21,40 @@
 
         ![egit](egit.png)
 
+    * markdown editor
+        1. Help -> Install new software
+        2. Set **Work with** to https://www.winterwell.com/software/updatesite/
+        3. Tick select all
+
+        ![markdown](markdown.png)
+
 * Import samples using egit 5.1 ( not currently in studio builds )
 
     * Import -> Projects from Git ( with smart import )
 
-    ![smart import](smartimport.png)
+    ![egit51 smart import](egit51-smartimport.png)
 
     * Close URI
     * Set **URI** to https://github.com/plord12/samples.git
 
-    ![Source git](sourcegit.png)
+    ![egit51 select](egit51-select.png)
 
-    * Choose what samples to import
+    * Choose what sample(s) to import
 
-    ![Select sample](selectsample.png)
-
-    :heavy_exclamation_mark: add more images once we have more projects in
+    ![egit51 import](egit51-import.png)
 
 * Import samples using egit 5.0 ( currently in studio builds )
 
 * Import samples using m2e-git ( not currently in studio builds )
+
+    * Import -> Maven -> Check out Maven Projects from SCM
+    * Set **SCM URL** to git and https://github.com/plord12/samples.git
+    * Untick **Check out All Projects**
+
+    ![m2e-git select](m2e-git-select.png)
+
+    * Select Next then Finish
+    * Choose what sample(s) to import
+
+    ![m2e-git import](m2e-git-import.png)
 
