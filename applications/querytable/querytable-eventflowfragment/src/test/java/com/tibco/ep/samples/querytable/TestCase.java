@@ -1,4 +1,4 @@
-package com.tibco.ep.samples.helloworld;
+package com.tibco.ep.samples.querytable;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -10,7 +10,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.streambase.sb.StreamBaseException;
-import com.streambase.sb.unittest.JSONSingleQuotesTupleMaker;
 import com.streambase.sb.unittest.SBServerManager;
 import com.streambase.sb.unittest.ServerManagerFactory;
 
@@ -40,11 +39,13 @@ public class TestCase extends UnitTest {
     public static void setupServer() throws StreamBaseException, ConfigurationException, InterruptedException {
         // Example configuration load
         // Configuration.forFile("engine.conf").load().activate();
-
+        Configuration.forFile("application.conf").load().activate();
+        Configuration.forFile("node.conf").load().activate();
+        
         // create a StreamBase server and load applications once for all tests in this class
         server = ServerManagerFactory.getEmbeddedServer();
         server.startServer();
-        server.loadApp("com.tibco.ep.samples.helloworld.helloworld");
+        server.loadApp("com.tibco.ep.samples.querytable.querytable_eventflowfragment");
     }
 
     /**
@@ -81,14 +82,50 @@ public class TestCase extends UnitTest {
 
     /**
      * test case
-     * 
-     * @throws StreamBaseException on error
      */
     @Test
-    public void test1() throws StreamBaseException {
+    public void test1() {
         LOGGER.info("Test Case 1");
-        String inputTupleAsJSONString = "{'data':'Hello World'}";
-        server.getEnqueuer("InputStream").enqueue(JSONSingleQuotesTupleMaker.MAKER, inputTupleAsJSONString);
+        
+        Administration admin = new Administration();
+        
+        // should insert one row
+        //
+        server.getEnqueuer("WriteInput").enqueue(JSONSingleQuotesTupleMaker.MAKER, "{'time_int':1,'symbol':'AAA','bid_price':100, 'bid_size':1, 'ask_price':1.1, 'ask_size':1, 'sequence':1 }");
+
+        // check dequeue
+        //
+        server.getEnqueuer("ReadInput").enqueue(JSONSingleQuotesTupleMaker.MAKER, "{'symbol':'AAA'}");
+
+        // check transactional memory
+        //
+        for (int i=0; i<10; i++) {
+            if (admin.execute("read", "querytable").toDtmResults().get().getResultSet().getRows().size() > 0) {
+                break;
+            }
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+            }
+        }
+        assertEquals("AAA,100.0,1.0", admin.execute("read", "querytable").toDtmResults().get().getResultSet().getRow(0).getColumn(1));
+
+        // update one row
+        //
+        server.getEnqueuer("WriteInput").enqueue(JSONSingleQuotesTupleMaker.MAKER,"{'time_int':1,'symbol':'AAA','bid_price':200, 'bid_size':2, 'ask_price':2.2, 'ask_size':2, 'sequence':2 }");
+
+        // check dequeue
+        //
+        server.getEnqueuer("ReadInput").enqueue(JSONSingleQuotesTupleMaker.MAKER, "{'symbol':'AAA'}");
+
+        // check transactional memory
+        //
+        assertEquals("AAA,200.0,2.0", admin.execute("read", "querytable").toDtmResults().get().getResultSet().getRow(0).getColumn(1));
+
+        // non-existing
+        //
+        server.getEnqueuer("ReadInput").enqueue(JSONSingleQuotesTupleMaker.MAKER, "{'symbol':'BBB'}");
+
     }
 
     /**
