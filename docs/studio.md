@@ -34,7 +34,7 @@
 
     ![egit51 smart import](egit51-smartimport.png)
 
-    * Close URI
+    * Clone URI
     * Set **URI** to https://github.com/plord12/samples.git
 
     ![egit51 select](egit51-select.png)
