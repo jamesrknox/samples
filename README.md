@@ -6,4 +6,3 @@ to your local workspace.
 * [Using in Studio](docs/studio.md)
 * [Index of samples](docs/samples.md)
 * [Contributing](docs/contributing.md)
-* [Issue tracking](docs/issues.md)
