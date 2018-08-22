@@ -6,47 +6,19 @@ This example contains the following :
 
 ![Application](https://raw.githubusercontent.com/plord12/samples/master/fragments/eventflow/helloworld/src/site/resources/images/HelloWorld.png)
 
-* Junit test case
+* [Junit test case](../../test/java/com/tibco/ep/samples/helloworld/TestCase.java)
 
-* Codeline structure
+```java
+    /**
+     * test case
+     * 
+     * @throws StreamBaseException on error
+     */
+    @Test
+    public void test1() throws StreamBaseException {
+        LOGGER.info("Test Case 1");
+        String inputTupleAsJSONString = "{'data':'Hello World'}";
+        server.getEnqueuer("InputStream").enqueue(JSONSingleQuotesTupleMaker.MAKER, inputTupleAsJSONString);
+    }
+```
 
-```
-helloworld
-├── src
-│   ├── main
-│   │   ├── configurations
-│   │   ├── eventflow
-│   │   │   └── com
-│   │   │       └── tibco
-│   │   │           └── ep
-│   │   │               └── samples
-│   │   │                   └── helloworld
-│   │   │                       ├── helloworld.sbapp
-│   │   │                       └── helloworld.sblayout
-│   │   ├── java
-│   │   │   └── com
-│   │   │       └── tibco
-│   │   │           └── ep
-│   │   │               └── samples
-│   │   │                   └── helloworld
-│   │   └── resources
-│   ├── site
-│   │   ├── markdown
-│   │   │   ├── index.md
-│   │   │   └── using.md
-│   │   ├── resources
-│   │   │   └── images
-│   │   │       └── HelloWorld.png
-│   │   └── site.xml
-│   └── test
-│       ├── configurations
-│       ├── java
-│       │   └── com
-│       │       └── tibco
-│       │           └── ep
-│       │               └── samples
-│       │                   └── helloworld
-│       │                       └── TestCase.java
-│       └── resources
-└── pom.xml
-```
