@@ -19,4 +19,20 @@
         <relativePath/>
     </parent>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.tibco.ep</groupId>
+                <artifactId>ep-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <ignoreLeaks>
+                        <!-- for unit testing, ignore leaks in query table -->
+                        <ignoreLeak>default.Bids_and_Asks</ignoreLeak>
+                    </ignoreLeaks>
+                </configuration>
+            </plugin>  
+        </plugins>
+    </build>
+    
 </project>

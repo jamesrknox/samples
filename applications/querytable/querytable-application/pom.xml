@@ -52,9 +52,6 @@
                         <id>start nodes</id>
                         <phase>pre-integration-test</phase>
                         <goals><goal>start-nodes</goal></goals>
-                        <configuration>
-                            <nodeDeployFile>${project.basedir}/src/test/configurations/node.conf</nodeDeployFile>
-                        </configuration>
                     </execution>
 
                     <execution>
@@ -67,7 +64,7 @@
                             <serviceName>A.${project.artifactId}</serviceName>
                             <skip>${skipTests}</skip>
                             <arguments>
-                                <engine>default-engine-for-com.tibco.ep.dtmexamples.eventflowfragment.querytable</engine>
+                                <engine>default-engine-for-com.tibco.ep.samples.querytable_eventflowfragment</engine>
                                 <connecttime>60</connecttime>
                                 <maxtuples>10000</maxtuples>
                                 <maxtime>60</maxtime>
@@ -129,10 +126,10 @@
                             <target>
                                 <!-- wait for max 10 minutes checking every 500ms -->
                                 <waitfor maxwait="10" maxwaitunit="minute" checkevery="500"  timeoutproperty="atimeoutqt">
-                                    <resourcecontains resource="${project.build.directory}/test-nodes/A.${project.artifactId}/logs/default-engine-for-com.tibco.ep.dtmexamples.eventflowfragment.querytable.log" substring=" sbd at "/>
+                                    <resourcecontains resource="${project.build.directory}/test-nodes/A.${project.artifactId}/logs/default-engine-for-com.tibco.ep.samples.querytable_eventflowfragment.log" substring=" sbd at "/>
                                 </waitfor>
                                 <waitfor maxwait="10" maxwaitunit="minute" checkevery="500"  timeoutproperty="btimeoutqt">
-                                    <resourcecontains resource="${project.build.directory}/test-nodes/B.${project.artifactId}/logs/default-engine-for-com.tibco.ep.dtmexamples.eventflowfragment.querytable.log" substring=" sbd at "/>
+                                    <resourcecontains resource="${project.build.directory}/test-nodes/B.${project.artifactId}/logs/default-engine-for-com.tibco.ep.samples.querytable_eventflowfragment.log" substring=" sbd at "/>
                                 </waitfor>
                                 <fail message="QueryTable on node A failed to startup in time">
                                     <condition>

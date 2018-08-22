@@ -1,5 +1,7 @@
 package com.tibco.ep.samples.querytable;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -10,9 +12,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.streambase.sb.StreamBaseException;
+import com.streambase.sb.unittest.JSONSingleQuotesTupleMaker;
 import com.streambase.sb.unittest.SBServerManager;
 import com.streambase.sb.unittest.ServerManagerFactory;
-
+import com.tibco.ep.testing.framework.Administration;
 import com.tibco.ep.testing.framework.Configuration;
 import com.tibco.ep.testing.framework.ConfigurationException;
 import com.tibco.ep.testing.framework.TransactionalDeadlockDetectedException;
@@ -82,11 +85,13 @@ public class TestCase extends UnitTest {
 
     /**
      * test case
+     * 
+     * @throws StreamBaseException on error
      */
     @Test
-    public void test1() {
+    public void test1() throws StreamBaseException {
         LOGGER.info("Test Case 1");
-        
+
         Administration admin = new Administration();
         
         // should insert one row
@@ -125,7 +130,6 @@ public class TestCase extends UnitTest {
         // non-existing
         //
         server.getEnqueuer("ReadInput").enqueue(JSONSingleQuotesTupleMaker.MAKER, "{'symbol':'BBB'}");
-
     }
 
     /**
