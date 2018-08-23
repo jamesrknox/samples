@@ -22,10 +22,15 @@ We follow the GitHub flow process, including :
 
 ## Sample requirements
 
-* Samples consist of a single fragment or single application - applications must contain one or more fragments
-* Samples contain documentation in [markdown](https://guides.github.com/features/mastering-markdown/) format conforming to [maven site documentation rules](https://maven.apache.org/guides/mini/guide-site.html)
-* Fragments must include junit test cases
-* Applications must include integration tests that at least start the application up
+* Samples consist of a single fragment or single application archive - application archives must contain one or more fragments
+* Samples contain documentation in [markdown](https://guides.github.com/features/mastering-markdown/) format conforming to [maven site documentation rules](https://maven.apache.org/guides/mini/guide-site.html), containing at least :
+    * Introduction
+    * Business logic description, including screen shots
+    * For application archives, deployment description
+    * Test case description and expected results
+    * Links to main files ( such as HOCON configuration and pom.xml )
+* Fragments must include junit test case(s)
+* Application archives must include integration tests that at least start the application up
 * Samples must import into studio with no errors or warnings
 * Samples must be built and tests launched from maven - they will be automatically built and tested under a jenkins-based continuous automation system
 * Samples cannot contain dependencies not available publicly or part of the StreamBase release
