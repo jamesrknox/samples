@@ -10,8 +10,7 @@ following :-
             <dependency>
                 <groupId>com.tibco.ep.samples</groupId>
                 <artifactId>querytable_eventflowfragment</artifactId>
-                <type>zip</type>
-                <classifier>ep-eventflow-fragment</classifier>
+                <type>ep-application</type>
             </dependency>
             ...
         </dependencies>

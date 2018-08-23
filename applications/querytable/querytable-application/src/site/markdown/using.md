@@ -10,8 +10,7 @@ following :-
             <dependency>
                 <groupId>com.tibco.ep.samples</groupId>
                 <artifactId>querytable_application</artifactId>
-                <type>zip</type>
-                <classifier>ep-java-fragment</classifier>
+                <type>ep-java-fragment</type>
             </dependency>
             ...
         </dependencies>

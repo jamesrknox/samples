@@ -10,8 +10,7 @@ following :-
             <dependency>
                 <groupId>com.tibco.ep.samples</groupId>
                 <artifactId>helloworld</artifactId>
-                <type>zip</type>
-                <classifier>ep-eventflow-fragment</classifier>
+                <type>ep-eventflow-fragment</type>
             </dependency>
             ...
         </dependencies>

@@ -1,4 +1,4 @@
-# Query table application
+# Query table application archive
 
 This application archive is part of the query table sample and shows how to deploy the query table fragment.
 

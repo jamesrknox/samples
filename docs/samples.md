@@ -12,7 +12,7 @@
         * Adapter
     * Liveview
         * Hello liveview
-* Applications
+* Deployable application archives
     * [Query Table](../applications/querytable/pom.xml)
         * [Eventflow fragment](../applications/querytable/querytable-eventflowfragment/src/site/markdown/index.md) 
         * [Application archive containing the fragment](../applications/querytable/querytable-application/src/site/markdown/index.md)
