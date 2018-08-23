@@ -13,7 +13,7 @@
     * Liveview
         * Hello liveview
 * Applications
-    * Query Table
+    * [Query Table](../applications/querytable/pom.xml)
         * [Eventflow fragment](../applications/querytable/querytable-eventflowfragment/src/site/markdown/index.md) 
         * [Application containing the fragment](../applications/querytable/querytable-application/src/site/markdown/index.md)
     * Hello liveview
