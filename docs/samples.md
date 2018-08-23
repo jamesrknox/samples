@@ -17,6 +17,6 @@
         * [Eventflow fragment](../applications/querytable/querytable-eventflowfragment/src/site/markdown/index.md) 
         * [Application containing the fragment](../applications/querytable/querytable-application/src/site/markdown/index.md)
     * Hello liveview
-    * Data sharding - Pending - see [Create a data sharding sample](https://github.com/plord12/samples/issues/1)
+    * Data sharding **- pending - see [Create a data sharding sample](https://github.com/plord12/samples/issues/1)**
     * Docker
     * HA deployment options
