@@ -1,6 +1,6 @@
-# Introduction
+# Query table application
 
-This application archive contains the following :
+This application archive is part of the query table sample and shows how to deploy the query table fragment.
 
 * [Query table eventflow fragment](../../../../querytable-eventflowfragment/src/site/markdown/index.md)
 
@@ -127,7 +127,7 @@ This application archive contains the following :
             </plugin>
 ```
 
-Results :
+Expected results :
 
 ```
 ...

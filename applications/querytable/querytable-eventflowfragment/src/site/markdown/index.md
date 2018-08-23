@@ -1,6 +1,6 @@
 # Query table fragment
 
-This sample shows how to use a query table backed by transactional memory.
+This fragment is part of the query table sample and shows how to use a query table backed by transactional memory.
 
 * EventFlow that stores and queries bids and asks in a query table
 
