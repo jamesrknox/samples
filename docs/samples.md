@@ -20,3 +20,5 @@
     * [ ] Data sharding ( Pending - see #1 )
     * [ ] Docker
     * [ ] HA deployment options
+    
+#1
