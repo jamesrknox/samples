@@ -17,6 +17,6 @@
         * [Eventflow fragment](../applications/querytable/querytable-eventflowfragment/src/site/markdown/index.md) 
         * [Application containing the fragment](../applications/querytable/querytable-application/src/site/markdown/index.md)
     * [ ] Hello liveview
-    * [ ] Data sharding
+    * [ ] Data sharding (Pending - see #1)
     * [ ] Docker
     * [ ] HA deployment options
