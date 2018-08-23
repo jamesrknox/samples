@@ -1,4 +1,4 @@
 # Dependencies
 
 
-![Dependencies](../resources/images/dependency-graph.png)
+![Dependencies](../resources/images/dependency-graph.svg)
