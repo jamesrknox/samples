@@ -1,10 +1,22 @@
-# Introduction
+# Query table fragment
 
-This eventflow fragment contains the following :
+This sample shows how to use a query table backed by transactional memory.
 
-* EventFlow that stores and queries bids in a query table
+* EventFlow that stores and queries bids and asks in a query table
 
-![Application](https://raw.githubusercontent.com/plord12/samples/master/applications/querytable/querytable-eventflowfragment/src/site/resources/images/Querytable.png)
+![Application](../resources/images/Querytable.png)
+
+* Query table is backed by transactional memory
+
+![Table settings](../resources/images/Tablesettings.png)
+
+* Data distribution policy **dynamic** is selected
+
+![Policy](../resources/images/Policy.png)
+
+* Data is partitioned by the **key field symbol**
+
+![Schema](../resources/images/Schema.png)
 
 * [Junit test case](../../test/java/com/tibco/ep/samples/querytable/TestCase.java)
 
@@ -117,7 +129,7 @@ Test case :
     }
 ```
 
-Results :
+Expected results :
 
 ```
 [INFO] --- ep-maven-plugin:1.4.0-SNAPSHOT:test-eventflow-fragment (default-test-eventflow-fragment) @ querytable_eventflowfragment ---

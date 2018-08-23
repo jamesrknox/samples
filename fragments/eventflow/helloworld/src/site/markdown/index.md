@@ -1,6 +1,7 @@
-# Introduction
+# helloworld
 
-This eventflow fragment contains the following :
+This sample shows the structure of an eventflow fragment.  Business logic and test cases
+are about as simple as possible.
 
 * EventFlow hello world application that simply writes input data to log adapter
 
@@ -22,7 +23,7 @@ This eventflow fragment contains the following :
     }
 ```
 
-Results :
+Expected results :
 
 ```
 [INFO] --- ep-maven-plugin:1.4.0-SNAPSHOT:test-eventflow-fragment (default-test-eventflow-fragment) @ helloworld ---
