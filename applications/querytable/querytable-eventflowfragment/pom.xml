@@ -9,7 +9,7 @@
     <artifactId>querytable_eventflowfragment</artifactId>
     <packaging>ep-eventflow-fragment</packaging>
     <version>1.0.0</version>
-    <name>Query table - EventFlow Fragment</name>
+    <name>Applications - Query table - EventFlow Fragment</name>
 
     <!-- common definitions for this version of StreamBase -->
     <parent>

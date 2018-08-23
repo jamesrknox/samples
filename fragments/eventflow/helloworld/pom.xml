@@ -9,7 +9,7 @@
     <artifactId>helloworld</artifactId>
     <packaging>ep-eventflow-fragment</packaging>
     <version>1.0.0</version>
-    <name>hello world</name>
+    <name>Fragments - Eventflow - Hello World</name>
 
     <!-- common definitions for this version of StreamBase -->
     <parent>

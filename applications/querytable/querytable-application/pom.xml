@@ -9,7 +9,7 @@
     <artifactId>querytable_application</artifactId>
     <packaging>ep-application</packaging>
     <version>1.0.0</version>
-    <name>Query table - Application</name>
+    <name>Applications - Query table - Application</name>
 
     <!-- common definitions for this version of StreamBase -->
     <parent>

@@ -5,16 +5,15 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep.samples</groupId>
-    <artifactId>querytable</artifactId>
+    <groupId>com.tibco.ep</groupId>
+    <artifactId>samples</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>Applications - Query table - Aggregator</name>
+    <name>StramBase 10 Samples</name>
 
-    <!-- Aggregator pom -->
     <modules>
-        <module>querytable-eventflowfragment</module>
-        <module>querytable-application</module>
+        <module>fragments/eventflow/helloworld</module>
+        <module>applications/querytable</module>
     </modules>
 
 </project>
