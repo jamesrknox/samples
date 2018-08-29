@@ -32,6 +32,11 @@ We follow the GitHub flow process, including :
 * Fragments must include junit test case(s)
 * Application archives must include integration tests that at least start the application up
 * Samples must import into studio with no errors or warnings
-* Samples must be built and tests launched from maven - they will be automatically built and tested under a jenkins-based continuous automation system
+* Samples must be built and tests launched from maven - they will be automatically built and tested under a jenkins-based continuous integration system
 * Samples cannot contain dependencies not available publicly or part of the StreamBase release
 * It must be possible for anyone to setup their own maven repository ( eg follow http://devzone.tibco.com/forums/posts/list/3728.page ), build and execute all tests.
+* Samples must go through standard development process including :
+  * requirements - reviewed
+  * design - reviewed
+  * implementation - reviewed
+  * testing
