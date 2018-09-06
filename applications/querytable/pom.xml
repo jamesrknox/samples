@@ -17,6 +17,7 @@
         <module>querytable-application</module>
     </modules>
 
+    <!-- skip site docs in this aggregator -->
     <build>
         <plugins>
             <plugin>
@@ -25,6 +26,7 @@
                 <version>3.7.1</version>
                 <configuration>
                     <skipDeploy>true</skipDeploy>
+                    <skip>true</skip>
                 </configuration>
             </plugin>
             <plugin>
@@ -32,10 +34,8 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <version>0.12</version>
                 <configuration>
-                    <server>github</server>
                     <message>Updated site documentation from jenkins</message>
-                    <path>applications/querytable</path>
-                    <merge>true</merge>
+                    <skip>true</skip>
                 </configuration>
             </plugin>
         </plugins>
