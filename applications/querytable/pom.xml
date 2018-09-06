@@ -27,6 +27,17 @@
                     <skipDeploy>true</skipDeploy>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.12</version>
+                <configuration>
+                    <server>github</server>
+                    <message>Updated site documentation from jenkins</message>
+                    <path>applications/querytable</path>
+                    <merge>true</merge>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
