@@ -11,6 +11,23 @@
     <version>1.0.0</version>
     <name>Applications - Query table - EventFlow Fragment</name>
 
+    <url>https://plord12.github.io/samples/applications/querytable/querytable-eventflowfragment</url>
+
+    <inceptionYear>2015</inceptionYear>
+
+    <organization>
+        <name>TIBCO Software Inc.</name>
+        <url>http://www.tibco.com</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>Tibco End User License Agreement</name>
+            <url>http://www.tibco.com/assets/blt59b361e6644c8d3a/tibco-end-user-license-agreement_tcm8-9378.pdf</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
     <!-- common definitions for this version of StreamBase -->
     <parent>
         <groupId>com.tibco.ep.sb.parent</groupId>
@@ -31,7 +48,20 @@
                         <ignoreLeak>default.Bids_and_Asks</ignoreLeak>
                     </ignoreLeaks>
                 </configuration>
-            </plugin>  
+            </plugin>
+            <!--  deploy site documentation to github pages -->
+            <!--  in CI use mvn site com.github.github:site-maven-plugin:site -->
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.12</version>
+                <configuration>
+                    <server>github</server>
+                    <message>Updated site documentation from jenkins</message>
+                    <path>applications/querytable/querytable-eventflowfragment</path>
+                    <merge>true</merge>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     
