@@ -10,7 +10,7 @@
     <packaging>ep-eventflow-fragment</packaging>
     <version>1.0.0</version>
     <name>Structure : Complete Application : EventFlow Fragment</name>
-    <description>EventFlow fragment maven module</description>
+    <description>EventFlow fragment maven module.</description>
 
     <url>https://github.com/plord12/samples</url>
 

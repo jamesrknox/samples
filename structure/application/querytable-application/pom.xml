@@ -10,7 +10,7 @@
     <packaging>ep-application</packaging>
     <version>1.0.0</version>
     <name>Structure : Complete Application : Application Archive</name>
-    <description>Application archive maven module</description>
+    <description>Application archive maven module.</description>
 
     <url>https://github.com/plord12/samples</url>
 
