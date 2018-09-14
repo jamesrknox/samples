@@ -10,6 +10,7 @@ We follow the GitHub flow process, including :
 * Collaborators are users with direct push access to the repository
     * Are from TIBCO StreamBase engineering team
     * Are part of github team @streambasesamples
+    * Commit messages should be clear and concise, describing the change well and referencing jira or github issue number
 * Any user can submit a pull request
     * The request should mention @streambasesamples
     * One or more collaborators will engage with the aim of accepting the pull request
