@@ -43,3 +43,11 @@ We follow the GitHub flow process, including :
   * design - reviewed
   * implementation - reviewed
   * testing
+
+## Empty directories
+
+Git doesn't store empty directories, so such directories that need to be part of the sample should include an empty .gitignore file.
+
+## Index
+
+Jenkins will re-generate README.md files based on the pom.xml metadata.

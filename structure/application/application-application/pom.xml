@@ -72,7 +72,7 @@
                 <configuration>
                     <server>github</server>
                     <message>Updated site documentation from jenkins</message>
-                    <path>${project.parent.version}/structure/application/application_application</path>
+                    <path>${project.parent.version}/structure/application/application-application</path>
                     <merge>true</merge>
                 </configuration>
             </plugin>
