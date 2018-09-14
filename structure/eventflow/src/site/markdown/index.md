@@ -5,7 +5,7 @@ are about as simple as possible.
 
 * EventFlow hello world application that simply writes input data to log adapter
 
-![Application](https://raw.githubusercontent.com/plord12/samples/master/fragments/eventflow/helloworld/src/site/resources/images/HelloWorld.png)
+![Application](../resources/images/HelloWorld.png)
 
 * [Junit test case](../../test/java/com/tibco/ep/samples/helloworld/TestCase.java)
 

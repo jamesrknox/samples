@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>Structure : Complete Application</name>
-    <description>How to structure a complete application</description>
+    <description>How to structure a complete application.</description>
 
     <!-- Aggregator pom -->
     <modules>
