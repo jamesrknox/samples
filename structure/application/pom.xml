@@ -5,15 +5,17 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep</groupId>
-    <artifactId>samples</artifactId>
+    <groupId>com.tibco.ep.samples</groupId>
+    <artifactId>querytable</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>StreamBase 10 Samples</name>
-    <description>This github repository contains a number of StreamBase 10 samples that can cloned to your local workspace.</description>
+    <name>Structure : Complete Application</name>
+    <description>How to structure a complete application</description>
 
+    <!-- Aggregator pom -->
     <modules>
-        <module>structure</module>
+        <module>querytable-eventflowfragment</module>
+        <module>querytable-application</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->

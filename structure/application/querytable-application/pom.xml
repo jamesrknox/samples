@@ -9,7 +9,8 @@
     <artifactId>querytable_application</artifactId>
     <packaging>ep-application</packaging>
     <version>1.0.0</version>
-    <name>Applications - Query table - Application</name>
+    <name>Structure : Complete Application : Application Archive</name>
+    <description>Application archive maven module</description>
 
     <url>https://github.com/plord12/samples</url>
 
@@ -174,7 +175,7 @@
                 <configuration>
                     <server>github</server>
                     <message>Updated site documentation from jenkins</message>
-                    <path>applications/querytable/querytable-application</path>
+                    <path>structure/application/querytable-application</path>
                     <merge>true</merge>
                 </configuration>
             </plugin>

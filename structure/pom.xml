@@ -6,15 +6,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tibco.ep.samples</groupId>
-    <artifactId>querytable</artifactId>
+    <artifactId>structure</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>Applications - Query table - Aggregator</name>
+    <name>Structure</name>
+    <description>How to structure StreamBase projects.</description>
 
-    <!-- Aggregator pom -->
     <modules>
-        <module>querytable-eventflowfragment</module>
-        <module>querytable-application</module>
+        <module>eventflow</module>
+        <module>application</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->

@@ -9,7 +9,8 @@
     <artifactId>querytable_eventflowfragment</artifactId>
     <packaging>ep-eventflow-fragment</packaging>
     <version>1.0.0</version>
-    <name>Applications - Query table - EventFlow Fragment</name>
+    <name>Structure : Complete Application : EventFlow Fragment</name>
+    <description>EventFlow fragment maven module</description>
 
     <url>https://github.com/plord12/samples</url>
 
@@ -58,7 +59,7 @@
                 <configuration>
                     <server>github</server>
                     <message>Updated site documentation from jenkins</message>
-                    <path>applications/querytable/querytable-eventflowfragment</path>
+                    <path>structure/application/querytable-eventflowfragment</path>
                     <merge>true</merge>
                 </configuration>
             </plugin>
