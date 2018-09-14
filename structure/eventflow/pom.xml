@@ -48,7 +48,7 @@
                 <configuration>
                     <server>github</server>
                     <message>Updated site documentation from jenkins</message>
-                    <path>structure/eventflow</path>
+                    <path>${project.parent.version}/structure/eventflow</path>
                     <merge>true</merge>
                 </configuration>
             </plugin>

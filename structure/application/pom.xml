@@ -6,16 +6,33 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tibco.ep.samples</groupId>
-    <artifactId>querytable</artifactId>
+    <artifactId>application</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>Structure : Complete Application</name>
-    <description>How to structure a complete application.</description>
+    <name>Structure : Application - Aggregator</name>
+    <description>How to structure a maven aggregate project with EventFlow fragment and application archive - Aggregator</description>
+
+    <url>https://github.com/plord12/samples</url>
+
+    <inceptionYear>2015</inceptionYear>
+
+    <organization>
+        <name>TIBCO Software Inc.</name>
+        <url>http://www.tibco.com</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>Tibco End User License Agreement</name>
+            <url>http://www.tibco.com/assets/blt59b361e6644c8d3a/tibco-end-user-license-agreement_tcm8-9378.pdf</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <!-- Aggregator pom -->
     <modules>
-        <module>querytable-eventflowfragment</module>
-        <module>querytable-application</module>
+        <module>application-eventflowfragment</module>
+        <module>application-application</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->

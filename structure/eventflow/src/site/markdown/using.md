@@ -1,15 +1,14 @@
 # Using
 
-This component is available via maven.  Include in your pom.xml file the
-following :-
+This component is available via maven.  Include in your pom.xml file the following :-
 
-```xml
+```
     <project>
         ...
         <dependencies>
             <dependency>
                 <groupId>com.tibco.ep.samples</groupId>
-                <artifactId>helloworld</artifactId>
+                <artifactId>eventflow</artifactId>
                 <type>ep-eventflow-fragment</type>
             </dependency>
             ...
@@ -19,7 +18,7 @@ following :-
             <dependencies>
                 <dependency>
                      <groupId>com.tibco.ep.samples</groupId>
-                     <artifactId>helloworld</artifactId>
+                     <artifactId>eventflow</artifactId>
                      <version>1.0.0</version>
                  </dependency>
                  ...
