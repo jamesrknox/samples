@@ -36,7 +36,13 @@ We follow the GitHub flow process, including :
 * Samples must be built and tests launched from maven
   * they will be automatically built and tested under a jenkins-based continuous integration system
   * Maven site docs will be published to github pages
-* Samples cannot contain dependencies not available publicly or part of the StreamBase release
+* Ideally samples shouldn't reference 3rd party dependencies not available publicly or part of the StreamBase release. 
+    This allows samples to work without additional steps for both customers and automated builds.  However, when this isn't possible, the following applies : 
+    * If the dependency is available on a vendor maintained maven repository, instructions are provided in that sample to use that repository.
+    * If the dependency is only available with a manual download, instructions are provided in the sample to to manually download the dependency, install into 
+    the local maven repository and (optionally) deploy to a shared repository.
+    * Internally, we do the same but deploy (or mirror) the dependency to a shared 3rd party repository. This repository is included in the sample builds.
+    * Care must be taken to keep the metadata intact ( for example maintain copyright and license information ) so that the maven site info reports are correct.
 * It must be possible for anyone to setup their own maven repository ( eg follow http://devzone.tibco.com/forums/posts/list/3728.page ), build and execute all tests.
 * Samples must go through standard development process including :
   * requirements - reviewed
