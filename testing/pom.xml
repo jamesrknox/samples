@@ -5,16 +5,15 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep</groupId>
-    <artifactId>samples</artifactId>
+    <groupId>com.tibco.ep.samples</groupId>
+    <artifactId>testing</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>StreamBase 10 Samples</name>
-    <description>This github repository contains a number of StreamBase 10 samples that can cloned to your local workspace.</description>
+    <name>Testing</name>
+    <description>How to test StreamBase projects.</description>
 
     <modules>
-        <module>structure</module>
-        <module>testing</module>
+        <module>junit</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->
