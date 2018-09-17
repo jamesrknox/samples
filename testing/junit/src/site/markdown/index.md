@@ -143,6 +143,4 @@ Results are displayed in the console and junit windows :
 To run unit test from the command line ( including from Continuous Integration systems ) use 
 [maven](https://maven.apache.org) with the **mvn install** goal :
 
-<p align="center">
-    <img src="../resources/images/Terminal.svg">
-</p>
+![Terminal](https://rawgit.com/plord12/samples/master/testing/junit/src/site/resources/images/Terminal.svg)
