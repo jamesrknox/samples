@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Date-Revision-yyyymmdd" content="20180917" />
     <meta http-equiv="Content-Language" content="en" />
-    <title>Structure : Eventflow &#x2013; Structure : Eventflow</title>
+    <title>Testing : Junit &#x2013; Testing : Junit</title>
     <link rel="stylesheet" href="./css/apache-maven-fluido-1.7.min.css" />
     <link rel="stylesheet" href="./css/site.css" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
@@ -18,7 +18,7 @@
   <body class="topBarDisabled">
     <div class="container-fluid">
       <div id="banner">
-        <div class="pull-left"><div id="bannerLeft"><h2>Structure : Eventflow</h2>
+        <div class="pull-left"><div id="bannerLeft"><h2>Testing : Junit</h2>
 </div>
 </div>
         <div class="pull-right"></div>
@@ -54,61 +54,215 @@
           </div>
         </div>
         <div id="bodyColumn"  class="span10" >
-<h1>Structure : Eventflow</h1>
-<p>This sample describes how to structure an EventFlow fragment.</p>
-<p>An EventFlow fragment directory structure consists of :</p>
+<h1>Testing : Junit</h1>
+<p>This sample describes how to write junit unit tests for EventFlow fragments.</p>
+<div class="section">
+<h2><a name="EventFlow_under_test"></a>EventFlow under test</h2>
+<p>In this sample the following simple EventFlow fragment is used :</p>
+<p><img src="../resources/images/Goldylocks.png" alt="Goldylocks" /></p></div>
+<div class="section">
+<h2><a name="Using_the_test_framework"></a>Using the test framework</h2>
+<p>Test cases can use the <a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/package-frame.html">test framework</a> by inheriting from the <a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html">UnitTest</a> base class :</p>
+
+<div>
+<div>
+<pre class="source">import com.tibco.ep.testing.framework.UnitTest;
+
+public class TestCase extends UnitTest {
+	...
+}
+</pre></div></div>
+
+<p>This allows access to :</p>
 <ul>
 
-<li><b>pom.xml</b> - Maven Project Object Module that controls the build, tests, installation and deployment of the project.</li>
-<li><b>src/main/eventflow/[package]/</b> - Directory containing EventFlow applications.</li>
-<li><b>src/main/java/[package]/</b> - Directory containing any Java source.</li>
-<li><b>src/main/configurations/</b> - Directory containing any HOCON configuration files.  These are included in the built fragment.</li>
-<li><b>src/main/resources/</b> - Directory containing any resources files.  These are included in the built fragment.</li>
-<li><b>src/site/</b> - Directory containing any site documentation.  The maven build process can create html from these and publish to a web site.</li>
-<li><b>src/test/java/[package]/</b> - Directory containing any junit test cases</li>
-<li><b>src/test/configurations/</b> - Directory containing any HOCON configuration files used by test cases.  These are <i>not</i> included in the built fragment.</li>
-<li><b>src/test/resources/</b> - Directory containing any resources files used by test cases.  These are <i>not</i> included in the built fragment.</li>
-</ul>
-<p>This sample&#x2019;s structure is shown below :</p>
+<li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/Administration.html">Running administration commands</a></li>
+<li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/Configuration.html">Loading HOCON configurations</a></li>
+<li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/MultiNodeCoordinator.html">Co-ordinating across multiple test node</a></li>
+<li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--">Deadlock detection</a></li>
+<li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--">Managed object leak detection</a></li>
+<li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--">Test case timeout handling</a></li>
+<li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--">transactional abort mode</a></li>
+</ul></div>
+<div class="section">
+<h2><a name="Starting.2C_stopping_and_loading_HOCON_configuration"></a>Starting, stopping and loading HOCON configuration</h2>
+<p>Junit @beforeClass and @AfterClass functions can be used to start and stop the embedded server.  Likewise, Junit @Before and @After functions can be used to start and stopo the containers.</p>
+<p>Any HOCON configurations required by the unit test case should be loaded and activated prior to starting the embedded server :</p>
 
 <div>
 <div>
-<pre class="source">.
-&#x251c;&#x2500;&#x2500; pom.xml
-&#x2514;&#x2500;&#x2500; src
-    &#x251c;&#x2500;&#x2500; main
-    &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; configurations
-    &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; eventflow
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; com
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; tibco
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; ep
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;             &#x2514;&#x2500;&#x2500; samples
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;                 &#x2514;&#x2500;&#x2500; eventflow
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;                     &#x251c;&#x2500;&#x2500; eventflow.sbapp
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;                     &#x2514;&#x2500;&#x2500; eventflow.sblayout
-    &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; java
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; com
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; tibco
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; ep
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;             &#x2514;&#x2500;&#x2500; samples
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;                 &#x2514;&#x2500;&#x2500; eventflow
-    &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; resources
-    &#x251c;&#x2500;&#x2500; site
-    &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; markdown
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; index.md
-    &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; using.md
-    &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; site.xml
-    &#x2514;&#x2500;&#x2500; test
-        &#x251c;&#x2500;&#x2500; configurations
-        &#x251c;&#x2500;&#x2500; java
-        &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; com
-        &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; tibco
-        &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; ep
-        &#x2502;&#xa0;&#xa0;             &#x2514;&#x2500;&#x2500; samples
-        &#x2502;&#xa0;&#xa0;                 &#x2514;&#x2500;&#x2500; eventflow
-        &#x2502;&#xa0;&#xa0;                     &#x2514;&#x2500;&#x2500; TestCase.java
-        &#x2514;&#x2500;&#x2500; resources
+<pre class="source">    @BeforeClass
+    public static void setupServer() throws StreamBaseException, ConfigurationException, InterruptedException {
+        // Example configuration load
+        // Configuration.forFile(&quot;engine.conf&quot;).load().activate();
+    	Configuration.forFile(&quot;engine.conf&quot;).load().activate();
+    	
+        // create a StreamBase server and load applications once for all tests in this class
+        server = ServerManagerFactory.getEmbeddedServer();
+        server.startServer();
+        server.loadApp(&quot;com.tibco.ep.samples.junit.junit&quot;);
+    }
+
+    /**
+     * Stop the server
+     *
+     * @throws StreamBaseException on shutdown failure
+     * @throws InterruptedException on shutdown failure
+     */
+    @AfterClass
+    public static void stopServer() throws InterruptedException, StreamBaseException {
+        try {
+            if (server != null) {
+                server.shutdownServer();
+                server = null;
+            }
+        } finally {
+            Configuration.deactiveAndRemoveAll();
+        }
+    }
+
+    /**
+     * Start the containers
+     *
+     * @throws StreamBaseException on start container error
+     */
+    @Before
+    public void startContainers() throws StreamBaseException {
+        // before each test, startup fresh container instances
+        server.startContainers();
+
+        // Setup test framework before running tests
+        this.initialize();
+    }
+    
+    /**
+     * Stop containers
+     *
+     * @throws StreamBaseException on stop container error
+     * @throws TransactionalMemoryLeakException Leak detected
+     * @throws TransactionalDeadlockDetectedException Deadlock detected
+     */
+    @After
+    public void stopContainers() throws StreamBaseException, TransactionalMemoryLeakException, TransactionalDeadlockDetectedException {
+        // Complete test framework and check for any errors
+        this.complete();
+
+        // after each test, dispose of the container instances
+        server.stopContainers();
+    }
 </pre></div></div>
+</div>
+<div class="section">
+<h2><a name="Test_cases"></a>Test cases</h2>
+<p>Junit test cases can use the <a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/sb/com/streambase/sb/unittest/package-frame.html">unittest</a> API to enqueue tubles and verify the results :</p>
+
+<div>
+<div>
+<pre class="source">    /**
+     * Too small test case
+     * 
+     * @throws StreamBaseException Test failure
+     */
+    @Test
+    public void tooSmall() throws StreamBaseException {
+    	LOGGER.info(&quot;Too small&quot;);
+    	
+        server.getEnqueuer(&quot;in&quot;).enqueue(JSONSingleQuotesTupleMaker.MAKER,
+                &quot;{'name':'a','price':-52.0,'quantity':100}&quot;);
+        
+        new Expecter(server.getDequeuer(&quot;tooSmall&quot;)).expect(
+                JSONSingleQuotesTupleMaker.MAKER,
+                &quot;{'name':'a','price':-52.0,'quantity':100}&quot;);  
+        new Expecter(server.getDequeuer(&quot;tooSmall&quot;)).expectNothing();
+        new Expecter(server.getDequeuer(&quot;tooBig&quot;)).expectNothing();
+        new Expecter(server.getDequeuer(&quot;justRight&quot;)).expectNothing();
+    }
+</pre></div></div>
+</div>
+<div class="section">
+<h2><a name="Running_this_sample_from_Studio"></a>Running this sample from Studio</h2>
+<p>To run unit test cases from Studio, use the Run As -&gt; EventFlow Fragment Unit Test menu :</p>
+<p><img src="../resources/images/RunFromStudio.png" alt="RunFromStudio" /></p>
+<p>Results are displayed in the console and junit windows :</p>
+<p><img src="../resources/images/RunFromStudioResults.png" alt="RunFromStudio" /></p></div>
+<div class="section">
+<h2><a name="Running_this_sample_from_the_command_line"></a>Running this sample from the command line</h2>
+<p>To run unit test from the command line ( including from Continuous Integration systems ) use <a class="externalLink" href="https://maven.apache.org">maven</a> with the install goal :</p>
+
+<div>
+<div>
+<pre class="source">$ mvn install
+...
+[INFO] --- ep-maven-plugin:1.4.0-SNAPSHOT:start-nodes (default-start-nodes) @ junit ---
+[INFO] [A.junit] Running &quot;install node&quot;
+[INFO] [A.junit] 	Installing node
+[INFO] [A.junit] 		PRODUCTION executables
+[INFO] [A.junit] 		File shared memory
+[INFO] [A.junit] 		7 concurrent allocation segments
+[INFO] [A.junit] 		Host name plordimac.plord.co.uk
+[INFO] [A.junit] 		Container tibco/sb
+[INFO] [A.junit] 		Starting container services
+[INFO] [A.junit] 		Loading node configuration
+[INFO] [A.junit] 		Auditing node security
+[INFO] [A.junit] 		Administration port is 33419
+[INFO] [A.junit] 		Discovery Service running on port 53568
+[INFO] [A.junit] 		Service name is A.junit
+[INFO] [A.junit] 	Node installed
+[INFO] [A.junit] Finished &quot;install node&quot;
+[INFO] [junit] Running &quot;start node&quot;
+[INFO] [A.junit] 	Starting node
+[INFO] [A.junit] 		Loading node configuration
+[INFO] [A.junit] 		Auditing node security
+[INFO] [A.junit] 		Host name plordimac.plord.co.uk
+[INFO] [A.junit] 		Administration port is 33419
+[INFO] [A.junit] 		Discovery Service running on port 53568
+[INFO] [A.junit] 		Service name is A.junit
+[INFO] [A.junit] 	Node started
+[INFO] [junit] Finished &quot;start node&quot;
+[INFO] 
+[INFO] --- ep-maven-plugin:1.4.0-SNAPSHOT:test-eventflow-fragment (default-test-eventflow-fragment) @ junit ---
+[INFO] [dtm] INFO: Deploy tool version: [TIBCO Distributed Transactional Memory Platform 10.4.0-SNAPSHOT (build 1809170954)] starting at [Mon Sep 17 14:52:43 BST 2018]
+[INFO] [dtm] INFO: Node version: [TIBCO StreamBase Runtime 10.4.0-SNAPSHOT (build 1809161635)]
+[INFO] [dtm] INFO: Starting com.tibco.ep.buildmavenplugin.surefire.Runner on node A.junit ...
+[INFO] [dtm] INFO: com.tibco.ep.buildmavenplugin.surefire.Runner started on JVM com_tibco_ep_buildmavenplugin_surefire_Runner0 on node A.junit.
+[INFO] [A.junit] No user-defined Logback configuration, using product default configuration
+[INFO] [A.junit] 2018-09-17 14:52:47.380000+0100 [5457:main] INFO  com.tibco.ep.dtm.stdout:
+[INFO] [A.junit] -------------------------------------------------------
+[INFO] [A.junit]  T E S T S
+[INFO] [A.junit] -------------------------------------------------------
+[INFO] [A.junit] Running com.tibco.ep.samples.junit.TestCase
+[INFO] [A.junit] Too small
+[INFO] [A.junit] TooSmall(tupleid=0,name=&quot;a&quot;,price=-52.0,quantity=100)
+[INFO] [A.junit] Too big
+[INFO] [A.junit] TooBig(tupleid=0,name=&quot;a&quot;,price=2500.0,quantity=200)
+[INFO] [A.junit] TooSmall(tupleid=0,name=&quot;a&quot;,price=-52.0,quantity=100)
+[INFO] [A.junit] TooBig(tupleid=0,name=&quot;a&quot;,price=2500.0,quantity=200)
+[INFO] [A.junit] JustRight(tupleid=0,name=&quot;a&quot;,price=34.0,quantity=300)
+[INFO] [A.junit] Just right
+[INFO] [A.junit] JustRight(tupleid=0,name=&quot;a&quot;,price=34.0,quantity=300)
+[INFO] [A.junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.571 sec
+[INFO] [A.junit] 2018-09-17 14:52:52.958000+0100 [5457:main] INFO  com.tibco.ep.dtm.stdout:
+[INFO] [A.junit] Results :
+[INFO] [A.junit] 2018-09-17 14:52:52.959000+0100 [5457:main] INFO  com.tibco.ep.dtm.stdout:
+[INFO] [A.junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] [A.junit] 2018-09-17 14:52:52.959000+0100 [5457:main] INFO  com.tibco.ep.dtm.stdout:
+[INFO] [dtm] INFO: Engine com_tibco_ep_buildmavenplugin_surefire_Runner0 on node [A.junit] exited with status [0]
+[INFO] [junit] Finished &quot;junit&quot;
+[INFO] 
+[INFO] --- ep-maven-plugin:1.4.0-SNAPSHOT:stop-nodes (default-stop-nodes-1) @ junit ---
+[INFO] [A.junit] Running &quot;stop node&quot;
+[INFO] [A.junit] 	Stopping node
+[INFO] [A.junit] 		Engine application::com_tibco_ep_buildmavenplugin_surefire_Runner0 stopped
+[INFO] [A.junit] 	Node stopped
+[INFO] [A.junit] Finished &quot;stop node&quot;
+[INFO] [A.junit] Running &quot;remove node&quot;
+[INFO] [A.junit] 	Removing node
+[INFO] [A.junit] 		Shutting down container services
+[INFO] [A.junit] 		Removing node directory
+[INFO] [A.junit] 	Node removed
+[INFO] [A.junit] Finished &quot;remove node&quot;
+...
+</pre></div></div></div>
         </div>
       </div>
     </div>
