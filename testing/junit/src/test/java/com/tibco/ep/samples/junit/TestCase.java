@@ -81,68 +81,80 @@ public class TestCase extends UnitTest {
         this.initialize();
     }
 
-
-    private void expectNothignElse() throws StreamBaseException {
+    /**
+     * Too small test case
+     * 
+     * @throws StreamBaseException Test failure
+     */
+    @Test
+    public void tooSmall() throws StreamBaseException {
+    	LOGGER.info("Too small");
+    	
+        server.getEnqueuer("in").enqueue(JSONSingleQuotesTupleMaker.MAKER,
+                "{'name':'a','price':-52.0,'quantity':100}");
+        
+        new Expecter(server.getDequeuer("tooSmall")).expect(
+                JSONSingleQuotesTupleMaker.MAKER,
+                "{'name':'a','price':-52.0,'quantity':100}");  
         new Expecter(server.getDequeuer("tooSmall")).expectNothing();
         new Expecter(server.getDequeuer("tooBig")).expectNothing();
         new Expecter(server.getDequeuer("justRight")).expectNothing();
     }
 
     /**
-     * Too small test case
-     * @throws Exception Test failure
-     */
-    @Test
-    public void tooSmall() throws Exception {
-    	LOGGER.info("Too small");
-        server.getEnqueuer("in").enqueue(JSONSingleQuotesTupleMaker.MAKER,
-                "{'name':'a','price':-52.0,'quantity':100}");
-        new Expecter(server.getDequeuer("tooSmall")).expect(
-                JSONSingleQuotesTupleMaker.MAKER,
-                "{'name':'a','price':-52.0,'quantity':100}");
-        expectNothignElse();
-    }
-
-    /**
      * Too big
-     * @throws Exception Test failure
+     * 
+     * @throws StreamBaseException Test failure
      */
     @Test
-    public void tooBig() throws Exception {
+    public void tooBig() throws StreamBaseException  {
     	LOGGER.info("Too big");
+    	
         server.getEnqueuer("in").enqueue(JSONSingleQuotesTupleMaker.MAKER,
                 "{'name':'a','price':2500.0,'quantity':200}");
+        
         new Expecter(server.getDequeuer("tooBig")).expect(
                 JSONSingleQuotesTupleMaker.MAKER,
                 "{'name':'a','price':2500.0,'quantity':200}");
-        expectNothignElse();
+        new Expecter(server.getDequeuer("tooSmall")).expectNothing();
+        new Expecter(server.getDequeuer("tooBig")).expectNothing();
+        new Expecter(server.getDequeuer("justRight")).expectNothing();
     }
 
     /**
      * Just right
-     * @throws Exception Test failure
+     * 
+     * @throws StreamBaseException Test failure
      */
     @Test
-    public void justRight() throws Exception {
+    public void justRight() throws StreamBaseException  {
     	LOGGER.info("Just right");
+    	
         server.getEnqueuer("in").enqueue(JSONSingleQuotesTupleMaker.MAKER,
                 "{'name':'a','price':34.0,'quantity':300}");
+        
         new Expecter(server.getDequeuer("justRight")).expect(
                 JSONSingleQuotesTupleMaker.MAKER,
                 "{'name':'a','price':34.0,'quantity':300}");
-        expectNothignElse();
+        new Expecter(server.getDequeuer("tooSmall")).expectNothing();
+        new Expecter(server.getDequeuer("tooBig")).expectNothing();
+        new Expecter(server.getDequeuer("justRight")).expectNothing();
     }
 
     /**
      * All test cases
-     * @throws Exception Test failure
+     * 
+     * @throws StreamBaseException Test failure
      */
     @Test
-    public void all() throws Exception {
+    public void all() throws StreamBaseException {
+    	LOGGER.info("All");
+    	
         server.getEnqueuer("in").enqueue(JSONSingleQuotesTupleMaker.MAKER,
                 "{'name':'a','price':-52.0,'quantity':100}",
                 "{'name':'a','price':2500.0,'quantity':200}",
                 "{'name':'a','price':34.0,'quantity':300}");
+        
         new Expecter(server.getDequeuer("tooSmall")).expect(
                 JSONSingleQuotesTupleMaker.MAKER,
                 "{'name':'a','price':-52.0,'quantity':100}");
