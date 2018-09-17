@@ -9,4 +9,5 @@ Overview:
 
 Samples:
 
+* [How to test StreamBase projects.](testing)
 * [How to structure StreamBase projects.](structure)
