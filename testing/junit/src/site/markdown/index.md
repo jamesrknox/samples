@@ -132,15 +132,15 @@ API to enqueue tubles and verify the results :
 
 To run unit test cases from Studio, use the Run As -> EventFlow Fragment Unit Test menu :
 
-![RunFromStudio](../resources/images/RunFromStudio.png)
+![RunFromStudio](images/RunFromStudio.png)
 
 Results are displayed in the console and junit windows :
 
-![RunFromStudio](../resources/images/RunFromStudioResults.png)
+![RunFromStudio](images/RunFromStudioResults.png)
 
 ## Running this sample from the command line
 
 To run unit test from the command line ( including from Continuous Integration systems ) use 
 [maven](https://maven.apache.org) with the **mvn install** goal :
 
-![Terminal](https://rawgit.com/plord12/samples/master/testing/junit/src/site/resources/images/Terminal.svg)
+![Terminal](images/Terminal.svg)
