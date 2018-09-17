@@ -6,7 +6,7 @@ This sample describes how to write junit unit tests for EventFlow fragments.
 
 In this sample the following simple EventFlow fragment is used :
 
-![Goldylocks](../resources/images/Goldylocks.png)
+![Goldylocks](images/Goldylocks.png)
 
 ## Using the test framework
 
