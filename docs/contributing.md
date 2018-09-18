@@ -32,7 +32,7 @@ We follow the GitHub flow process, including :
     * Links to main files ( such as HOCON configuration and pom.xml )
 * Fragments must include junit test case(s)
 * Application archives must include integration tests that at least start the application up
-* Samples must import into studio with no errors or warnings
+* Samples must import into studio with no errors or warnings (after following any manual instructions)
 * Samples must be built and tests launched from maven
   * they will be automatically built and tested under a jenkins-based continuous integration system
   * Maven site docs will be published to github pages

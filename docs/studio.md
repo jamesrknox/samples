@@ -5,7 +5,7 @@
 
 ## Recommended plugins
 
-:warning: We can choose to ship these with studio.
+:warning: This is pending shipping this with studio - once we have this this section will be removed
 
 * m2e-git
     * Preferences -> Maven -> Discovery -> Open Catalog
@@ -26,11 +26,9 @@
     :warning: I found this works with standard eclipse but not Studio
 
 * markdown editor
-    * Help -> Install new software
-    * Set **Work with** to https://www.winterwell.com/software/updatesite/
-    * Tick select all
 
-    ![markdown](markdown.png)
+  Sample contributors may want to install a markdown editor ( such as https://www.winterwell.com/software/updatesite/ )
+
 
 ## Options to import samples into TIBCO StreamBase Studio&trade;
  

@@ -23,8 +23,8 @@
 
     <licenses>
         <license>
-            <name>Tibco End User License Agreement</name>
-            <url>http://www.tibco.com/assets/blt59b361e6644c8d3a/tibco-end-user-license-agreement_tcm8-9378.pdf</url>
+            <name>BSD 3-Clause License</name>
+            <url>https://raw.githubusercontent.com/plord12/samples/master/docs/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>

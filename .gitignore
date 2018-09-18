@@ -1,0 +1,9 @@
+.metadata
+.classpath
+.project
+.settings/
+bin/
+*.tmp
+*.bak
+*.swp
+.index.md.html
