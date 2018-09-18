@@ -6,7 +6,7 @@ This sample describes how to write junit unit tests for EventFlow fragments.
 
 In this sample the following simple EventFlow fragment is used :
 
-![Goldylocks](images/Goldylocks.png)
+![Goldylocks](../resources/images/Goldylocks.png)
 
 ## Using the test framework
 
@@ -132,7 +132,7 @@ API to enqueue tubles and verify the results :
 
 To run unit test cases from Studio, use the **Run As -> EventFlow Fragment Unit Test** menu :
 
-![RunFromStudio](studio.gif)
+![RunFromStudio](../resources/images/studio.gif)
 
 Results are displayed in the console and junit windows.
 
@@ -142,4 +142,4 @@ Results are displayed in the console and junit windows.
 To run unit test from the command line ( including from Continuous Integration systems ) use 
 [maven](https://maven.apache.org) with the **mvn install** goal :
 
-![Terminal](images/maven.gif)
+![Terminal](../resources/images/maven.gif)
