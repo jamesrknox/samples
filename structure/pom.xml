@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>Structure</name>
-    <description>How to structure StreamBase projects.</description>
+    <description>How to structure TIBCO StreamBase 10 projects.</description>
 
     <modules>
         <module>eventflow</module>

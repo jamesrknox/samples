@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>Testing</name>
-    <description>How to test StreamBase projects.</description>
+    <description>How to test TIBCO StreamBase projects.</description>
 
     <modules>
         <module>junit</module>

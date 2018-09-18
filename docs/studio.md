@@ -1,7 +1,7 @@
-# Using in studio
+# Using in TIBCO StreamBase Studio&trade;
 
 * [Recommended plugins](#recommended-plugins)
-* [Options to import samples to studio](#options-to-import-samples-to-studio)
+* [Options to import samples to studio](#options-to-import-samples-into-tibco-streambase-studio-trade)
 
 ## Recommended plugins
 
@@ -32,7 +32,7 @@
 
     ![markdown](markdown.png)
 
-## Options to import samples to studio
+## Options to import samples into TIBCO StreamBase Studio&trade;
  
 * Import samples using egit 5.1 ( not currently in studio builds )
 
