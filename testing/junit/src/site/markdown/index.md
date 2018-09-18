@@ -130,17 +130,16 @@ API to enqueue tubles and verify the results :
 
 ## Running this sample from Studio
 
-To run unit test cases from Studio, use the Run As -> EventFlow Fragment Unit Test menu :
+To run unit test cases from Studio, use the **Run As -> EventFlow Fragment Unit Test** menu :
 
-![RunFromStudio](images/RunFromStudio.png)
+![RunFromStudio](images/studio.gif)
 
-Results are displayed in the console and junit windows :
+Results are displayed in the console and junit windows.
 
-![RunFromStudio](images/RunFromStudioResults.png)
 
 ## Running this sample from the command line
 
 To run unit test from the command line ( including from Continuous Integration systems ) use 
 [maven](https://maven.apache.org) with the **mvn install** goal :
 
-![Terminal](./Terminal.svg)
+![Terminal](images/maven.gif)
