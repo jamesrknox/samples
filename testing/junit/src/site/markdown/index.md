@@ -132,7 +132,7 @@ API to enqueue tubles and verify the results :
 
 To run unit test cases from Studio, use the **Run As -> EventFlow Fragment Unit Test** menu :
 
-![RunFromStudio](images/studio.gif)
+![RunFromStudio](studio.gif)
 
 Results are displayed in the console and junit windows.
 

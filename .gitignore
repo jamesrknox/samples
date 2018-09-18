@@ -7,3 +7,4 @@ bin/
 *.bak
 *.swp
 .index.md.html
+/target/
