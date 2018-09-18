@@ -1,13 +1,14 @@
-# StreamBase 10 Samples
+# TIBCO StreamBase&reg; 10 Samples
 
-This github repository contains a number of StreamBase 10 samples that can cloned to your local workspace.
+This github repository contains a number of TIBCO StreamBase&reg; 10 samples that can cloned to your local workspace.
 
 Overview:
 
-* [Using in Studio](docs/studio.md)
+* [Using in TIBCO StreamBase Studio&trade;](docs/studio.md)
 * [Contributing](docs/contributing.md)
+* [License](docs/LICENSE)
 
 Samples:
 
-* [How to structure StreamBase projects.](structure)
-* [How to test StreamBase projects.](testing)
+* [How to structure TIBCO StreamBase&reg; 10 projects.](structure)
+* [How to test TIBCO StreamBase&reg; projects.](testing)
