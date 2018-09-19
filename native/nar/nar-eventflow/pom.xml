@@ -10,7 +10,7 @@
     <packaging>ep-eventflow-fragment</packaging>
     <version>1.0.0</version>
     <name>Native : NAR - EventFlow calling C++</name>
-    <description>How to use NAR from EventFlow.</description>
+    <description>How to use a NAR dependency in an EventFlow fragment.</description>
 
     <url>https://github.com/plord12/samples</url>
 
@@ -100,7 +100,7 @@
                 <configuration>
                     <server>github</server>
                     <message>Updated site documentation from jenkins</message>
-                    <path>${project.parent.version}/structure/${project.parent.artifactId}/${project.artifactId}</path>
+                    <path>${project.parent.version}/nativelibrary/${project.parent.artifactId}/${project.artifactId}</path>
                     <merge>true</merge>
                 </configuration>
             </plugin>
