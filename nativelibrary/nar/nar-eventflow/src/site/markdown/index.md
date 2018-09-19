@@ -10,7 +10,7 @@ classifier should be specified :
 ```xml
                 <dependency>
                     <groupId>com.tibco.ep.samples.nativelibrary</groupId>
-                    <artifactId>nar_cpplib</artifactId>
+                    <artifactId>nar-cpplib</artifactId>
                     <version>1.0.0</version>
                     <type>nar</type>
                     <classifier>amd64-Linux-gpp-jni</classifier>
@@ -31,7 +31,7 @@ test on Linux servers ) - this can be achieved with maven profiles :
             <dependencies>
                 <dependency>
                     <groupId>com.tibco.ep.samples.nativelibrary</groupId>
-                    <artifactId>nar_cpplib</artifactId>
+                    <artifactId>nar-cpplib</artifactId>
                     <version>1.0.0</version>
                     <type>nar</type>
                     <classifier>amd64-Linux-gpp-jni</classifier>
@@ -46,7 +46,7 @@ test on Linux servers ) - this can be achieved with maven profiles :
             <dependencies>
                 <dependency>
                     <groupId>com.tibco.ep.samples.nativelibrary</groupId>
-                    <artifactId>nar_cpplib</artifactId>
+                    <artifactId>nar-cpplib</artifactId>
                     <version>1.0.0</version>
                     <type>nar</type>
                     <classifier>x86_64-MacOSX-gpp-jni</classifier>
@@ -64,7 +64,7 @@ test on Linux servers ) - this can be achieved with maven profiles :
             <dependencies>
                 <dependency>
                     <groupId>com.tibco.ep.samples.nativelibrary</groupId>
-                    <artifactId>nar_cpplib</artifactId>
+                    <artifactId>nar-cpplib</artifactId>
                     <version>1.0.0</version>
                     <type>nar</type>
                     <classifier>amd64-Windows-msvc-jni</classifier>
@@ -92,7 +92,7 @@ public class CallCpp {
         // Don't need the native part when we're typechecking in studio
         //
         if (System.getProperty("streambase.ide.is-running") == null) {
-            System.loadLibrary("nar_cpplib-1.0.0");
+            System.loadLibrary("nar-cpplib-1.0.0");
             System.out.println("loaded shared lib");
         }
     }

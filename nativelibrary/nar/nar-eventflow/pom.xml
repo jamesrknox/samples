@@ -47,7 +47,7 @@
             <dependencies>
                 <dependency>
                     <groupId>com.tibco.ep.samples.nativelibrary</groupId>
-                    <artifactId>nar_cpplib</artifactId>
+                    <artifactId>nar-cpplib</artifactId>
                     <version>1.0.0</version>
                     <type>nar</type>
                     <classifier>amd64-Linux-gpp-jni</classifier>
@@ -62,7 +62,7 @@
             <dependencies>
                 <dependency>
                     <groupId>com.tibco.ep.samples.nativelibrary</groupId>
-                    <artifactId>nar_cpplib</artifactId>
+                    <artifactId>nar-cpplib</artifactId>
                     <version>1.0.0</version>
                     <type>nar</type>
                     <classifier>x86_64-MacOSX-gpp-jni</classifier>
@@ -80,7 +80,7 @@
             <dependencies>
                 <dependency>
                     <groupId>com.tibco.ep.samples.nativelibrary</groupId>
-                    <artifactId>nar_cpplib</artifactId>
+                    <artifactId>nar-cpplib</artifactId>
                     <version>1.0.0</version>
                     <type>nar</type>
                     <classifier>amd64-Windows-msvc-jni</classifier>

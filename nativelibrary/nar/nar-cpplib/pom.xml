@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tibco.ep.samples.nativelibrary</groupId>
-    <artifactId>nar_cpplib</artifactId>
+    <artifactId>nar-cpplib</artifactId>
     <packaging>nar</packaging>
     <version>1.0.0</version>
     <name>Native : NAR - C++ Library</name>
