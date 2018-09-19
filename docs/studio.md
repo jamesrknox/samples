@@ -5,30 +5,22 @@
 
 ## Recommended plugins
 
-:warning: This is pending shipping this with studio - once we have this this section will be removed
-
-* m2e-git
-    * Preferences -> Maven -> Discovery -> Open Catalog
-    * Search for m2e-egit
-    * Select and install
-
-    ![m2e-egit](m2e-egit.png)
-
-    :warning: See https://stackoverflow.com/questions/51359823/m2e-egit-connector-for-scm-on-eclipse-photon-failure if installation fails
-
 * egit 5.1
+
+Egit 5.1 (with auto-import) will soon be available in studio.  Pending this, use :
+
     * Help -> Install new software
-    * Set **Work with** to http://download.eclipse.org/egit/updates-nightly/
-    * Tick select all
-
-    ![egit](egit.png)
-
-    :warning: I found this works with standard eclipse but not Studio
+    * Set **Work with** to http://download.eclipse.org/egit/updates-stable-nightly/
+    * Tick at least **Git integration for Eclipse** and **Git integration for Eclipse - auto-import**
 
 * markdown editor
 
-  Sample contributors may want to install a markdown editor ( such as https://www.winterwell.com/software/updatesite/ )
+Sample contributors may want to install a markdown editor :
 
+    * Help -> Install new software
+    * Set **Work with** to https://www.winterwell.com/software/updatesite/
+    * Tick select all
+    
 
 ## Options to import samples into TIBCO StreamBase Studio&trade;
  
