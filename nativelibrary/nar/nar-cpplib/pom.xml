@@ -64,7 +64,7 @@
                 <configuration>
                     <server>github</server>
                     <message>Updated site documentation from jenkins</message>
-                    <path>${project.parent.version}/nativelibrary/${project.parent.artifactId}/${project.artifactId}</path>
+                    <path>${project.parent.version}/nativelibrary/nar/${project.artifactId}</path>
                     <merge>true</merge>
                 </configuration>
             </plugin>
