@@ -1,6 +1,6 @@
 # Native : NAR - Aggregator
 
-How to build and use native libraries with NAR - Aggregator
+How to build and use native libraries with NAR.
 
-* [How to use NAR from EventFlow.](nar-eventflow)
-* [How to build and use native libraries with NAR - C++ Library](nar-cpplib)
+* [How to use a NAR dependency in an EventFlow fragment.](nar-eventflow)
+* [How to compile C++ source to a NAR.](nar-cpplib)
