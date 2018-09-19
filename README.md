@@ -10,5 +10,5 @@ Overview:
 
 Samples:
 
-* [How to structure TIBCO StreamBase&reg; ${basebranch} projects.](structure)
 * [How to test TIBCO StreamBase&reg; ${basebranch} projects.](testing)
+* [How to structure TIBCO StreamBase&reg; ${basebranch} projects.](structure)
