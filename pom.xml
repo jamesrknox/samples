@@ -15,7 +15,7 @@
     <modules>
         <module>structure</module>
         <module>testing</module>
-        <module>native</module>
+        <module>nativelibrary</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->
