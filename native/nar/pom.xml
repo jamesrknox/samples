@@ -5,17 +5,17 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep</groupId>
-    <artifactId>samples</artifactId>
+    <groupId>com.tibco.ep.samples.nativelibrary</groupId>
+    <artifactId>nar</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>TIBCO StreamBase Samples</name>
-    <description>This github repository contains a number of TIBCO StreamBase samples that can cloned to your local workspace.</description>
+    <name>Native : NAR - Aggregator</name>
+    <description>How to build and use native libraries with NAR - Aggregator</description>
 
+    <!-- Aggregator pom -->
     <modules>
-        <module>structure</module>
-        <module>testing</module>
-        <module>native</module>
+        <module>nar-cpplib</module>
+        <module>nar-eventflow</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->
@@ -27,15 +27,6 @@
                 <version>3.7.1</version>
                 <configuration>
                     <skipDeploy>true</skipDeploy>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <version>0.12</version>
-                <configuration>
-                    <message>Updated site documentation from jenkins</message>
                     <skip>true</skip>
                 </configuration>
             </plugin>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- vim: set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab : -->
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tibco.ep.samples.nativelibrary</groupId>
+    <artifactId>nar-eventflow</artifactId>
+    <packaging>ep-eventflow-fragment</packaging>
+    <version>1.0.0</version>
+    <name>Native : NAR - EventFlow calling C++</name>
+    <description>How to use NAR from EventFlow.</description>
+
+    <!-- common definitions for this version of StreamBase -->
+    <parent>
+        <groupId>com.tibco.ep.sb.parent</groupId>
+        <artifactId>ep-eventflow-fragment</artifactId>
+        <version>10.4.0-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+
+    <!-- Import platform specific NAR dependency -->
+    <profiles>
+        <profile>
+            <id>linux profile</id>
+            <activation>
+                <os><name>linux</name></os>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.tibco.ep.samples.nativelibrary</groupId>
+                    <artifactId>nar_cpplib</artifactId>
+                    <version>1.0.0</version>
+                    <type>nar</type>
+                    <classifier>amd64-Linux-gpp-jni</classifier>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>mac profile</id>
+            <activation>
+                <os><name>mac os x</name></os>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.tibco.ep.samples.nativelibrary</groupId>
+                    <artifactId>nar_cpplib</artifactId>
+                    <version>1.0.0</version>
+                    <type>nar</type>
+                    <classifier>x86_64-MacOSX-gpp-jni</classifier>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>windows profile</id>
+            <activation>
+                <property>
+                    <name>path.separator</name>
+                    <value>;</value>
+                </property>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.tibco.ep.samples.nativelibrary</groupId>
+                    <artifactId>nar_cpplib</artifactId>
+                    <version>1.0.0</version>
+                    <type>nar</type>
+                    <classifier>amd64-Windows-msvc-jni</classifier>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+
+</project>

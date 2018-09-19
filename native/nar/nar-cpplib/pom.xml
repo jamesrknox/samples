@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- vim: set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab : -->
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tibco.ep.samples.nativelibrary</groupId>
+    <artifactId>nar_cpplib</artifactId>
+    <packaging>nar</packaging>
+    <version>1.0.0</version>
+    <name>Native : NAR - C++ Library</name>
+    <description>How to build and use native libraries with NAR - C++ Library</description>
+
+    <!-- common definitions for this version of StreamBase -->
+    <parent>
+        <groupId>com.tibco.ep.sb.parent</groupId>
+        <artifactId>common</artifactId>
+        <version>10.4.0-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+
+    <build>
+
+        <plugins>
+
+            <plugin>
+                <groupId>com.github.maven-nar</groupId>
+                <artifactId>nar-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <libraries>
+                        <library>
+                            <type>jni</type>
+                            <narSystemPackage>com.tibco.ep.samples.nativelibrary.narcpplib</narSystemPackage>
+                        </library>
+                    </libraries>
+                </configuration>
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+</project>

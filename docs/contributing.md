@@ -54,6 +54,16 @@ We follow the GitHub flow process, including :
 
 Git doesn't store empty directories, so such directories that need to be part of the sample should include an empty .gitignore file.
 
+## Images
+
+We need to support viewing documents in github, studio and maven generated site documentation.  Unfortunately, the location of images for these cases differ.  Hence we should :
+
+* markdown files are stored in src/site/markdown
+* images are stored in src/site/markdown/images
+* a soft link is added from src/site/resources/images to src/site/markdown/images
+* links to images in markdown files are of the format **\!\[Alt Text\]\(images/MyImage.png\)**
+
+
 ## Index
 
 Jenkins will re-generate README.md files based on the pom.xml metadata.

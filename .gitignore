@@ -6,5 +6,5 @@ bin/
 *.tmp
 *.bak
 *.swp
-.index.md.html
+.*.md.html
 /target/

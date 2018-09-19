@@ -5,17 +5,15 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep</groupId>
-    <artifactId>samples</artifactId>
+    <groupId>com.tibco.ep.samples</groupId>
+    <artifactId>nativelibrary</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>TIBCO StreamBase Samples</name>
-    <description>This github repository contains a number of TIBCO StreamBase samples that can cloned to your local workspace.</description>
+    <name>Native</name>
+    <description>How to use native libraries in TIBCO StreamBase projects.</description>
 
     <modules>
-        <module>structure</module>
-        <module>testing</module>
-        <module>native</module>
+        <module>nar</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->
