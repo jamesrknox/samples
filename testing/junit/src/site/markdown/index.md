@@ -128,18 +128,16 @@ API to enqueue tubles and verify the results :
     }
 ```
 
-## Running this sample from Studio
+# Running this sample from TIBCO StreamBase Studio&trade;
 
-To run unit test cases from Studio, use the **Run As -> EventFlow Fragment Unit Test** menu :
+Use the **Run As -> Maven install** menu option to build from TIBCO StreamBase Studio&trade; :
 
 ![RunFromStudio](images/studio.gif)
 
 Results are displayed in the console and junit windows.
 
-
 ## Running this sample from the command line
 
-To run unit test from the command line ( including from Continuous Integration systems ) use 
-[maven](https://maven.apache.org) with the **mvn install** goal :
+Use the [maven](https://maven.apache.org) as **mvn install** to build from the command line or Continuous Integration system :
 
 ![Terminal](images/maven.gif)
