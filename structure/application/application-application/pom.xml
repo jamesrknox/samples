@@ -43,7 +43,7 @@
     
     <dependencies>
         <dependency>
-            <groupId>com.tibco.ep.samples</groupId>
+            <groupId>com.tibco.ep.samples.structure</groupId>
             <artifactId>application_eventflowfragment</artifactId>
             <version>1.0.0</version>
             <type>ep-eventflow-fragment</type>
