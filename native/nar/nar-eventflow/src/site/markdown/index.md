@@ -121,7 +121,7 @@ public class CallCpp {
 
 A HOCON configuration is required to declare the functions available :
 
-```json
+```scala
 name = "sbapp-calls-cpp-engine"
 version = "1.0.0"
 type = "com.tibco.ep.streambase.configuration.sbengine"
@@ -161,12 +161,16 @@ configuration =
 
 These functions can now be used in EventFlow :
 
-![studio](images/studio.png)
+![studio](images/studioFunction.png)
 
-# Running this sample from Studio
+# Running this sample from TIBCO StreamBase Studio&trade;
 
-FIX THIS - add 
+Use the **Run As -> Maven install** menu option to build from TIBCO StreamBase Studio&trade; :
+
+![studio](images/studio.gif)
 
 # Running this sample from the command line
 
-FIX THIS - add
+Use the [maven](https://maven.apache.org) as **mvn install** to build from the command line or Continuous Integration system :
+
+![maven](images/maven.gif)

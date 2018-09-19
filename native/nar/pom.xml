@@ -12,6 +12,23 @@
     <name>Native : NAR - Aggregator</name>
     <description>How to build and use native libraries with NAR - Aggregator</description>
 
+    <url>https://github.com/plord12/samples</url>
+
+    <inceptionYear>2015</inceptionYear>
+
+    <organization>
+        <name>TIBCO Software Inc.</name>
+        <url>http://www.tibco.com</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>BSD 3-Clause License</name>
+            <url>https://raw.githubusercontent.com/plord12/samples/master/docs/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
     <!-- Aggregator pom -->
     <modules>
         <module>nar-cpplib</module>
