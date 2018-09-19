@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep.samples</groupId>
+    <groupId>com.tibco.ep.samples.structure</groupId>
     <artifactId>application_eventflowfragment</artifactId>
     <packaging>ep-eventflow-fragment</packaging>
     <version>1.0.0</version>

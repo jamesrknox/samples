@@ -1,4 +1,4 @@
-package com.tibco.ep.samples.java;
+package com.tibco.ep.samples.structure.java;
 
 public class Main  {
 

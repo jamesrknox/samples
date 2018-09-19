@@ -6,7 +6,7 @@
         </annotations>
         <type-metadata>
             <param name="type" value="module"/>
-            <param name="fully-qualified-name" value="com.tibco.ep.samples.eventflow.eventflow"/>
+            <param name="fully-qualified-name" value="com.tibco.ep.samples.structure.application.application_eventflowfragment"/>
         </type-metadata>
         <dynamic-variables/>
     </add>

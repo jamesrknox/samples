@@ -1,4 +1,4 @@
-package com.tibco.ep.samples.application;
+package com.tibco.ep.samples.structure.eventflow;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -43,7 +43,7 @@ public class TestCase extends UnitTest {
         // create a StreamBase server and load applications once for all tests in this class
         server = ServerManagerFactory.getEmbeddedServer();
         server.startServer();
-        server.loadApp("com.tibco.ep.samples.application.application_eventflowfragment");
+        server.loadApp("com.tibco.ep.samples.structure.eventflow.eventflow");
     }
 
     /**

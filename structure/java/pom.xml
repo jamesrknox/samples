@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep.samples</groupId>
+    <groupId>com.tibco.ep.samples.structure</groupId>
     <artifactId>java</artifactId>
     <packaging>ep-java-fragment</packaging>
     <version>1.0.0</version>
@@ -45,7 +45,7 @@
                 <artifactId>ep-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <mainClass>com.tibco.ep.samples.java.Main</mainClass>
+                    <mainClass>com.tibco.ep.samples.structure.java.Main</mainClass>
                 </configuration>
             </plugin>
             <!--  deploy site documentation to github pages -->

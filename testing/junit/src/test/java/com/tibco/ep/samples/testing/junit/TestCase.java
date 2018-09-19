@@ -1,4 +1,4 @@
-package com.tibco.ep.samples.junit;
+package com.tibco.ep.samples.testing.junit;
 
 import org.junit.After;
 import org.junit.AfterClass;
