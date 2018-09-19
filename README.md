@@ -1,6 +1,6 @@
-# TIBCO StreamBase&reg; ${basebranch} Samples
+# TIBCO StreamBase&reg; 10.4.0 Samples
 
-This github repository contains a number of TIBCO StreamBase&reg; ${basebranch} samples that can cloned to your local workspace.
+This github repository contains a number of TIBCO StreamBase&reg; 10.4.0 samples that can cloned to your local workspace.
 
 Overview:
 
@@ -10,5 +10,5 @@ Overview:
 
 Samples:
 
-* [How to test TIBCO StreamBase&reg; ${basebranch} projects.](testing)
-* [How to structure TIBCO StreamBase&reg; ${basebranch} projects.](structure)
+* [How to test TIBCO StreamBase&reg; 10.4.0 projects.](testing)
+* [How to structure TIBCO StreamBase&reg; 10.4.0 projects.](structure)
