@@ -128,9 +128,9 @@ API to enqueue tubles and verify the results :
     }
 ```
 
-# Running this sample from TIBCO StreamBase Studio&trade;
+## Running this sample from TIBCO StreamBase Studio&trade;
 
-Use the **Run As -> Maven install** menu option to build from TIBCO StreamBase Studio&trade; :
+Use the **Run As -> EventFlow Fragment Unit Test** menu option to build from TIBCO StreamBase Studio&trade; :
 
 ![RunFromStudio](images/studio.gif)
 
