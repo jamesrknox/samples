@@ -5,16 +5,35 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep.samples</groupId>
-    <artifactId>java</artifactId>
+    <groupId>com.tibco.ep.samples.adapter</groupId>
+    <artifactId>custom</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>Java</name>
-    <description>How to use Java in TIBCO StreamBase projects.</description>
+    <name>Adapter : Custom - Aggregator</name>
+    <description>How to use custom adapters with EventFlow.</description>
 
-	<modules>
-		<module>javafunction</module>
-	</modules>
+    <url>https://github.com/plord12/samples</url>
+
+    <inceptionYear>2015</inceptionYear>
+
+    <organization>
+        <name>TIBCO Software Inc.</name>
+        <url>http://www.tibco.com</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>BSD 3-Clause License</name>
+            <url>https://raw.githubusercontent.com/plord12/samples/master/docs/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
+    <!-- Aggregator pom -->
+    <modules>
+        <module>sampleadapter</module>
+        <module>eventflow</module>
+    </modules>
 
     <!-- skip site docs in this aggregator -->
     <build>

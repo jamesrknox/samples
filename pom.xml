@@ -17,6 +17,7 @@
         <module>testing</module>
         <module>nativelibrary</module>
         <module>java</module>
+        <module>adapter</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->

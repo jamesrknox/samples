@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modify version="7.5.4">
+    <add>
+        <annotations>
+            <annotation name="hygienic"/>
+        </annotations>
+        <stream name="InputStream">
+            <schema>
+                <field name="name" type="string"/>
+            </schema>
+        </stream>
+        <box name="SampleAdapter" type="inputadapter">
+            <output port="1" stream="out:SampleAdapter_1"/>
+            <param name="start:state" value="true"/>
+            <param name="javaclass" value="com.tibco.ep.samples.adapter.custom.SampleAdapter"/>
+            <param name="schema0" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;schema&gt;&#13;&#10;    &lt;field name=&quot;symbol&quot; type=&quot;string&quot;/&gt;&#13;&#10;    &lt;field name=&quot;price&quot; type=&quot;double&quot;/&gt;&#13;&#10;&lt;/schema&gt;&#13;&#10;"/>
+        </box>
+        <box name="Map" type="map">
+            <input port="1" stream="InputStream"/>
+            <output port="1" stream="OutputStream"/>
+            <target-list>
+                <item name="input" selection="all"/>
+            </target-list>
+        </box>
+        <output-stream name="OutputStream"/>
+    </add>
+</modify>
