@@ -13,7 +13,7 @@
     <description>How to use Java in TIBCO StreamBase projects.</description>
 
     <modules>
-    <module>javafuntion</module>
+    <module>javafunction</module>
   </modules>
 
     <!-- skip site docs in this aggregator -->

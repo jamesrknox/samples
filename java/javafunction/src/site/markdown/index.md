@@ -1,3 +1,18 @@
+# Java : Java Function
+
+This sample describes how to use java functions in EventFlow.
+
+## EventFlow under test
+
+In this sample the following simple EventFlow fragment is used :
+
+![Density](images/Density.png)
+
+## Declare the java function
+
+This sample uses the following java function :
+
+```java
 /*******************************************************************************
  *
  * COPYRIGHT
@@ -9,8 +24,6 @@ package com.tibco.ep.samples.javafunction;
 
 import java.text.MessageFormat;
 import java.util.List;
-
-//import org.hamcrest.core.IsNull;
 
 import com.streambase.sb.CompleteDataType;
 import com.streambase.sb.DataType;
@@ -27,7 +40,7 @@ import com.streambase.sb.operator.TypecheckException;
 public class UtilFunctions {
 
 	/**
-	 * Think schema
+	 * Thing schema
 	 */
     protected static Schema ThingSchema = new Schema(null,
             Schema.createField(DataType.STRING, "name"),
@@ -121,3 +134,57 @@ public class UtilFunctions {
     }
 
 }
+```
+
+## Provide a HOCON configuration for EventFlow use
+
+A HOCON configuration is required to declare the functions available :
+
+```scala
+name = "sbapp-calls-java-engine"
+version = "1.0.0"
+type = "com.tibco.ep.streambase.configuration.sbengine"
+configuration =
+{
+    StreamBaseEngine =
+    {
+        streamBase =
+        {
+            pluginFunctions =
+            {
+                java =
+                {
+                    Density =
+                    {
+                        type = "simple"
+                        alias = "density"
+                        className = "com.tibco.ep.samples.javafunction.UtilFunctions"
+                        autoArguments = true
+                    }
+                }
+           }
+        }
+    }
+}
+
+```
+
+## Running this sample in TIBCO StreamBase Studio&trade;
+
+Use the **Run As -> EventFlow Fragment** menu option to run in TIBCO StreamBase Studio&trade;, and then enqueue test messages :
+
+![RunFromStudio](images/studio.gif)
+
+## Running this sample's unit test case from TIBCO StreamBase Studio&trade;
+
+Use the **Run As -> EventFlow Fragment Unit Test** menu option to build from TIBCO StreamBase Studio&trade; :
+
+![RunFromStudio](images/studiounit.gif)
+
+Results are displayed in the console and junit windows.
+
+## Running this sample from the command line
+
+Use the [maven](https://maven.apache.org) as **mvn install** to build from the command line or Continuous Integration system :
+
+![Terminal](images/maven.gif)
