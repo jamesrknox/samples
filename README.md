@@ -8,9 +8,10 @@ Overview:
 * [Contributing](docs/contributing.md)
 * [License](docs/LICENSE)
 
-Samples:
+Sample categories:
 
 * [How to test TIBCO StreamBase&reg; 10.4.0 projects.](testing)
+* [How to use adapters in TIBCO StreamBase&reg; 10.4.0 projects.](adapter)
 * [How to use Java in TIBCO StreamBase&reg; 10.4.0 projects.](java)
 * [How to use native libraries in TIBCO StreamBase&reg; 10.4.0 projects.](nativelibrary)
 * [How to structure TIBCO StreamBase&reg; 10.4.0 projects.](structure)
