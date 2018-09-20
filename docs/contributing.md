@@ -23,7 +23,10 @@ We follow the GitHub flow process, including :
 
 ## Sample requirements
 
-* Samples consist of a single fragment or single application archive - application archives must contain one or more fragments
+* Samples consists of either :
+  * A single fragment
+  * An aggregator pom + more than one fragment
+  * An aggregator pom + at least one application archive + at least one fragment
 * Samples contain documentation in [markdown](https://guides.github.com/features/mastering-markdown/) format conforming to [maven site documentation rules](https://maven.apache.org/guides/mini/guide-site.html), containing at least :
     * Introduction
     * Business logic description, including screen shots
