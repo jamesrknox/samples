@@ -8,7 +8,7 @@ This component is available via maven.  Include in your pom.xml file the followi
         <dependencies>
             <dependency>
                 <groupId>com.tibco.ep.samples.adapter</groupId>
-                <artifactId>simpleadapter</artifactId>
+                <artifactId>sampleadapter</artifactId>
                 <type>ep-java-fragment</type>
             </dependency>
             ...
@@ -18,7 +18,7 @@ This component is available via maven.  Include in your pom.xml file the followi
             <dependencies>
                 <dependency>
                      <groupId>com.tibco.ep.samples.adapter</groupId>
-                     <artifactId>simpleadapter</artifactId>
+                     <artifactId>sampleadapter</artifactId>
                      <version>1.0.0</version>
                  </dependency>
                  ...

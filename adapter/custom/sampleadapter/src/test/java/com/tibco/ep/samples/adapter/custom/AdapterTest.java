@@ -5,7 +5,7 @@
  *      TIBCO Software Inc. Confidential Information
  *      
  *******************************************************************************/
-package com.tibco.ep.samples.adapter.simpleadapter;
+package com.tibco.ep.samples.adapter.custom;
 
 import org.junit.After;
 import org.junit.AfterClass;

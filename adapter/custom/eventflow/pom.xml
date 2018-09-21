@@ -37,13 +37,6 @@
         <relativePath/>
     </parent>
 
-    <dependencies>
-    	<dependency>
-    		<groupId>com.tibco.ep.samples.adapter.custom</groupId>
-    		<artifactId>sampleadapter</artifactId>
-    		<version>1.0.0</version>
-    	</dependency>
-    </dependencies>
     
     <build>
 
@@ -67,4 +60,11 @@
 
     </build>
     
+    <dependencies>
+    	<dependency>
+    		<groupId>com.tibco.ep.samples.adapter.custom</groupId>
+    		<artifactId>sampleadapter</artifactId>
+    		<version>1.0.0</version>
+    	</dependency>
+    </dependencies>
 </project>
