@@ -56,13 +56,13 @@ The following maven build rule is used :
             </plugin>
 ```
 
-# Running this sample from TIBCO StreamBase Studio&trade;
+## Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases
 
 Use the **Run As -> Maven install** menu option to build from TIBCO StreamBase Studio&trade; :
 
-![studio](images/studio.gif)
+![studio](images/studiounit.gif)
 
-# Running this sample from the command line
+## Building this sample from the command line and running the unit test cases
 
 Use the [maven](https://maven.apache.org) as **mvn install** to build from the command line or Continuous Integration system :
 

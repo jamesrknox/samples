@@ -169,22 +169,20 @@ configuration =
 
 ```
 
-## Running this sample in TIBCO StreamBase Studio&trade;
+## Running this sample from TIBCO StreamBase Studio&trade;
 
 Use the **Run As -> EventFlow Fragment** menu option to run in TIBCO StreamBase Studio&trade;, and then enqueue test messages :
 
 ![RunFromStudio](images/studio.gif)
 
-## Running this sample's unit test case from TIBCO StreamBase Studio&trade;
+## Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases
 
 Use the **Run As -> EventFlow Fragment Unit Test** menu option to build from TIBCO StreamBase Studio&trade; :
 
 ![RunFromStudio](images/studiounit.gif)
 
-Results are displayed in the console and junit windows.
-
-## Running this sample from the command line
+## Building this sample from the command line and running the unit test cases
 
 Use the [maven](https://maven.apache.org) as **mvn install** to build from the command line or Continuous Integration system :
 
-![Terminal](images/maven.gif)
+![maven](images/maven.gif)
