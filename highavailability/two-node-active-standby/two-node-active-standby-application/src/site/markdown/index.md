@@ -120,9 +120,9 @@ In this sample, some HA integration test cases are defined in the pom.xml that :
 
 * start nodes A & B
 * use **epadmin start playback** to inject tuples to node A
-* use **epadmin display querytable** on node A to verify
+* use **epadmin read querytable** on node A to verify query table contents
 * stop node A
-* use **epadmin display querytable** on node B to verify no data loss
+* use **epadmin read querytable** on node B to verify no data loss
 * stop node B
 
 Use the [maven](https://maven.apache.org) as **mvn install** to build from the command line or Continuous Integration system :
