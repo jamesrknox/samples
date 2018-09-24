@@ -59,7 +59,6 @@
                 <artifactId>ep-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <skipTests>${skipLocalTests}</skipTests>
                     <nodes>
                         <node>A</node>
                      </nodes>
