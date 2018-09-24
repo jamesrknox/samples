@@ -5,20 +5,15 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep</groupId>
-    <artifactId>samples</artifactId>
+    <groupId>com.tibco.ep.samples</groupId>
+    <artifactId>highavailability</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>TIBCO StreamBase Samples</name>
-    <description>This github repository contains a number of TIBCO StreamBase samples that can cloned to your local workspace.</description>
+    <name>HA</name>
+    <description>How to build High Availability TIBCO StreamBase projects.</description>
 
     <modules>
-        <module>structure</module>
-        <module>testing</module>
-        <module>nativelibrary</module>
-        <module>java</module>
-        <module>adapter</module>
-        <module>highavailability</module>
+        <module>two-node-active-standby</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->
