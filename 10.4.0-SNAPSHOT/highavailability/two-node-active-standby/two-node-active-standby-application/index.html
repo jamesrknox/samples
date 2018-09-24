@@ -54,7 +54,144 @@
         </div>
         <div id="bodyColumn"  class="span10" >
 <h1>HA : 2-node active standby</h1>
-<p>How to build a 2-node active standby deployment. - Application</p>
+<p>How to deploy an EventFlow fragment in a 2-node active standby configuration.</p>
+<div class="section">
+<h2><a name="Servers_and_nodes"></a>Servers and nodes</h2>
+<p>In this sample we name the initially active server as <b>A</b> which hosts the StreamBase node <b>A</b>.<br />
+The standby server is named <b>B</b> which hosts the StreamBase node <b>B</b>.</p>
+<p><img src="images/two-node-active-standby-nodes.svg" alt="nodes" /></p>
+<p>A client that uses the service initially connects to server <b>A</b>.</p></div>
+<div class="section">
+<h2><a name="Data_partitioning"></a>Data partitioning</h2>
+<p>To support an active standby configuration, the query table data must be replicated from the active node to the standby.  In this sample a partition <b>P1</b> is defined that is initially active on <b>A</b> with a replica defined on <b>B</b> :</p>
+<p><img src="images/two-node-active-standby-partitions.svg" alt="partitions" /></p></div>
+<div class="section">
+<h2><a name="Define_the_application_definition_HOCON_configuration"></a>Define the application definition HOCON configuration</h2>
+<p>A  application definition configuration defines the data distribution policy referenced in the EventFlow fragment data distribution policy :</p>
+
+<div>
+<div>
+<pre class="source">name = &quot;two-node-active-standby-application&quot;
+version = &quot;1.0.0&quot;
+type = &quot;com.tibco.ep.dtm.configuration.application&quot;
+
+configuration = {
+    ApplicationDefinition = {
+        execution {
+            nodeTypes {
+                docker {
+                    sharedMemory = {
+                        memoryType = SYSTEM_V_SHARED_MEMORY
+                    }
+                }
+            }
+        }
+        dataDistributionPolicies = {
+            static-data-distribution-policy = {
+                type = STATIC
+            }
+        }
+    }
+}
+</pre></div></div>
+</div>
+<div class="section">
+<h2><a name="Define_the_node_deployment_configuration"></a>Define the node deployment configuration</h2>
+<p>A node deployment configuration defines the availability zone :</p>
+
+<div>
+<div>
+<pre class="source">name = &quot;two-node-active-standby-application&quot;
+version = &quot;1.0.0&quot;
+type = &quot;com.tibco.ep.dtm.configuration.node&quot;
+
+configuration = {
+    NodeDeploy = {
+        nodes = {
+            &quot;A.two-node-active-standby-application&quot; = {
+                availabilityZoneMemberships = {
+                    static-availability-zone = {
+                        staticPartitionBindings = {
+                            P1 = {
+                                type = ACTIVE
+                            }
+                        }
+                    }
+                }
+            }
+            &quot;B.two-node-active-standby-application&quot; = {
+                availabilityZoneMemberships = {
+                    static-availability-zone = {
+                        staticPartitionBindings = {
+                            P1 = {
+                                type = REPLICA
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        availabilityZones = {
+            static-availability-zone = {
+                dataDistributionPolicy = static-data-distribution-policy
+                staticPartitionPolicy = {
+                    staticPartitions = {
+                        P1 = {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+</pre></div></div>
+</div>
+<div class="section">
+<h2><a name="Failure_scenarios"></a>Failure scenarios</h2>
+<p>The main failure cases for this deployment are outlined below :</p>
+<table border="0" class="table table-striped">
+<thead>
+
+<tr class="a">
+<th>Failure case </th>
+<th> HA Effects </th>
+<th> Steps to resolve </th>
+<th> Notes</th></tr>
+</thead><tbody>
+
+<tr class="b">
+<td>Server A fails </td>
+<td> 1 Client is disconnected<br />2 Partition becomes active on B<br />3 Client may connect to B and continue  </td>
+<td> 1 Fix server A<br />2 Use <b>epadmin install node</b> and <b>epadmin start node</b> </td>
+<td> 1 No data loss<br />2 No service loss</td></tr>
+<tr class="a">
+<td>Server B fails </td>
+<td> 1 Data replica is lost<br />2 Client may continue work on A </td>
+<td> 1 Fix server B<br />2 Use <b>epadmin install node</b> and <b>epadmin start node</b> </td>
+<td> 1 No data loss<br />2 No service loss</td></tr>
+<tr class="b">
+<td>Network fails  </td>
+<td> 1 Partition becomes active on both A and B<br /><b>multi-master</b> scenario </td>
+<td> 1 Fix network<br />2 Use <b>epadmin restore availabilityzone</b> </td>
+<td> 1 <b>Possible data loss</b><br />2 No service loss</td></tr>
+</tbody>
+</table>
+<p>With a 2 node configuration node quorums don&#x2019;t apply hence a multi-master scenario is possible on network failure.<br />
+To avoid the risk of data loss when restoring the availability zone, multiple network paths ( such as bonding ) is recommended.</p></div>
+<div class="section">
+<h2><a name="Building_this_sample_from_the_command_line_and_running_the_integration_test_cases"></a>Building this sample from the command line and running the integration test cases</h2>
+<p>In this sample, some HA integration test cases are defined in the pom.xml that :</p>
+<ul>
+
+<li>start nodes A &amp; B</li>
+<li>use <b>epadmin start playback</b> to inject tuples to node A</li>
+<li>use <b>epadmin read querytable</b> on node A to verify query table contents</li>
+<li>stop node A</li>
+<li>use <b>epadmin read querytable</b> on node B to verify no data loss</li>
+<li>stop node B</li>
+</ul>
+<p>Use the <a class="externalLink" href="https://maven.apache.org">maven</a> as <b>mvn install</b> to build from the command line or Continuous Integration system :</p>
+<p><img src="images/maven.gif" alt="maven" /></p></div>
         </div>
       </div>
     </div>
