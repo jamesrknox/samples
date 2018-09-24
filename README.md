@@ -1,6 +1,6 @@
-# TIBCO StreamBase Samples
+# TIBCO StreamBase&reg; 10.4.0 Samples
 
-This github repository contains a number of TIBCO StreamBase samples that can cloned to your local workspace.
+This github repository contains a number of TIBCO StreamBase&reg; 10.4.0 samples that can cloned to your local workspace.
 
 Overview:
 
@@ -10,9 +10,9 @@ Overview:
 
 Sample categories:
 
-* [How to structure TIBCO StreamBase projects.](structure)
-* [How to test TIBCO StreamBase projects.](testing)
-* [How to use native libraries in TIBCO StreamBase projects.](nativelibrary)
-* [How to use Java in TIBCO StreamBase projects.](java)
-* [How to use adapters in TIBCO StreamBase projects.](adapter)
-* [How to build Highly Available TIBCO StreamBase projects.](highavailability)
+* [How to structure TIBCO StreamBase&reg; 10.4.0 projects.](structure)
+* [How to test TIBCO StreamBase&reg; 10.4.0 projects.](testing)
+* [How to use native libraries in TIBCO StreamBase&reg; 10.4.0 projects.](nativelibrary)
+* [How to use Java in TIBCO StreamBase&reg; 10.4.0 projects.](java)
+* [How to use adapters in TIBCO StreamBase&reg; 10.4.0 projects.](adapter)
+* [How to build Highly Available TIBCO StreamBase&reg; 10.4.0 projects.](highavailability)

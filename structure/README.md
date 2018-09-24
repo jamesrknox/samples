@@ -1,6 +1,6 @@
 # Structure
 
-How to structure TIBCO StreamBase projects.
+How to structure TIBCO StreamBase&reg; 10.4.0 projects.
 
 * [How to structure an EventFlow fragment.](eventflow)
 * [How to structure an LiveView fragment.](liveview)
