@@ -56,8 +56,74 @@
         <div id="bodyColumn"  class="span10" >
 <h1>Structure : Application</h1>
 <p>How to structure a maven aggregate project with EventFlow fragment and application archive - EventFlow Fragment.</p>
-<p>. &#x251c;&#x2500;&#x2500; application-application &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; pom.xml &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; src &#x2502;&#xa0;&#xa0;     &#x251c;&#x2500;&#x2500; main &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; configurations &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; app.conf &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; defaultnode.conf &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; docker &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0;     &#x251c;&#x2500;&#x2500; application &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; Dockerfile &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; base &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0;         &#x251c;&#x2500;&#x2500; Dockerfile &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; start-node &#x2502;&#xa0;&#xa0;     &#x251c;&#x2500;&#x2500; site &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; markdown &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; index.md &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; using.md &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; site.xml &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; test &#x2502;&#xa0;&#xa0;         &#x251c;&#x2500;&#x2500; configurations &#x2502;&#xa0;&#xa0;         &#x251c;&#x2500;&#x2500; java &#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; com &#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; tibco &#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; ep &#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;             &#x2514;&#x2500;&#x2500; samples &#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;                 &#x2514;&#x2500;&#x2500; application &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; resources &#x251c;&#x2500;&#x2500; application-eventflowfragment &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; pom.xml &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; src &#x2502;&#xa0;&#xa0;     &#x251c;&#x2500;&#x2500; main &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; configurations &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; eventflow &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; com &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; tibco &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; ep &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;             &#x2514;&#x2500;&#x2500; samples &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;                 &#x2514;&#x2500;&#x2500; application &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;                     &#x251c;&#x2500;&#x2500; application_eventflowfragment.sbapp &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;                     &#x2514;&#x2500;&#x2500; application_eventflowfragment.sblayout &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; java &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; com &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; tibco &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; ep &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;             &#x2514;&#x2500;&#x2500; samples &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;                 &#x2514;&#x2500;&#x2500; application &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; resources &#x2502;&#xa0;&#xa0;     &#x251c;&#x2500;&#x2500; site &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; markdown &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; index.md &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; using.md &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; site.xml &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; test &#x2502;&#xa0;&#xa0;         &#x251c;&#x2500;&#x2500; configurations &#x2502;&#xa0;&#xa0;         &#x251c;&#x2500;&#x2500; java &#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; com &#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; tibco &#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; ep &#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;             &#x2514;&#x2500;&#x2500; samples &#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;                 &#x2514;&#x2500;&#x2500; application &#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;                     &#x2514;&#x2500;&#x2500; TestCase.java &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; resources &#x2514;&#x2500;&#x2500; pom.xml</p>
-<p>46 directories, 17 files</p>
+
+<div>
+<div>
+<pre class="source">.
+&#x251c;&#x2500;&#x2500; application-application
+&#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; pom.xml
+&#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; src
+&#x2502;&#xa0;&#xa0;     &#x251c;&#x2500;&#x2500; main
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; configurations
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; app.conf
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; defaultnode.conf
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; docker
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0;     &#x251c;&#x2500;&#x2500; application
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; Dockerfile
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; base
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0;         &#x251c;&#x2500;&#x2500; Dockerfile
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; start-node
+&#x2502;&#xa0;&#xa0;     &#x251c;&#x2500;&#x2500; site
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; markdown
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; index.md
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; using.md
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; site.xml
+&#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; test
+&#x2502;&#xa0;&#xa0;         &#x251c;&#x2500;&#x2500; configurations
+&#x2502;&#xa0;&#xa0;         &#x251c;&#x2500;&#x2500; java
+&#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; com
+&#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; tibco
+&#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; ep
+&#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;             &#x2514;&#x2500;&#x2500; samples
+&#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;                 &#x2514;&#x2500;&#x2500; application
+&#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; resources
+&#x251c;&#x2500;&#x2500; application-eventflowfragment
+&#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; pom.xml
+&#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; src
+&#x2502;&#xa0;&#xa0;     &#x251c;&#x2500;&#x2500; main
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; configurations
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; eventflow
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; com
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; tibco
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; ep
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;             &#x2514;&#x2500;&#x2500; samples
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;                 &#x2514;&#x2500;&#x2500; application
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;                     &#x251c;&#x2500;&#x2500; application_eventflowfragment.sbapp
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;                     &#x2514;&#x2500;&#x2500; application_eventflowfragment.sblayout
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; java
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; com
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; tibco
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; ep
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;             &#x2514;&#x2500;&#x2500; samples
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0;                 &#x2514;&#x2500;&#x2500; application
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; resources
+&#x2502;&#xa0;&#xa0;     &#x251c;&#x2500;&#x2500; site
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; markdown
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; index.md
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; using.md
+&#x2502;&#xa0;&#xa0;     &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; site.xml
+&#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; test
+&#x2502;&#xa0;&#xa0;         &#x251c;&#x2500;&#x2500; configurations
+&#x2502;&#xa0;&#xa0;         &#x251c;&#x2500;&#x2500; java
+&#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; com
+&#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;     &#x2514;&#x2500;&#x2500; tibco
+&#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; ep
+&#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;             &#x2514;&#x2500;&#x2500; samples
+&#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;                 &#x2514;&#x2500;&#x2500; application
+&#x2502;&#xa0;&#xa0;         &#x2502;&#xa0;&#xa0;                     &#x2514;&#x2500;&#x2500; TestCase.java
+&#x2502;&#xa0;&#xa0;         &#x2514;&#x2500;&#x2500; resources
+&#x2514;&#x2500;&#x2500; pom.xml
+</pre></div></div>
         </div>
       </div>
     </div>
