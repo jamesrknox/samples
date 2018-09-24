@@ -1,6 +1,6 @@
-# %Adapter : Custom - EventFlow
+# Adapter : Custom - EventFlow
 
-%How to use a custom adapter in EventFlow.
+How to use a custom adapter in EventFlow.
 
-* [%eventflow main page](src/site/markdown/index.md)
-* [%eventflow generated html site documentation](https://plord12.github.io/samples/%10.4.0-SNAPSHOT//opt/tibco/users/jenkins/workspace/EventProcessing/samples/adapter/custom/eventflow/)
+* [eventflow main page](src/site/markdown/index.md)
+* [eventflow generated html site documentation](https://plord12.github.io/samples/10.4.0-SNAPSHOT//opt/tibco/users/jenkins/workspace/EventProcessing/samples/adapter/custom/eventflow/)
