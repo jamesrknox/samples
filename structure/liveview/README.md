@@ -2,5 +2,4 @@
 
 How to structure an LiveView fragment.
 
-* [liveview main page](src/site/markdown/index.md)
-* [liveview generated html site documentation](https://plord12.github.io/samples/10.4.0-SNAPSHOT//opt/tibco/users/jenkins/workspace/EventProcessing/samples/structure/liveview/)
+* [liveview](src/site/markdown/index.md) ([html](https://plord12.github.io/samples/structure/liveview/))
