@@ -45,7 +45,7 @@ public class TestCase extends UnitTest {
         // create a StreamBase server and load applications once for all tests in this class
         server = ServerManagerFactory.getEmbeddedServer();
         server.startServer();
-        server.loadApp("com.tibco.ep.samples.highavailability.two_node_active_standby.two-node-active-standby_eventflowfragment");
+        server.loadApp("com.tibco.ep.samples.highavailability.two_node_active_standby.two-node-active-standby-eventflowfragment");
     }
 
     /**

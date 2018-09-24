@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tibco.ep.samples.highavailability</groupId>
-    <artifactId>two-node-active-standby_application</artifactId>
+    <artifactId>two-node-active-standby-application</artifactId>
     <packaging>ep-application</packaging>
     <version>1.0.0</version>
     <name>HA : 2-node active standby - Application</name>
@@ -44,7 +44,7 @@
     <dependencies>
         <dependency>
             <groupId>com.tibco.ep.samples.highavailability</groupId>
-            <artifactId>two-node-active-standby_eventflowfragment</artifactId>
+            <artifactId>two-node-active-standby-eventflowfragment</artifactId>
             <version>1.0.0</version>
             <type>ep-eventflow-fragment</type>
         </dependency>
@@ -114,7 +114,7 @@
                             <target>playback</target>
                             <serviceName>A.${project.artifactId}</serviceName>
                             <arguments>
-                                <engine>default-engine-for-com.tibco.ep.samples.highavailability.two-node-active-standby_eventflowfragment</engine>
+                                <engine>default-engine-for-com.tibco.ep.samples.highavailability.two-node-active-standby-eventflowfragment</engine>
                                 <simulationfile>${project.basedir}/src/test/configurations/test.sbfs</simulationfile>
                             </arguments>
                         </configuration>
@@ -197,10 +197,10 @@
                             <target>
                                 <!-- wait for max 10 minutes checking every 500ms -->
                                 <waitfor maxwait="10" maxwaitunit="minute" checkevery="500"  timeoutproperty="atimeout">
-                                    <resourcecontains resource="${project.build.directory}/test-nodes/A.${project.artifactId}/logs/default-engine-for-com.tibco.ep.samples.highavailability.two-node-active-standby_eventflowfragment.log" substring=" sbd at "/>
+                                    <resourcecontains resource="${project.build.directory}/test-nodes/A.${project.artifactId}/logs/default-engine-for-com.tibco.ep.samples.highavailability.two-node-active-standby-eventflowfragment.log" substring=" sbd at "/>
                                 </waitfor>
                                 <waitfor maxwait="10" maxwaitunit="minute" checkevery="500"  timeoutproperty="btimeout">
-                                    <resourcecontains resource="${project.build.directory}/test-nodes/B.${project.artifactId}/logs/default-engine-for-com.tibco.ep.samples.highavailability.two-node-active-standby_eventflowfragment.log" substring=" sbd at "/>
+                                    <resourcecontains resource="${project.build.directory}/test-nodes/B.${project.artifactId}/logs/default-engine-for-com.tibco.ep.samples.highavailability.two-node-active-standby-eventflowfragment.log" substring=" sbd at "/>
                                 </waitfor>
                                 <fail message="Application on node A failed to startup in time">
                                     <condition>

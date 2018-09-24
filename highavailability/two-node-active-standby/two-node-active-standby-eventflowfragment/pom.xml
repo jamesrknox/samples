@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tibco.ep.samples.highavailability</groupId>
-    <artifactId>two-node-active-standby_eventflowfragment</artifactId>
+    <artifactId>two-node-active-standby-eventflowfragment</artifactId>
     <packaging>ep-eventflow-fragment</packaging>
     <version>1.0.0</version>
     <name>HA : 2-node active standby - EventFlow Fragment</name>
