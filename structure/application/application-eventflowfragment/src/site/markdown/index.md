@@ -2,6 +2,7 @@
 
 How to structure a maven aggregate project with EventFlow fragment and application archive - EventFlow Fragment.
 
+```
 .
 ├── application-application
 │   ├── pom.xml
@@ -66,5 +67,4 @@ How to structure a maven aggregate project with EventFlow fragment and applicati
 │           │                       └── TestCase.java
 │           └── resources
 └── pom.xml
-
-46 directories, 17 files
+```

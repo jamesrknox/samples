@@ -106,9 +106,9 @@ The main failure cases for this deployment are outlined below :
 
 Failure case | HA Effects | Steps to resolve | Notes
 --- | --- | --- | ---
-Server A fails | 1 Client is disconnected<br>2 Partition becomes active on B<br>3 Client may connect to B and continue  | 1 Fix server A<br>2 Use **epadmin install node** and **epadmin start node** | 1 No data loss<br>2 No service loss
-Server B fails | 1 Data replica is lost<br>2 Client may continue work on A | 1 Fix server B<br>2 Use **epadmin install node** and **epadmin start node** | 1 No data loss<br>2 No service loss
-Network fails  | 1 Partition becomes active on both A and B<br>**multi-master** scenario | 1 Fix network<br>2 Use **epadmin restore availabilityzone** | 1 **Possible data loss**<br>2 No service loss
+Server A fails | 1 Client is disconnected<br/>2 Partition becomes active on B<br/>3 Client may connect to B and continue  | 1 Fix server A<br/>2 Use **epadmin install node** and **epadmin start node** | 1 No data loss<br/>2 No service loss
+Server B fails | 1 Data replica is lost<br/>2 Client may continue work on A | 1 Fix server B<br/>2 Use **epadmin install node** and **epadmin start node** | 1 No data loss<br/>2 No service loss
+Network fails  | 1 Partition becomes active on both A and B<br/>**multi-master** scenario | 1 Fix network<br/>2 Use **epadmin restore availabilityzone** | 1 **Possible data loss**<br/>2 No service loss
 
 With a 2 node configuration node quorums don't apply hence a multi-master scenario is possible on network failure.  
 To avoid the risk of data loss when restoring the availability zone, multiple network paths ( such as bonding )
