@@ -1,7 +1,5 @@
-# %Testing : Junit
-%Testing
+# Testing
 
-%How to write unit tests for EventFlow fragments.
-%How to test TIBCO StreamBase projects.
+How to test TIBCO StreamBase&reg; 10.4.0 projects.
 
-* [%How to write unit tests for EventFlow fragments.](junit)
+* [How to write unit tests for EventFlow fragments.](junit)

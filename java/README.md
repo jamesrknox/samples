@@ -1,7 +1,5 @@
-# %Java : Java Function
-%Java
+# Java
 
-%How to build and use java libraries with EventFlow.
-%How to use Java in TIBCO StreamBase projects.
+How to use Java in TIBCO StreamBase&reg; 10.4.0 projects.
 
-* [%How to build and use java libraries with EventFlow.](javafunction)
+* [How to build and use java libraries with EventFlow.](javafunction)
