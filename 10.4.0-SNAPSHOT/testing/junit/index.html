@@ -77,7 +77,7 @@ public class TestCase extends UnitTest {
 <ul>
 
 <li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/Administration.html">Running administration commands</a></li>
-<li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/Configuration.html">Loading HOCON configurations</a></li>
+<li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/Configuration.html">Loading configurations</a></li>
 <li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/MultiNodeCoordinator.html">Co-ordinating across multiple test node</a></li>
 <li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--">Deadlock detection</a></li>
 <li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--">Managed object leak detection</a></li>
@@ -85,9 +85,9 @@ public class TestCase extends UnitTest {
 <li><a class="externalLink" href="http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--">transactional abort mode</a></li>
 </ul></div>
 <div class="section">
-<h2><a name="Starting.2C_stopping_and_loading_HOCON_configuration"></a>Starting, stopping and loading HOCON configuration</h2>
-<p>Junit @beforeClass and @AfterClass functions can be used to start and stop the embedded server.  Likewise, Junit @Before and @After functions can be used to start and stopo the containers.</p>
-<p>Any HOCON configurations required by the unit test case should be loaded and activated prior to starting the embedded server :</p>
+<h2><a name="Starting.2C_stopping_and_loading_configuration"></a>Starting, stopping and loading configuration</h2>
+<p>Junit @beforeClass and @AfterClass functions can be used to start and stop the embedded server.  Likewise, Junit @Before and @After functions can be used to start and stop the containers.</p>
+<p>Any configuration required by the unit test case should be loaded and activated prior to starting the embedded server :</p>
 
 <div>
 <div>
