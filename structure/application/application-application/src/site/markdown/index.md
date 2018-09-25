@@ -1,9 +1,9 @@
 # Structure : Application
 
-This sample describes how to structure the application archive module of a maven aggregate project.
+This sample describes how to structure the application archive module of a maven aggregator project.
 
-A [maven aggregator project](http://maven.apache.org/pom.html#Aggregation) consists of at least one application archive module and at least one fragment.  Contained
-in one project allows maven to work out dependencies across maven modules and build and test in the right order.
+A [maven aggregator project](http://maven.apache.org/pom.html#Aggregation) consists of at least one application archive module and at least one fragment module.  
+With multiple maven modules in one project, maven can work out dependencies across maven modules and build and test in the right order.
 
 The directory structure consists of :
 

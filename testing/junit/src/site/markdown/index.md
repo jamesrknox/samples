@@ -35,7 +35,7 @@ This allows access to :
 ## Starting, stopping and loading configuration
 
 Junit @beforeClass and @AfterClass functions can be used to start and stop the embedded server.  Likewise,
-Junit @Before and @After functions can be used to start and stopo the containers.
+Junit @Before and @After functions can be used to start and stop the containers.
 
 Any configuration required by the unit test case should be loaded and activated prior to starting the embedded server :
 
