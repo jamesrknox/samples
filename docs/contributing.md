@@ -31,7 +31,7 @@ We follow the GitHub flow process, including :
     * Business logic description, including screen shots
     * For application archives, deployment description
     * Test case description and expected results
-    * Links to main files ( such as HOCON configuration and pom.xml )
+    * Links to main files ( such as configurations and pom.xml )
 * Fragments must include junit test case(s)
 * Application archives must include integration tests that at least start the application up
 * Samples must import into studio with no errors or warnings (after following any manual instructions)

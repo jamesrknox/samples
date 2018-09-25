@@ -9,7 +9,7 @@ transactional memory :
 
 ![Table settings](images/studiotablesettings.png)
 
-A data distribution policy is set ( to be later defined in HOCON application definition ) :
+A data distribution policy is set ( to be later defined in the application definition configuration file ) :
 
 ![Data distribution](images/studiodatadistribution.png)
 
@@ -23,7 +23,7 @@ Use the **Run As -> EventFlow Fragment** menu option to run in TIBCO StreamBase 
 
 Note that here we are unit testing the business logic rather than high availability - in this sample we test high availability in
 the application archive integration test cases.  The unit test cases can test high availability by loading an activating test versions 
-of the application definition and node deployment HOCON configuration files.
+of the application definition and node deployment configuration files.
 
 ![RunFromStudio](images/studio.gif)
 

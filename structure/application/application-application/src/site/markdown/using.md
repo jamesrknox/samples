@@ -8,7 +8,7 @@ This component is available via maven.  Include in your pom.xml file the followi
         <dependencies>
             <dependency>
                 <groupId>com.tibco.ep.samples</groupId>
-                <artifactId>application_application</artifactId>
+                <artifactId>application-application</artifactId>
                 <type>application-archive</type>
             </dependency>
             ...
@@ -18,7 +18,7 @@ This component is available via maven.  Include in your pom.xml file the followi
             <dependencies>
                 <dependency>
                      <groupId>com.tibco.ep.samples</groupId>
-                     <artifactId>application_application</artifactId>
+                     <artifactId>application-application</artifactId>
                      <version>1.0.0</version>
                  </dependency>
                  ...

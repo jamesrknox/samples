@@ -19,9 +19,9 @@ with a replica defined on **B** :
 
 ![partitions](images/two-node-active-standby-partitions.svg)
 
-## Define the application definition HOCON configuration
+## Define the application definition configuration
 
-A  application definition configuration defines the data distribution policy referenced in the EventFlow fragment 
+An application definition configuration defines the data distribution policy referenced in the EventFlow fragment 
 data distribution policy :
 
 

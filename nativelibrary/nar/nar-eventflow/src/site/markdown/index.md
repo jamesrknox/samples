@@ -117,9 +117,9 @@ public class CallCpp {
 }
 ```
 
-# Provide a HOCON configuration for EventFlow use
+# Provide a engine configuration for EventFlow use
 
-A HOCON configuration is required to declare the functions available :
+A engine configuration is required to declare the functions available :
 
 ```scala
 name = "sbapp-calls-cpp-engine"

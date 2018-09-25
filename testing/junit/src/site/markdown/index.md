@@ -24,7 +24,7 @@ public class TestCase extends UnitTest {
 This allows access to :
 
 * [Running administration commands](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/Administration.html)
-* [Loading HOCON configurations](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/Configuration.html)
+* [Loading configurations](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/Configuration.html)
 * [Co-ordinating across multiple test node](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/MultiNodeCoordinator.html)
 * [Deadlock detection](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--)
 * [Managed object leak detection](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--)
@@ -32,12 +32,12 @@ This allows access to :
 * [transactional abort mode](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--)
 
 
-## Starting, stopping and loading HOCON configuration
+## Starting, stopping and loading configuration
 
 Junit @beforeClass and @AfterClass functions can be used to start and stop the embedded server.  Likewise,
 Junit @Before and @After functions can be used to start and stopo the containers.
 
-Any HOCON configurations required by the unit test case should be loaded and activated prior to starting the embedded server :
+Any configuration required by the unit test case should be loaded and activated prior to starting the embedded server :
 
 ``` java
     @BeforeClass
