@@ -10,11 +10,10 @@ We follow the GitHub flow process, including :
 * Collaborators are users with direct push access to the repository
     * Are from TIBCO StreamBase engineering team
     * Are part of github team @streambasesamples
-    * Commit messages should be clear and concise, describing the change well and referencing jira or github issue number
 * Any user can submit a pull request
     * The request should mention @streambasesamples
     * One or more collaborators will engage with the aim of accepting the pull request
-    * Pull requests can be fore changes to existing samples or proposals for new samples
+    * Pull requests can contain changes to existing samples or proposals for new samples
 * All issues are tracked by github issues
     * See https://github.com/plord12/samples/issues
     * Optionally, any related internal jira issues can be referenced
@@ -23,11 +22,11 @@ We follow the GitHub flow process, including :
 
 ## Sample requirements
 
-* Samples consists of either :
+* Samples may consists of one of :
   * A single fragment
-  * An aggregator pom + more than one fragment
-  * An aggregator pom + at least one application archive + at least one fragment
-* Samples contain documentation in [markdown](https://guides.github.com/features/mastering-markdown/) format conforming to [maven site documentation rules](https://maven.apache.org/guides/mini/guide-site.html), containing at least :
+  * A [maven aggregator](http://maven.apache.org/pom.html#Aggregation) + more than one fragment
+  * A [maven aggregator](http://maven.apache.org/pom.html#Aggregation) + at least one application archive + at least one fragment
+* Samples contain documentation in [markdown](https://guides.github.com/features/mastering-markdown/) format conforming to [maven site documentation rules](https://maven.apache.org/guides/mini/guide-site.html), containing :
     * Introduction
     * Business logic description, including screen shots
     * For application archives, deployment description
@@ -36,9 +35,9 @@ We follow the GitHub flow process, including :
 * Fragments must include junit test case(s)
 * Application archives must include integration tests that at least start the application up
 * Samples must import into studio with no errors or warnings (after following any manual instructions)
-* Samples must be built and tests launched from maven
-  * they will be automatically built and tested under a jenkins-based continuous integration system
-  * Maven site docs will be published to github pages
+* Samples must also be buildable and testable from maven
+  * Samples will be automatically built and tested under a jenkins-based continuous integration system
+  * Maven site html documentation will be published to github pages
 * Ideally samples shouldn't reference 3rd party dependencies not available publicly or part of the StreamBase release. 
     This allows samples to work without additional steps for both customers and automated builds.  However, when this isn't possible, the following applies : 
     * If the dependency is available on a vendor maintained maven repository, instructions are provided in that sample to use that repository.
@@ -46,12 +45,13 @@ We follow the GitHub flow process, including :
     the local maven repository and (optionally) deploy to a shared repository.
     * Internally, we do the same but deploy (or mirror) the dependency to a shared 3rd party repository. This repository is included in the sample builds.
     * Care must be taken to keep the metadata intact ( for example maintain copyright and license information ) so that the maven site info reports are correct.
-* It must be possible for anyone to setup their own maven repository ( eg follow http://devzone.tibco.com/forums/posts/list/3728.page ), build and execute all tests.
+* It must be possible for anyone to setup their own maven repository, build and execute all tests.
 * Samples must go through standard development process including :
-  * requirements - reviewed
-  * design - reviewed
-  * implementation - reviewed
-  * testing
+  * Requirements - reviewed
+  * Design - reviewed
+  * Implementation - reviewed
+  * Testing
+* Commit messages should be clear and concise, describing the change well and referencing jira or github issue number
 
 ## Empty directories
 
@@ -61,12 +61,11 @@ Git doesn't store empty directories, so such directories that need to be part of
 
 We need to support viewing documents in github, studio and maven generated site documentation.  Unfortunately, the location of images for these cases differ.  Hence we should :
 
-* markdown files are stored in src/site/markdown
-* images are stored in src/site/markdown/images
-* a soft link is added from src/site/resources/images to src/site/markdown/images
-* links to images in markdown files are of the format **\!\[Alt Text\]\(images/MyImage.png\)**
-
+* Markdown files are stored in src/site/markdown
+* Images are stored in src/site/markdown/images
+* A soft link is added from src/site/resources/images to src/site/markdown/images
+* Links to images in markdown files are of the format **\!\[Alt Text\]\(images/MyImage.png\)**
 
 ## Index
 
-Jenkins will re-generate README.md files based on the pom.xml metadata.
+Jenkins will re-generate README.md files based on the pom.xml metadata. Therefore the READNE.md files should not be updated manually.

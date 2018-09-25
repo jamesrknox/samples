@@ -1,8 +1,8 @@
 # Structure : LiveView
 
-How to structure an LiveView fragment..
+This sample describes how to structure a LiveView fragment.
 
-An LiveView fragment directory structure consists of :
+A LiveView fragment directory structure consists of :
 
 * **pom.xml** - Maven Project Object Module that controls the build, tests, installation and deployment of the project.
 * **src/main/liveview/lv-user-webapps/** - Directory containing LiveView web applications (such as lvweb.war).

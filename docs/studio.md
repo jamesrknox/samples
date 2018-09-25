@@ -1,5 +1,11 @@
 # Using in TIBCO StreamBase Studio&trade;
 
+These samples are kept on-line in github - this allows browsing of the samples on-line,
+support of contributions outside of TIBCO engineering and updates outside of the main
+product release lifecycle.
+
+The samples also be imported into TIBCO StreamBase Studio&trade; :
+
 ## Using smart import
 
 Use **Import -> Git -> Projects from Git ( with smart import )** menu option.  Specify the github URL and choose what sample(s) to import :

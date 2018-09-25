@@ -1,8 +1,8 @@
 # Structure : Java
 
-How to structure an Java fragment.
+This sample describes how to structure a Java fragment.
 
-An Java fragment directory structure consists of :
+A Java fragment directory structure consists of :
 
 * **pom.xml** - Maven Project Object Module that controls the build, tests, installation and deployment of the project.
 * **src/main/java/[package]/** - Directory containing Java source.
