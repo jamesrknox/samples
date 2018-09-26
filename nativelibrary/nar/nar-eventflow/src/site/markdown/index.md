@@ -2,7 +2,14 @@
 
 This sample describes how to use a Native ARchive (.nar) dependency in an EventFlow project.
 
-# Declare the NAR as a dependency
+* [Declare the NAR as a dependency](#declare-the-nar-as-a-dependency)
+* [Declare a java wrapper class](#declare-a-java-wrapper-class)
+* [Provide a engine configuration for EventFlow use](#provide-a-engine-configuration-for-eventflow-use)
+* [Using in EventFlow](#using-in-eventflow)
+* [Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases](#building-this-sample-from-tibco-streambase-studio-and-running-the-unit-test-cases)
+* [Building this sample from the command line and running the unit test cases](#building-this-sample-from-the-command-line-and-running-the-unit-test-cases)
+
+## Declare the NAR as a dependency
 
 A NAR can be used in the same way as any other maven dependency, except that a platform-specific
 classifier should be specified :
@@ -75,7 +82,7 @@ test on Linux servers ) - this can be achieved with maven profiles :
 
 ```
 
-# Declare a java wrapper class
+## Declare a java wrapper class
 
 A java wrapper class is required to load the native shared library and provide JNI access :
 
@@ -117,7 +124,7 @@ public class CallCpp {
 }
 ```
 
-# Provide a engine configuration for EventFlow use
+## Provide a engine configuration for EventFlow use
 
 A engine configuration is required to declare the functions available :
 
@@ -157,7 +164,7 @@ configuration =
 }
 ```
 
-# Using in EventFlow
+## Using in EventFlow
 
 These functions can now be used in EventFlow :
 

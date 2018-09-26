@@ -2,6 +2,13 @@
 
 This sample describes how to write junit unit tests for EventFlow fragments.
 
+* [EventFlow under test](#eventflow-under-test)
+* [Using the test framework](#using-the-test-framework)
+* [Starting, stopping and loading configuration](#starting-stopping-and-loading-configuration)
+* [Test cases](#test-cases)
+* [Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases](#building-this-sample-from-tibco-streambase-studio-and-running-the-unit-test-cases)
+* [Building this sample from the command line and running the unit test cases](#building-this-sample-from-the-command-line-and-running-the-unit-test-cases)
+
 ## EventFlow under test
 
 In this sample the following simple EventFlow fragment is used :

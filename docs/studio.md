@@ -22,3 +22,4 @@ TBD
 
 * [Markdown Text Editor](https://marketplace.eclipse.org/content/markdown-text-editor)
 * [GitHub Flavored Markdown viewer plugin](https://marketplace.eclipse.org/content/github-flavored-markdown-viewer-plugin)
+* [Mylyn WikiText](https://marketplace.eclipse.org/content/mylyn-wikitext)

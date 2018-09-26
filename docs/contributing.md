@@ -68,4 +68,4 @@ We need to support viewing documents in github, studio and maven generated site 
 
 ## Index
 
-Jenkins will re-generate README.md files based on the pom.xml metadata. Therefore the READNE.md files should not be updated manually.
+Jenkins will re-generate README.md files based on the pom.xml metadata. Therefore the README.md files should not be updated manually.

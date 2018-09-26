@@ -3,7 +3,12 @@
 This sample describes how to build a maven Native ARchive files (.nar) from C++ source.  The
 resulting archive can then be used in a downstream EventFlow fragment.
 
-# C++ Source
+* [C++ Source](#c-source)
+* [Compilation to native library and generate NAR archive](#compilation-to-native-library-and-generate-nar-archive)
+* [Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases](#building-this-sample-from-tibco-streambase-studio-trade-and-running-the-unit-test-cases)
+* [Building this sample from the command line and running the unit test cases](#building-this-sample-from-the-command-line-and-running-the-unit-test-cases)
+
+## C++ Source
 
 The sample C++ source code provides functions to manipulate a static int :
 
@@ -35,7 +40,7 @@ JNIEXPORT jint JNICALL Java_com_tibco_ep_samples_nativelibrary_narcpplib_CallCpp
 }
 ```
 
-# Compilation to native library and generate NAR archive
+## Compilation to native library and generate NAR archive
 
 The [maven nar plugin](http://maven-nar.github.io/) is used to invoke the native complier and build the Native ARchive file (.nar).  
 The following maven build rule is used :

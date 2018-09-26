@@ -2,6 +2,11 @@
 
 This sample describes how to build a custom adapter.
 
+* [Maven pom.xml](#maven-pom-xml)
+* [Sample adapter source](#sample-adapter-source)
+* [Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases](#building-this-sample-from-tibco-streambase-studio-and-running-the-unit-test-cases)
+* [Building this sample from the command line and running the unit test cases](#building-this-sample-from-the-command-line-and-running-the-unit-test-cases)
+
 ## Maven pom.xml
 
 The maven pom.xml should be of pacjage type **jar** but use the **ep-eventflow-fragment** parent to
