@@ -5,16 +5,34 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep.samples</groupId>
-    <artifactId>highavailability</artifactId>
+    <groupId>com.tibco.ep.samples.highavailability</groupId>
+    <artifactId>two-node-active-active</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>HA</name>
-    <description>How to build Highly Available TIBCO StreamBase projects.</description>
+    <name>HA : 2-node active active - Aggregator</name>
+    <description>How to build a 2-node active active deployment.</description>
 
+    <url>https://github.com/plord12/samples</url>
+
+    <inceptionYear>2015</inceptionYear>
+
+    <organization>
+        <name>TIBCO Software Inc.</name>
+        <url>http://www.tibco.com</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>BSD 3-Clause License</name>
+            <url>https://raw.githubusercontent.com/plord12/samples/master/docs/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
+    <!-- Aggregator pom -->
     <modules>
-        <module>two-node-active-standby</module>
-        <module>two-node-active-active</module>
+        <module>two-node-active-active-eventflowfragment</module>
+        <module>two-node-active-active-application</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->
