@@ -66,8 +66,8 @@
     /></g
     ><g transform="translate(320,160)"
     ><rect fill="none" x="0.5" width="110" height="118.5" y="10.5" clip-path="url(#clipPath4)"
-      /><text x="27" font-size="14" y="27.8174" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >Server B</text
+      /><text x="20" font-size="14" y="27.8174" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      >Machine B</text
     ></g
     ><g fill="rgb(255,255,255)" fill-opacity="0" transform="translate(170,210)" stroke-opacity="0" stroke="rgb(255,255,255)"
     ><rect x="0.5" width="88.5" height="58.5" y="0.5" clip-path="url(#clipPath3)" stroke="none"
@@ -94,8 +94,8 @@
     /></g
     ><g transform="translate(160,160)"
     ><rect fill="none" x="0.5" width="110" height="118.5" y="10.5" clip-path="url(#clipPath4)"
-      /><text x="27" font-size="14" y="27.8174" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >Server A</text
+      /><text x="19" font-size="14" y="27.8174" clip-path="url(#clipPath4)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      >Machine A</text
     ></g
     ><g transform="translate(150,310)"
     ><path fill="none" d="M50.5 20.5 L10.5 20.5" clip-path="url(#clipPath5)"
