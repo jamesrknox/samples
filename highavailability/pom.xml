@@ -15,6 +15,7 @@
     <modules>
         <module>two-node-active-standby</module>
         <module>two-node-active-active</module>
+        <module>three-node-active-active</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->
