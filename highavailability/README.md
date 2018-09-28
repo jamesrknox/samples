@@ -6,3 +6,4 @@ Samples :
 
 * [How to build a 2-node active standby deployment.](two-node-active-standby)
 * [How to build a 2-node active active deployment.](two-node-active-active)
+* [How to build a 3-node active active deployment.](three-node-active-active)
