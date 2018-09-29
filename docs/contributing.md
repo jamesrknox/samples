@@ -22,13 +22,13 @@ We follow the GitHub flow process, including :
 
 ## Sample requirements
 
-* Samples may consists of one of :
+* Samples may consist of one of :
   * A single fragment
   * A [maven aggregator](http://maven.apache.org/pom.html#Aggregation) + more than one fragment
   * A [maven aggregator](http://maven.apache.org/pom.html#Aggregation) + at least one application archive + at least one fragment
 * Samples contain documentation in [markdown](https://guides.github.com/features/mastering-markdown/) format conforming to [maven site documentation rules](https://maven.apache.org/guides/mini/guide-site.html), containing :
     * Introduction
-    * Business logic description, including screen shots
+    * Code description or design notes, including studio screen shots if useful
     * For application archives, deployment description
     * Test case description and expected results
     * Links to main files ( such as configurations and pom.xml )
@@ -47,9 +47,9 @@ We follow the GitHub flow process, including :
     * Care must be taken to keep the metadata intact ( for example maintain copyright and license information ) so that the maven site info reports are correct.
 * It must be possible for anyone to setup their own maven repository, build and execute all tests.
 * Samples must go through standard development process including :
-  * Requirements - reviewed
-  * Design - reviewed
-  * Implementation - reviewed
+  * Requirements - reviewed by TIBCO engineering
+  * Design - reviewed by TIBCO engineering
+  * Implementation - reviewed by TIBCO engineering
   * Testing
 * Commit messages should be clear and concise, describing the change well and referencing jira or github issue number
 

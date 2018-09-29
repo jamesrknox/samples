@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>TIBCO StreamBase Samples</name>
-    <description>This github repository contains a number of TIBCO StreamBase samples that can cloned to your local workspace.</description>
+    <description>This github repository contains a number of TIBCO StreamBase samples that can be cloned to your local workspace.</description>
 
     <modules>
         <module>structure</module>
