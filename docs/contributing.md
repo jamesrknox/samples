@@ -13,7 +13,7 @@ We follow the GitHub flow process, including :
 * Any user can submit a pull request
     * The request should mention @streambasesamples
     * One or more collaborators will engage with the aim of accepting the pull request
-    * Pull requests can contain changes to existing samples or proposals for new samples
+    * Pull requests can contain changes to existing samples or new samples
 * All issues are tracked by github issues
     * See https://github.com/plord12/samples/issues
     * Optionally, any related internal jira issues can be referenced
@@ -29,7 +29,7 @@ We follow the GitHub flow process, including :
 * Samples contain documentation in [markdown](https://guides.github.com/features/mastering-markdown/) format conforming to [maven site documentation rules](https://maven.apache.org/guides/mini/guide-site.html), containing :
     * Introduction
     * Code description or design notes, including studio screen shots if useful
-    * For application archives, deployment description
+    * For application archives, deployment configuration and instructions
     * Test case description and expected results
     * Links to main files ( such as configurations and pom.xml )
 * Fragments must include junit test case(s)
@@ -41,7 +41,7 @@ We follow the GitHub flow process, including :
 * Ideally samples shouldn't reference 3rd party dependencies not available publicly or part of the StreamBase release. 
     This allows samples to work without additional steps for both customers and automated builds.  However, when this isn't possible, the following applies : 
     * If the dependency is available on a vendor maintained maven repository, instructions are provided in that sample to use that repository.
-    * If the dependency is only available with a manual download, instructions are provided in the sample to to manually download the dependency, install into 
+    * If the dependency is only available with a manual download, instructions are provided in the sample to manually download the dependency, install into 
     the local maven repository and (optionally) deploy to a shared repository.
     * Internally, we do the same but deploy (or mirror) the dependency to a shared 3rd party repository. This repository is included in the sample builds.
     * Care must be taken to keep the metadata intact ( for example maintain copyright and license information ) so that the maven site info reports are correct.
@@ -49,9 +49,10 @@ We follow the GitHub flow process, including :
 * Samples must go through standard development process including :
   * Requirements - reviewed by TIBCO engineering
   * Design - reviewed by TIBCO engineering
-  * Implementation - reviewed by TIBCO engineering
+  * Implementation - reviewed by any collaborator
   * Testing
-* Commit messages should be clear and concise, describing the change well and referencing jira or github issue number
+* Commit messages should be clear and concise, describing the change well and referencing jira or github issue number.  
+    See https://chris.beams.io/posts/git-commit/? for a description of good commit messages.
 
 ## Empty directories
 

@@ -4,7 +4,7 @@ These samples are kept on-line in github - this allows browsing of the samples o
 support of contributions outside of TIBCO engineering and updates outside of the main
 product release lifecycle.
 
-The samples also be imported into TIBCO StreamBase Studio&trade; :
+The samples can also be imported into TIBCO StreamBase Studio&trade; :
 
 ## Using smart import
 
