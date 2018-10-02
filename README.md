@@ -1,6 +1,6 @@
 # TIBCO StreamBase&reg; 10.4.0 Samples
 
-This github repository contains a number of TIBCO StreamBase&reg; 10.4.0 samples that can cloned to your local workspace.
+This github repository contains a number of TIBCO StreamBase&reg; 10.4.0 samples that can be cloned to your local workspace.
 
 Overview:
 
