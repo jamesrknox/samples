@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
     <version>1.0.0</version>
     <name>Adapter : Custom - Sample Adapter</name>
-    <description>How to build and unit test a custom adapter.</description>
+    <description>How to build and unit test a custom Java adapter.</description>
 
     <url>https://github.com/plord12/samples</url>
 
