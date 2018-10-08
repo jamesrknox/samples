@@ -38,7 +38,7 @@ Processing is always on the local node, hence :
 
 ## Running this sample from TIBCO StreamBase Studio&trade;
 
-Use the **Run As -> EventFlow Fragment** menu option to run in TIBCO StreamBase Studio&trade;, and then enqueue test messages :
+Use the **Run As -> EventFlow Fragment** menu option to run in TIBCO StreamBase Studio&trade;, and then enqueue tuples :
 
 Note that here we are unit testing the business logic rather than high availability - in this sample we test high availability in
 the application archive integration test cases.  The unit test cases can test high availability by loading an activating test versions 

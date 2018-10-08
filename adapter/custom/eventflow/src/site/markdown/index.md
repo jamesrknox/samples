@@ -24,7 +24,7 @@ type and configure the schema :
 
 ## Running this sample from TIBCO StreamBase Studio&trade;
 
-Use the **Run As -> EventFlow Fragment** menu option to run in TIBCO StreamBase Studio&trade;, and then enqueue test messages :
+Use the **Run As -> EventFlow Fragment** menu option to run in TIBCO StreamBase Studio&trade;, and then enqueue tuples :
 
 ![RunFromStudio](images/studio.gif)
 

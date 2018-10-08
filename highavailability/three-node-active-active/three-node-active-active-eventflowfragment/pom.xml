@@ -67,4 +67,11 @@
         </plugins>
     </build>
 
+    <dependencies>
+    	<dependency>
+    		<groupId>com.tibco.ep.sb</groupId>
+    		<artifactId>standard-extensions</artifactId>
+    		<version>10.4.0-SNAPSHOT</version>
+    	</dependency>
+    </dependencies>
 </project>

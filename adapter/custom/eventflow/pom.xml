@@ -10,7 +10,7 @@
     <packaging>ep-eventflow-fragment</packaging>
     <version>1.0.0</version>
     <name>Adapter : Custom - EventFlow</name>
-    <description>How to use a custom adapter in EventFlow.</description>
+    <description>How to use a custom Java adapter in EventFlow.</description>
 
     <url>https://github.com/plord12/samples</url>
 

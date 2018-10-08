@@ -1,7 +1,7 @@
 /*******************************************************************************
  *
  * COPYRIGHT
- *      Copyright 2015, 2016 TIBCO Software Inc. ALL RIGHTS RESERVED.
+ *      Copyright 2018 TIBCO Software Inc. ALL RIGHTS RESERVED.
  *      TIBCO Software Inc. Confidential Information
  *      
  *******************************************************************************/

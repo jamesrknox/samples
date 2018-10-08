@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>Adapter : Custom - Aggregator</name>
-    <description>How to use custom adapters with EventFlow.</description>
+    <description>How to use a custom java adapter in EventFlow.</description>
 
     <url>https://github.com/plord12/samples</url>
 

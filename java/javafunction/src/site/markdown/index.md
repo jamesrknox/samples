@@ -16,7 +16,7 @@ This sample uses the following java function :
 /*******************************************************************************
  *
  * COPYRIGHT
- *      Copyright 2015, 2016 TIBCO Software Inc. ALL RIGHTS RESERVED.
+ *      Copyright 2018 TIBCO Software Inc. ALL RIGHTS RESERVED.
  *      TIBCO Software Inc. Confidential Information
  *      
  *******************************************************************************/
@@ -171,7 +171,7 @@ configuration =
 
 ## Running this sample from TIBCO StreamBase Studio&trade;
 
-Use the **Run As -> EventFlow Fragment** menu option to run in TIBCO StreamBase Studio&trade;, and then enqueue test messages :
+Use the **Run As -> EventFlow Fragment** menu option to run in TIBCO StreamBase Studio&trade;, and then enqueue tuples :
 
 ![RunFromStudio](images/studio.gif)
 
