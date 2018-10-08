@@ -1,6 +1,6 @@
 # Adapter : Custom - Aggregator
 
-How to use custom adapters with EventFlow.
+How to use a custom java adapter in EventFlow.
 
 This is a maven aggregator project consisting of the following maven modules :
 
