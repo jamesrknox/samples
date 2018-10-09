@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>HA : 2-node active standby - Aggregator</name>
-    <description>How to build a 2-node active standby deployment.</description>
+    <description>How to build a 2-node active standby deployment with static data distribution policy.</description>
 
     <url>https://github.com/plord12/samples</url>
 

@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>HA : 2-node active active - Aggregator</name>
-    <description>How to build a 2-node active active deployment.</description>
+    <description>How to build a 2-node active active deployment with dynamic data distribution policy.</description>
 
     <url>https://github.com/plord12/samples</url>
 

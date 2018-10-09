@@ -70,10 +70,7 @@ type = "com.tibco.ep.dtm.configuration.node"
 configuration = {
     NodeDeploy = {
         nodes = {
-            "A.two-node-active-active-application" = {
-            }
-            "B.two-node-active-active-application" = {
-            }
+            "${EP_NODE_NAME}" = { }
         }
     }
 }

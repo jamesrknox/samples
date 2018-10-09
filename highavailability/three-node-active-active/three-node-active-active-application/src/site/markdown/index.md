@@ -59,8 +59,8 @@ configuration = {
 
 ## Define the node deployment configuration
 
-Since this sample uses the default availability zone, it doesn't need to be specified again, so
-the node deployment configuration is :
+The **minimumNumberOfVotes** configuration enables quorums, so the node deployment
+configuration is :
 
 ```scala
 name = "three-node-active-active-application"
@@ -70,36 +70,27 @@ type = "com.tibco.ep.dtm.configuration.node"
 configuration = {
     NodeDeploy = {
         nodes = {
-            "A.three-node-active-active-application" = {
+            "${EP_NODE_NAME}" = {
                 availabilityZoneMemberships = {
                     default-cluster-wide-availability-zone = {
-                        votes = 1
                     }
                 }
-            }
-            "B.three-node-active-active-application" = {
-                availabilityZoneMemberships = {
-                    default-cluster-wide-availability-zone = {
-                        votes = 1
-                    }
-                }
-            }
-            "C.three-node-active-active-application" = {
-                availabilityZoneMemberships = {
-                    default-cluster-wide-availability-zone = {
-                        votes = 1
-                    }
-                }
-            }            
+            }          
         }
         availabilityZones = {
             default-cluster-wide-availability-zone = {
                 dataDistributionPolicy = "default-dynamic-data-distribution-policy"
+                // enable quorums - each node must be able to see itself plus 1 other node
+                //
+                minimumNumberOfVotes = 2
             }
         }
     }
 }
 ```
+
+Note that **percentageOfVotes** could be used instead.  An alternative configuration for quorums could
+use **quorumMemberPattern**.
 
 ## Design notes
 
