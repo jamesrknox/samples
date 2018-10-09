@@ -7,7 +7,7 @@ public class CallCpp {
 
     static {
         //
-        // Don't need the native part when we're typechecking in studio
+        // Don't load the native library when we're typechecking in studio
         //
         if (System.getProperty("streambase.ide.is-running") == null) {
             System.loadLibrary("nar-cpplib-1.0.0");
