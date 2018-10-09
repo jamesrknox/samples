@@ -10,7 +10,7 @@
     <packaging>ep-eventflow-fragment</packaging>
     <version>1.0.0</version>
     <name>Java : Java Function</name>
-    <description>How to build and use java libraries with EventFlow.</description>
+    <description>How to invoke java code from EventFlow.</description>
 
     <url>https://github.com/plord12/samples</url>
 

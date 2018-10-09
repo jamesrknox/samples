@@ -10,11 +10,11 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>Java</name>
-    <description>How to use Java in TIBCO StreamBase projects.</description>
+    <description>How to invoke Java from TIBCO StreamBase projects.</description>
 
-	<modules>
-		<module>javafunction</module>
-	</modules>
+    <modules>
+        <module>javafunction</module>
+    </modules>
 
     <!-- skip site docs in this aggregator -->
     <build>

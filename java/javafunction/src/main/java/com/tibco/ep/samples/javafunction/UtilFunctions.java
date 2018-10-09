@@ -14,6 +14,7 @@ import com.streambase.sb.CompleteDataType;
 import com.streambase.sb.DataType;
 import com.streambase.sb.Schema;
 import com.streambase.sb.StreamBaseException;
+import com.streambase.sb.StreamBaseRuntimeException;
 import com.streambase.sb.Tuple;
 import com.streambase.sb.TupleException;
 import com.streambase.sb.client.CustomFunctionResolver;
@@ -24,9 +25,9 @@ import com.streambase.sb.operator.TypecheckException;
  */
 public class UtilFunctions {
 
-	/**
-	 * Thing schema
-	 */
+    /**
+     * Thing schema
+     */
     protected static Schema ThingSchema = new Schema(null,
             Schema.createField(DataType.STRING, "name"),
             Schema.createField(DataType.DOUBLE, "width"),
@@ -78,7 +79,7 @@ public class UtilFunctions {
                 density = sumDensity / numValidThings;
 
         } catch (StreamBaseException e) {
-            e.printStackTrace();
+            throw new StreamBaseRuntimeException(e.getCause());
         }
 
         return density;
@@ -112,7 +113,7 @@ public class UtilFunctions {
      */
     public static CompleteDataType DensityCustomFunctionResolver0(CompleteDataType things) {
         if(!things.equals(CompleteDataType.forList(CompleteDataType.forTuple(ThingSchema)))) {
-            throw new Error(new TypecheckException(MessageFormat.format("Expected list of {0}, got {1}", ThingSchema, things)));
+            throw new StreamBaseRuntimeException(new TypecheckException(MessageFormat.format("Expected list of {0}, got {1}", ThingSchema, things)));
         }
 
         return CompleteDataType.forDouble();
