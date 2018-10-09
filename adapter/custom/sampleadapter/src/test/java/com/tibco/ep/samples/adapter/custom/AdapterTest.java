@@ -7,6 +7,8 @@
  *******************************************************************************/
 package com.tibco.ep.samples.adapter.custom;
 
+import static org.junit.Assert.assertNotNull;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,6 +19,7 @@ import com.streambase.sb.unittest.Expecter;
 import com.streambase.sb.unittest.JSONSingleQuotesTupleMaker;
 import com.streambase.sb.unittest.SBServerManager;
 import com.streambase.sb.unittest.ServerManagerFactory;
+import com.tibco.ep.testing.framework.Configuration;
 import com.tibco.ep.testing.framework.UnitTest;
 
 /**
@@ -32,10 +35,13 @@ public class AdapterTest extends UnitTest {
      */
     @BeforeClass
     public static void setupServer() throws Exception {
-        // create a StreamBase server and load applications once for all tests in this class
+        // Example configuration load
+        // Configuration.forFile("engine.conf").load().activate();
+        
+        // create a StreamBase server and load modules once for all tests in this class
         server = ServerManagerFactory.getEmbeddedServer();
         server.startServer();
-        server.loadApp("com.tibco.ep.samples.adapter.custom.test");
+        server.loadApp("com.tibco.ep.samples.adapter.custom.Test");
     }
 
     /**
@@ -44,9 +50,12 @@ public class AdapterTest extends UnitTest {
      */
     @AfterClass
     public static void stopServer() throws Exception {
-        if (server != null) {
-            server.shutdownServer();
-            server = null;
+        try {
+        	assertNotNull(server);
+        	server.shutdownServer();
+        	server = null;
+        } finally {
+            Configuration.deactiveAndRemoveAll();
         }
     }
 

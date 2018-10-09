@@ -6,7 +6,7 @@ This sample describes how to write junit unit tests for EventFlow fragments.
 * [Using the test framework](#using-the-test-framework)
 * [Starting, stopping and loading configuration](#starting-stopping-and-loading-configuration)
 * [Test cases](#test-cases)
-* [Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases](#building-this-sample-from-tibco-streambase-studio-and-running-the-unit-test-cases)
+* [Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases](#building-this-sample-from-tibco-streambase-studio-trade-and-running-the-unit-test-cases)
 * [Building this sample from the command line and running the unit test cases](#building-this-sample-from-the-command-line-and-running-the-unit-test-cases)
 
 ## EventFlow under test
@@ -33,8 +33,8 @@ This allows access to :
 * [Running administration commands](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/Administration.html)
 * [Loading configurations](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/Configuration.html)
 * [Co-ordinating across multiple test node](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/MultiNodeCoordinator.html)
-* [Deadlock detection](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--)
-* [Managed object leak detection](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--)
+* [Transactional deadlock detection](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--)
+* [Transactional memory detection](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--)
 * [Test case timeout handling](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--)
 * [transactional abort mode](http://devzone.tibco.com/sites/streambase/latest/sb/sb-product/documentation/reference/dtm/com/tibco/ep/testing/framework/UnitTest.html#initialize--)
 
@@ -56,7 +56,7 @@ Any configuration required by the unit test case should be loaded and activated 
         // create a StreamBase server and load applications once for all tests in this class
         server = ServerManagerFactory.getEmbeddedServer();
         server.startServer();
-        server.loadApp("com.tibco.ep.samples.junit.junit");
+        server.loadApp("com.tibco.ep.samples.junit.JUnit");
     }
 
     /**
@@ -68,10 +68,9 @@ Any configuration required by the unit test case should be loaded and activated 
     @AfterClass
     public static void stopServer() throws InterruptedException, StreamBaseException {
         try {
-            if (server != null) {
-                server.shutdownServer();
-                server = null;
-            }
+            assertNotNull(server);
+            server.shutdownServer();
+            server = null;
         } finally {
             Configuration.deactiveAndRemoveAll();
         }
@@ -123,15 +122,15 @@ API to enqueue tubles and verify the results :
     public void tooSmall() throws StreamBaseException {
     	LOGGER.info("Too small");
     	
-        server.getEnqueuer("in").enqueue(JSONSingleQuotesTupleMaker.MAKER,
+        server.getEnqueuer("test.in").enqueue(JSONSingleQuotesTupleMaker.MAKER,
                 "{'name':'a','price':-52.0,'quantity':100}");
         
-        new Expecter(server.getDequeuer("tooSmall")).expect(
+        new Expecter(server.getDequeuer("test.tooSmall")).expect(
                 JSONSingleQuotesTupleMaker.MAKER,
                 "{'name':'a','price':-52.0,'quantity':100}");  
-        new Expecter(server.getDequeuer("tooSmall")).expectNothing();
-        new Expecter(server.getDequeuer("tooBig")).expectNothing();
-        new Expecter(server.getDequeuer("justRight")).expectNothing();
+        new Expecter(server.getDequeuer("test.tooSmall")).expectNothing();
+        new Expecter(server.getDequeuer("test.tooBig")).expectNothing();
+        new Expecter(server.getDequeuer("test.justRight")).expectNothing();
     }
 ```
 

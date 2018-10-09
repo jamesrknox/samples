@@ -1,5 +1,7 @@
 package com.tibco.ep.samples.highavailability.three_node_active_active;
 
+import static org.junit.Assert.assertNotNull;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -43,10 +45,10 @@ public class TestCase extends UnitTest {
         // Example configuration load
         Configuration.forFile("clientlistener.conf").load().activate();
 
-        // create a StreamBase server and load applications once for all tests in this class
+        // create a StreamBase server and load modules once for all tests in this class
         server = ServerManagerFactory.getEmbeddedServer();
         server.startServer();
-        server.loadApp("com.tibco.ep.samples.highavailability.three_node_active_active.three-node-active-active-eventflowfragment");
+        server.loadApp("com.tibco.ep.samples.highavailability.three_node_active_active.ThreeNodeActiveActiveEventFlowFragment");
     }
 
     /**
@@ -58,10 +60,9 @@ public class TestCase extends UnitTest {
     @AfterClass
     public static void stopServer() throws InterruptedException, StreamBaseException {
         try {
-            if (server != null) {
-                server.shutdownServer();
-                server = null;
-            }
+            assertNotNull(server);
+            server.shutdownServer();
+            server = null;
         } finally {
             Configuration.deactiveAndRemoveAll();
         }

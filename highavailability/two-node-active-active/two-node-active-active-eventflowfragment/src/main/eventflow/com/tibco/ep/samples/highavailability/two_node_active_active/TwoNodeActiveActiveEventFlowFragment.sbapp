@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<modify version="10.4.0-SNAPSHOT_33eb97d836366dd891943aea0d6d2ad9ff3e9284">
+<modify version="10.4.0-SNAPSHOT_c1dc2b237e10c176316f34eed9838c59eb59b00d">
     <add>
         <annotations>
             <annotation name="hygienic"/>
         </annotations>
         <type-metadata>
             <param name="type" value="module"/>
-            <param name="fully-qualified-name" value="com.tibco.ep.samples.highavailability.two_node_active_active.two-node-active-active-eventflowfragment"/>
+            <param name="fully-qualified-name" value="com.tibco.ep.samples.highavailability.two_node_active_active.TwoNodeActiveActiveEventFlowFragment"/>
         </type-metadata>
         <memory-model-settings/>
         <named-schemas>
@@ -144,6 +144,8 @@
                 <item name="current" selection="all">
                     <remove field="createdon"/>
                 </item>
+                <item name="old" selection="none"/>
+                <item name="new" selection="none"/>
             </target-list>
             <target-list goal-schema="NameValueSource" name="insert">
                 <item name="input" selection="all"/>
