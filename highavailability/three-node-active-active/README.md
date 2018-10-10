@@ -1,6 +1,6 @@
 # HA : 3-node active active - Aggregator
 
-How to build a 3-node active active deployment.
+How to build a 3-node active active deployment with dynamic data distribution policy.
 
 This is a maven aggregator project consisting of the following maven modules :
 

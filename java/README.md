@@ -1,6 +1,6 @@
 # Java
 
-How to use Java in TIBCO StreamBase&reg; 10.4.0 projects.
+How to invoke Java from TIBCO StreamBase&reg; 10.4.0 projects.
 
 Samples :
 

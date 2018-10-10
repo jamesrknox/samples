@@ -15,6 +15,6 @@ Samples :
 * [How to structure TIBCO StreamBase&reg; 10.4.0 projects.](structure)
 * [How to test TIBCO StreamBase&reg; 10.4.0 projects.](testing)
 * [How to use native libraries in TIBCO StreamBase&reg; 10.4.0 projects.](nativelibrary)
-* [How to use Java in TIBCO StreamBase&reg; 10.4.0 projects.](java)
+* [How to invoke Java from TIBCO StreamBase&reg; 10.4.0 projects.](java)
 * [How to use adapters in TIBCO StreamBase&reg; 10.4.0 projects.](adapter)
 * [How to build Highly Available TIBCO StreamBase&reg; 10.4.0 projects.](highavailability)

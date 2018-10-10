@@ -1,6 +1,6 @@
 # HA : 2-node active standby - Aggregator
 
-How to build a 2-node active standby deployment.
+How to build a 2-node active standby deployment with static data distribution policy.
 
 This is a maven aggregator project consisting of the following maven modules :
 
