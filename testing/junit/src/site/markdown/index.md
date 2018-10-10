@@ -51,7 +51,7 @@ Any configuration required by the unit test case should be loaded and activated 
     public static void setupServer() throws StreamBaseException, ConfigurationException, InterruptedException {
         // Example configuration load
         // Configuration.forFile("engine.conf").load().activate();
-    	Configuration.forFile("engine.conf").load().activate();
+        Configuration.forFile("engine.conf").load().activate();
     	
         // create a StreamBase server and load applications once for all tests in this class
         server = ServerManagerFactory.getEmbeddedServer();
@@ -122,15 +122,15 @@ API to enqueue tubles and verify the results :
     public void tooSmall() throws StreamBaseException {
     	LOGGER.info("Too small");
     	
-        server.getEnqueuer("test.in").enqueue(JSONSingleQuotesTupleMaker.MAKER,
+        server.getEnqueuer("in").enqueue(JSONSingleQuotesTupleMaker.MAKER,
                 "{'name':'a','price':-52.0,'quantity':100}");
         
-        new Expecter(server.getDequeuer("test.tooSmall")).expect(
+        new Expecter(server.getDequeuer("tooSmall")).expect(
                 JSONSingleQuotesTupleMaker.MAKER,
                 "{'name':'a','price':-52.0,'quantity':100}");  
-        new Expecter(server.getDequeuer("test.tooSmall")).expectNothing();
-        new Expecter(server.getDequeuer("test.tooBig")).expectNothing();
-        new Expecter(server.getDequeuer("test.justRight")).expectNothing();
+        new Expecter(server.getDequeuer("tooSmall")).expectNothing();
+        new Expecter(server.getDequeuer("tooBig")).expectNothing();
+        new Expecter(server.getDequeuer("justRight")).expectNothing();
     }
 ```
 
