@@ -104,7 +104,7 @@ public class TestCase extends UnitTest {
     public static void setupServer() throws StreamBaseException, ConfigurationException, InterruptedException {
         // Example configuration load
         // Configuration.forFile(&quot;engine.conf&quot;).load().activate();
-    	Configuration.forFile(&quot;engine.conf&quot;).load().activate();
+        Configuration.forFile(&quot;engine.conf&quot;).load().activate();
     	
         // create a StreamBase server and load applications once for all tests in this class
         server = ServerManagerFactory.getEmbeddedServer();
@@ -175,15 +175,15 @@ public class TestCase extends UnitTest {
     public void tooSmall() throws StreamBaseException {
     	LOGGER.info(&quot;Too small&quot;);
     	
-        server.getEnqueuer(&quot;test.in&quot;).enqueue(JSONSingleQuotesTupleMaker.MAKER,
+        server.getEnqueuer(&quot;in&quot;).enqueue(JSONSingleQuotesTupleMaker.MAKER,
                 &quot;{'name':'a','price':-52.0,'quantity':100}&quot;);
         
-        new Expecter(server.getDequeuer(&quot;test.tooSmall&quot;)).expect(
+        new Expecter(server.getDequeuer(&quot;tooSmall&quot;)).expect(
                 JSONSingleQuotesTupleMaker.MAKER,
                 &quot;{'name':'a','price':-52.0,'quantity':100}&quot;);  
-        new Expecter(server.getDequeuer(&quot;test.tooSmall&quot;)).expectNothing();
-        new Expecter(server.getDequeuer(&quot;test.tooBig&quot;)).expectNothing();
-        new Expecter(server.getDequeuer(&quot;test.justRight&quot;)).expectNothing();
+        new Expecter(server.getDequeuer(&quot;tooSmall&quot;)).expectNothing();
+        new Expecter(server.getDequeuer(&quot;tooBig&quot;)).expectNothing();
+        new Expecter(server.getDequeuer(&quot;justRight&quot;)).expectNothing();
     }
 </pre></div></div>
 </div>
