@@ -47,7 +47,7 @@
                 </expressions>
             </target-list>
         </box>
-        <box name="calcDenisity" type="map">
+        <box name="CalcDensity" type="map">
             <input port="1" stream="out:makeList_1"/>
             <output port="1" stream="out"/>
             <target-list>
