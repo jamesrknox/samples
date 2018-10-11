@@ -18,6 +18,17 @@ Use **Import -> Git -> Projects from Git ( with smart import )** menu option.  S
 
 TBD
 
+## Working with multiple projects
+
+By default, projects are organized in TIBCO StreamBase Studio&trade; in a flat structure :
+
+![flat](flat.png)
+
+With multiple projects ( such as importing all the samples ) this can become confusing.  Use
+**Projects Presentation -> Hierarchical** for a more structured organization :
+
+![hierarchical](hierarchical.gif)
+
 ## Other useful eclipse plugins
 
 * [Markdown Text Editor](https://marketplace.eclipse.org/content/markdown-text-editor)
