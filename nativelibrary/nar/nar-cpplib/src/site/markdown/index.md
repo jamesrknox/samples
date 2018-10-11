@@ -5,6 +5,7 @@ resulting archive can then be used in a downstream EventFlow fragment.
 
 * [C++ Source](#c-source)
 * [Compilation to native library and generate NAR archive](#compilation-to-native-library-and-generate-nar-archive)
+* [Environmental requirements](#environmental-requirements)
 * [Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases](#building-this-sample-from-tibco-streambase-studio-trade-and-running-the-unit-test-cases)
 * [Building this sample from the command line and running the unit test cases](#building-this-sample-from-the-command-line-and-running-the-unit-test-cases)
 
@@ -59,6 +60,21 @@ The following maven build rule is used :
                     </libraries>
                 </configuration>
             </plugin>
+```
+
+## Environmental requirements
+
+To build a shared library from source, native compilers must be correctly installed - see [maven nar plugin](http://maven-nar.github.io/)
+for full details.  However, this sample has been tested with :
+
+* MacOS - [Xcode](https://developer.apple.com/xcode/)
+* Linux - [the GNU Compiler Collection](https://www.gnu.org/software/gcc/)
+* Windows - [Visual Studio](https://visualstudio.microsoft.com/)
+
+For windows, ensure the COMNTOOLS environment variable is set, for example :
+
+```
+VS120COMNTOOLS=C:\\Program Files\ (x86)\\Microsoft\ Visual\ Studio\ 12.0\\Common7\\Tools\\
 ```
 
 ## Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases
