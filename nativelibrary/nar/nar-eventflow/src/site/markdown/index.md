@@ -6,7 +6,7 @@ This sample describes how to use a Native ARchive (.nar) dependency in an EventF
 * [Declare a java wrapper class](#declare-a-java-wrapper-class)
 * [Provide a engine configuration for EventFlow use](#provide-a-engine-configuration-for-eventflow-use)
 * [Using in EventFlow](#using-in-eventflow)
-* [Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases](#building-this-sample-from-tibco-streambase-studio-and-running-the-unit-test-cases)
+* [Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases](#building-this-sample-from-tibco-streambase-studio-trade-and-running-the-unit-test-cases)
 * [Building this sample from the command line and running the unit test cases](#building-this-sample-from-the-command-line-and-running-the-unit-test-cases)
 
 ## Declare the NAR as a dependency

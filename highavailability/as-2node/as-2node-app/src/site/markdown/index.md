@@ -36,7 +36,7 @@ data distribution policy :
 
 
 ```scala
-name = "two-node-active-standby-application"
+name = "as-2node-app"
 version = "1.0.0"
 type = "com.tibco.ep.dtm.configuration.application"
 
@@ -65,14 +65,19 @@ configuration = {
 A node deployment configuration defines the availability zone :
 
 ```scala
-name = "two-node-active-standby-application"
+name = "as-2node-app"
 version = "1.0.0"
 type = "com.tibco.ep.dtm.configuration.node"
 
 configuration = {
     NodeDeploy = {
         nodes = {
-            "A.two-node-active-standby-application" = {
+            "A.as-2node-app" = {
+                engines = {
+                    as-2node-ef = {
+                        fragmentIdentifier = "com.tibco.ep.samples.highavailability.as-2node-ef"                                                                
+                    }                                                    
+                }
                 availabilityZoneMemberships = {
                     static-availability-zone = {
                         staticPartitionBindings = {
@@ -83,7 +88,12 @@ configuration = {
                     }
                 }
             }
-            "B.two-node-active-standby-application" = {
+            "B.as-2node-app" = {
+                engines = {
+                    as-2node-ef = {
+                        fragmentIdentifier = "com.tibco.ep.samples.highavailability.as-2node-ef"                                                                
+                    }                                                    
+                }
                 availabilityZoneMemberships = {
                     static-availability-zone = {
                         staticPartitionBindings = {

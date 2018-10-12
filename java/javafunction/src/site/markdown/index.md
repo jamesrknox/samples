@@ -18,7 +18,7 @@ See [UtilFunctions.java](../../src/main/java/com/tibco/ep/samples/javafunction/U
 A engine configuration is required to declare the functions available :
 
 ```scala
-name = "sbapp-calls-java-engine"
+name = "javafunction-engine"
 version = "1.0.0"
 type = "com.tibco.ep.streambase.configuration.sbengine"
 

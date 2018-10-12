@@ -4,8 +4,8 @@ This sample describes how to use a custom adapter in EventFlow.
 
 * [Import the adapter as a dependency](#import-the-adapter-as-a-dependency)
 * [Add adapter to EventFlow](#add-adapter-to-eventflow)
-* [Running this sample from TIBCO StreamBase Studio&trade;](#running-this-sample-from-tibco-streambase-studio)
-* [Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases](#building-this-sample-from-tibco-streambase-studio-and-running-the-unit-test-cases)
+* [Running this sample from TIBCO StreamBase Studio&trade;](#running-this-sample-from-tibco-streambase-studio-trade)
+* [Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases](#building-this-sample-from-the-command-line-and-running-the-unit-test-cases)
 * [Building this sample from the command line and running the unit test cases](#building-this-sample-from-the-command-line-and-running-the-unit-test-cases)
 
 ## Import the adapter as a dependency

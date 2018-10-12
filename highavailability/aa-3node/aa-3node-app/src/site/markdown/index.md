@@ -38,7 +38,9 @@ so the application definition configuration is :
 
 
 ```scala
-name = "two-node-active-active-application"
+// Application definition configuration
+//
+name = "aa-3node-app"
 version = "1.0.0"
 type = "com.tibco.ep.dtm.configuration.application"
 
@@ -63,7 +65,7 @@ The **minimumNumberOfVotes** configuration enables quorums, so the node deployme
 configuration is :
 
 ```scala
-name = "three-node-active-active-application"
+name = "aa-3node-app"
 version = "1.0.0"
 type = "com.tibco.ep.dtm.configuration.node"
 
@@ -71,6 +73,11 @@ configuration = {
     NodeDeploy = {
         nodes = {
             "${EP_NODE_NAME}" = {
+                engines = {
+                    aa-3node-ef = {
+                        fragmentIdentifier = "com.tibco.ep.samples.highavailability.aa-3node-ef"                                                                
+                    }                                                    
+                }
                 availabilityZoneMemberships = {
                     default-cluster-wide-availability-zone = {
                     }

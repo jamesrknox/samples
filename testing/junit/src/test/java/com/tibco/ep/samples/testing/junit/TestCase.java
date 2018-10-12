@@ -16,7 +16,6 @@ import com.streambase.sb.unittest.Expecter;
 import com.streambase.sb.unittest.JSONSingleQuotesTupleMaker;
 import com.streambase.sb.unittest.SBServerManager;
 import com.streambase.sb.unittest.ServerManagerFactory;
-import com.tibco.ep.testing.framework.Administration;
 import com.tibco.ep.testing.framework.Configuration;
 import com.tibco.ep.testing.framework.ConfigurationException;
 import com.tibco.ep.testing.framework.TransactionalDeadlockDetectedException;
@@ -90,9 +89,6 @@ public class TestCase extends UnitTest {
     @Test
     public void tooSmall() throws StreamBaseException {
     	LOGGER.info("Too small");
-
-    	Administration admin = new Administration();
-    	LOGGER.info(admin.execute("display", "container").toString());
 
         server.getEnqueuer("in").enqueue(JSONSingleQuotesTupleMaker.MAKER,
                 "{'name':'a','price':-52.0,'quantity':100}");

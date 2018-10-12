@@ -38,7 +38,7 @@ so the application definition configuration is :
 
 
 ```scala
-name = "two-node-active-active-application"
+name = "aa-2node-app"
 version = "1.0.0"
 type = "com.tibco.ep.dtm.configuration.application"
 
@@ -63,14 +63,20 @@ Since this sample uses the default availability zone, it doesn't need to be spec
 the node deployment configuration is :
 
 ```scala
-name = "two-node-active-active-application"
+name = "aa-2node-app"
 version = "1.0.0"
 type = "com.tibco.ep.dtm.configuration.node"
 
 configuration = {
     NodeDeploy = {
         nodes = {
-            "${EP_NODE_NAME}" = { }
+            "${EP_NODE_NAME}" = { 
+                engines = {
+                    aa-2node-ef = {
+                        fragmentIdentifier = "com.tibco.ep.samples.highavailability.aa-2node-ef"                                                                
+                    }                                                    
+                }
+            }
         }
     }
 }

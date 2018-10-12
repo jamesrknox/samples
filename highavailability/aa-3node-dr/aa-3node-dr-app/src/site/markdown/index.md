@@ -41,7 +41,7 @@ to specify this in the application definition :
 
 
 ```scala
-name = "three-node-active-active-dr-application"
+name = "aa-3node-dr-app"
 version = "1.0.0"
 type = "com.tibco.ep.dtm.configuration.application"
 
@@ -83,14 +83,19 @@ data center nodes to **PRIMARY**.  Also,  we need to override the default value 
 configuration enables quorums for the main data center, so the node deployment configuration is :
 
 ```scala
-name = "three-node-active-active-dr-application"
+name = "aa-3node-dr-app"
 version = "1.0.0"
 type = "com.tibco.ep.dtm.configuration.node"
 
 configuration = {
     NodeDeploy = {
         nodes = {
-            "A.three-node-active-active-dr-application" = {
+            "A.aa-3node-dr-app" = {
+                engines = {
+                    aa-3node-dr-ef = {
+                        fragmentIdentifier = "com.tibco.ep.samples.highavailability.aa-3node-dr-ef"                                                                
+                    }                                                    
+                }
                 availabilityZoneMemberships = {
                     default-cluster-wide-availability-zone = {
                         dynamicPartitionBinding = {
@@ -101,7 +106,12 @@ configuration = {
                     }
                 }
             }
-            "B.three-node-active-active-dr-application" = {
+            "B.aa-3node-dr-app" = {
+                engines = {
+                    aa-3node-dr-ef = {
+                        fragmentIdentifier = "com.tibco.ep.samples.highavailability.aa-3node-dr-ef"                                                                
+                    }                                                    
+                }
                 availabilityZoneMemberships = {
                     default-cluster-wide-availability-zone = {
                         dynamicPartitionBinding = {
@@ -112,7 +122,12 @@ configuration = {
                     }
                 }
             }
-            "C.three-node-active-active-dr-application" = {
+            "C.aa-3node-dr-app" = {
+                engines = {
+                    aa-3node-dr-ef = {
+                        fragmentIdentifier = "com.tibco.ep.samples.highavailability.aa-3node-dr-ef"                                                                
+                    }                                                    
+                }
                 availabilityZoneMemberships = {
                     default-cluster-wide-availability-zone = {
                         dynamicPartitionBinding = {
@@ -123,7 +138,12 @@ configuration = {
                     }
                 }
             }
-            "D.three-node-active-active-dr-application" = {
+            "D.aa-3node-dr-app" = {
+                engines = {
+                    aa-3node-dr-ef = {
+                        fragmentIdentifier = "com.tibco.ep.samples.highavailability.aa-3node-dr-ef"                                                                
+                    }                                                    
+                }
                 availabilityZoneMemberships = {
                     default-cluster-wide-availability-zone = {
                         dynamicPartitionBinding = {
