@@ -1,36 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?><application-layout>
     <component name="in">
-        <param name="gui:x" value="-723"/>
-        <param name="gui:y" value="-82"/>
+        <param name="gui:x" value="-764"/>
+        <param name="gui:y" value="-118"/>
     </component>
     <component name="justRightLog">
-        <param name="gui:x" value="-494"/>
+        <param name="gui:x" value="-463"/>
         <param name="gui:y" value="32"/>
-        <param name="gui:bends:1" value="-548,-42;-526,62"/>
     </component>
     <component name="tooBigLog">
-        <param name="gui:x" value="-494"/>
-        <param name="gui:y" value="-82"/>
+        <param name="gui:x" value="-467"/>
+        <param name="gui:y" value="-92"/>
     </component>
     <component name="tooSmallLog">
-        <param name="gui:x" value="-494"/>
-        <param name="gui:y" value="-196"/>
-        <param name="gui:bends:1" value="-539,-62;-513,-166"/>
+        <param name="gui:x" value="-471"/>
+        <param name="gui:y" value="-197"/>
     </component>
     <component name="validatePrices">
-        <param name="gui:x" value="-618"/>
-        <param name="gui:y" value="-82"/>
+        <param name="gui:x" value="-620"/>
+        <param name="gui:y" value="-118"/>
     </component>
     <component name="justRight">
-        <param name="gui:x" value="-381"/>
+        <param name="gui:x" value="-327"/>
         <param name="gui:y" value="32"/>
     </component>
     <component name="tooBig">
-        <param name="gui:x" value="-381"/>
-        <param name="gui:y" value="-82"/>
+        <param name="gui:x" value="-327"/>
+        <param name="gui:y" value="-92"/>
     </component>
     <component name="tooSmall">
-        <param name="gui:x" value="-381"/>
-        <param name="gui:y" value="-196"/>
+        <param name="gui:x" value="-321"/>
+        <param name="gui:y" value="-198"/>
     </component>
 </application-layout>

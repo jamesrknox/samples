@@ -128,13 +128,13 @@ public class TestCase extends UnitTest {
     }
 
     /**
-     * Test all
+     * Test set and increment
      * 
      * @throws StreamBaseException Test failed
      */
     @Test
-    public void testAll() throws StreamBaseException {
-    	LOGGER.info("Running testAll");
+    public void testSetAndIncrement() throws StreamBaseException {
+    	LOGGER.info("Running testSetAndIncrement");
     	
         server.getEnqueuer("set").enqueue(JSONSingleQuotesTupleMaker.MAKER,
                 "{'i':1}", "{'i':2}");
