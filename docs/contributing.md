@@ -53,6 +53,9 @@ We follow the GitHub flow process, including :
   * Testing
 * Commit messages should be clear and concise, describing the change well and referencing jira or github issue number.  
     See https://chris.beams.io/posts/git-commit/? for a description of good commit messages.
+* In order to support windows, samples should limit file lengths as much as possible :
+  * Keep artifactId's short
+  * In node deployment files, specify short engine name 
 
 ## Empty directories
 

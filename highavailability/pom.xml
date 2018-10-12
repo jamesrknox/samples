@@ -13,10 +13,10 @@
     <description>How to build Highly Available TIBCO StreamBase projects.</description>
 
     <modules>
-        <module>2node-as</module>
-        <module>two-node-active-active</module>
-        <module>three-node-active-active</module>
-        <module>three-node-active-active-dr</module>
+        <module>as-2node</module>
+        <module>aa-2node</module>
+        <module>aa-3node</module>
+        <module>aa-3node-dr</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->

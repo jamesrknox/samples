@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<modify version="10.4.0-SNAPSHOT_c1dc2b237e10c176316f34eed9838c59eb59b00d">
+<modify version="10.4.0-SNAPSHOT_fc6039aa3ab3645431a40ff91436802290821a77">
     <add>
         <annotations>
             <annotation name="hygienic"/>
@@ -10,8 +10,10 @@
         </type-metadata>
         <memory-model-settings/>
         <import from="com.tibco.ep.samples.junit.junitSchemaDefs"/>
-        <constant expr="2000" name="MAX_VALUE"/>
-        <constant expr="1000" name="MIN_VALUE"/>
+        <parameter-definitions>
+            <parameter default="2000" name="MIN_VALUE"/>
+            <parameter default="3000" name="MAX_VALUE"/>
+        </parameter-definitions>
         <dynamic-variables/>
         <stream name="in" schema="PriceSchema"/>
         <box name="validatePrices" type="filter">
@@ -20,8 +22,8 @@
             <output port="2" stream="out:validatePrices_2"/>
             <output port="3" stream="out:validatePrices_3"/>
             <param name="autogen-nomatch-port" value="true"/>
-            <param name="expression.0" value="price &lt; MIN_VALUE"/>
-            <param name="expression.1" value="price &gt; MAX_VALUE"/>
+            <param name="expression.0" value="price &lt; ${MIN_VALUE}"/>
+            <param name="expression.1" value="price &gt; ${MAX_VALUE}"/>
             <param name="expression.2" value="true"/>
         </box>
         <box name="justRightLog" type="outputadapter">

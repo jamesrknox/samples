@@ -5,12 +5,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep.samples.structure</groupId>
-    <artifactId>application</artifactId>
+    <groupId>com.tibco.ep.samples.highavailability</groupId>
+    <artifactId>aa-2node</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>Structure : Application - Aggregator</name>
-    <description>How to structure a maven aggregate project with EventFlow fragment and application archive.</description>
+    <name>HA : 2-node active active - Aggregator</name>
+    <description>How to build a 2-node active active deployment with dynamic data distribution policy.</description>
 
     <url>https://github.com/plord12/samples</url>
 
@@ -28,11 +28,11 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-
+    
     <!-- Aggregator pom -->
     <modules>
-        <module>application-ef</module>
-        <module>application-app</module>
+        <module>aa-2node-ef</module>
+        <module>aa-2node-app</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->
