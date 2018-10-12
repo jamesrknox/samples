@@ -1,11 +1,11 @@
-# HA : 3-node active active
+# HA : 3-node active active with disaster recovery
 
 This sample describes how to build an EventFlow fragment suitable for 3-node active active deployment.
 
 * [Store tuples in a query table backed by transactional memory](#store-tuples-in-a-query-table-backed-by-transactional-memory)
 * [Design notes](#design-notes)
-* [Running this sample from TIBCO StreamBase Studio&trade;](#running-this-sample-from-tibco-streambase-studio)
-* [Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases](#building-this-sample-from-tibco-streambase-studio-and-running-the-unit-test-cases)
+* [Running this sample from TIBCO StreamBase Studio&trade;](#running-this-sample-from-tibco-streambase-studio-trade)
+* [Building this sample from TIBCO StreamBase Studio&trade; and running the unit test cases](#building-this-sample-from-tibco-streambase-studio-trade-and-running-the-unit-test-cases)
 * [Building this sample from the command line and running the unit test cases](#building-this-sample-from-the-command-line-and-running-the-unit-test-cases)
 
 ## Store tuples in a query table backed by transactional memory
@@ -56,4 +56,3 @@ Use the **Run As -> EventFlow Fragment Unit Test** menu option to build from TIB
 Use the [maven](https://maven.apache.org) as **mvn install** to build from the command line or Continuous Integration system :
 
 ![maven](images/maven.gif)
-
