@@ -4,5 +4,5 @@ How to build a 2-node active standby deployment with static data distribution po
 
 This is a maven aggregator project consisting of the following maven modules :
 
-* [HA : 2-node active standby - EventFlow Fragment](two-node-active-standby-eventflowfragment/src/site/markdown/index.md) ([html](https://plord12.github.io/samples/10.4.0-SNAPSHOT/highavailability/two-node-active-standby/two-node-active-standby-eventflowfragment/))
-* [HA : 2-node active standby - Application](two-node-active-standby-application/src/site/markdown/index.md) ([html](https://plord12.github.io/samples/10.4.0-SNAPSHOT/highavailability/two-node-active-standby/two-node-active-standby-application/))
+* [HA : 2-node active standby - EventFlow Fragment](as-2node-ef/src/site/markdown/index.md) ([html](https://plord12.github.io/samples/10.4.0-SNAPSHOT/highavailability/as-2node/as-2node-ef/))
+* [HA : 2-node active standby - Application](as-2node-app/src/site/markdown/index.md) ([html](https://plord12.github.io/samples/10.4.0-SNAPSHOT/highavailability/as-2node/as-2node-app/))

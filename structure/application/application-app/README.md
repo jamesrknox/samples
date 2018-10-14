@@ -2,4 +2,4 @@
 
 How to structure a maven aggregate project with EventFlow fragment and application archive - Application
 
-* [application-application](src/site/markdown/index.md) ([html](https://plord12.github.io/samples/10.4.0-SNAPSHOT/structure/application/application-application/))
+* [application-app](src/site/markdown/index.md) ([html](https://plord12.github.io/samples/10.4.0-SNAPSHOT/structure/application/application-app/))
