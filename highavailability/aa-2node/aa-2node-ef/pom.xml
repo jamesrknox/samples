@@ -49,7 +49,7 @@
                 <configuration>
                     <server>github</server>
                     <message>Updated site documentation from jenkins</message>
-                    <path>${project.parent.version}/highavailability/two-node-active-active/${project.artifactId}</path>
+                    <path>${project.parent.version}/highavailability/aa-2node/${project.artifactId}</path>
                     <merge>true</merge>
                 </configuration>
             </plugin>
