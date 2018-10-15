@@ -5,19 +5,34 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep.samples</groupId>
-    <artifactId>highavailability</artifactId>
+    <groupId>com.tibco.ep.samples.highavailability</groupId>
+    <artifactId>pd-2node</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>HA</name>
-    <description>How to build Highly Available TIBCO StreamBase projects.</description>
+    <name>HA : 2-node active active + proxy discovery - Aggregator</name>
+    <description>How to build a 2-node active active deployment with dynamic data distribution policy and proxy discovery.</description>
 
+    <url>https://github.com/plord12/samples</url>
+
+    <inceptionYear>2018</inceptionYear>
+
+    <organization>
+        <name>TIBCO Software Inc.</name>
+        <url>http://www.tibco.com</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>BSD 3-Clause License</name>
+            <url>https://raw.githubusercontent.com/plord12/samples/master/docs/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
+    <!-- Aggregator pom -->
     <modules>
-        <module>as-2node</module>
-        <module>aa-2node</module>
-        <module>aa-3node</module>
-        <module>aa-3node-dr</module>
-        <module>pd-2node</module>
+        <module>pd-2node-ef</module>
+        <module>pd-2node-app</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->
