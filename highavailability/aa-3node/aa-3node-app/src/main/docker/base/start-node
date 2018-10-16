@@ -13,6 +13,12 @@
 #   NODEDEPLOY      path of node deploy configuration file (default is to use application archive)
 #   SUBSTITUTIONS   substitution parameters (default is none)
 
+if [  "${NODENAME}" == "" ]
+then
+	echo "NODENAME is not set, use --env to set on the docker command line"
+	exit 1
+fi
+
 #
 # create install node arguments
 #
