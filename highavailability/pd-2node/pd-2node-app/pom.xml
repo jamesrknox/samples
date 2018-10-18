@@ -9,7 +9,7 @@
     <artifactId>pd-2node-app</artifactId>
     <packaging>ep-application</packaging>
     <version>1.0.0</version>
-    <name>HA : 2-node active active + proxy discovery - Application</name>
+    <name>HA : proxy discovery - Application</name>
     <description>How to build a 2-node active active deployment + proxy discovery. - Application</description>
 
     <url>https://github.com/plord12/samples</url>
@@ -275,7 +275,6 @@
             </plugin>
 
             <!-- wait for application to finish starting -->
-            <!-- FIX THIS - see https://jira.tibco.com/browse/SB-33983 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>

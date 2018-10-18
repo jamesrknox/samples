@@ -9,7 +9,7 @@
     <artifactId>pd-2node</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>HA : 2-node active active + proxy discovery - Aggregator</name>
+    <name>HA : proxy discovery</name>
     <description>How to build a 2-node active active deployment with dynamic data distribution policy and proxy discovery.</description>
 
     <url>https://github.com/plord12/samples</url>

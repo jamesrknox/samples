@@ -211,7 +211,6 @@
             </plugin>
 
             <!-- wait for application to finish starting -->
-            <!-- FIX THIS - see https://jira.tibco.com/browse/SB-33983 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
