@@ -22,9 +22,9 @@ ENV USER_NAME        tibco
 # systat    required for runtime statistcs
 # gdb       required for crash dumps
 # java      required for applications
-# zip       FIX THIS, will be removed - see SB-41799
+# zip       required for snapshots
 # unzip     required to unpack runtime on windows
-# perl      FIX THIS, will be removed - see SB-32765
+# perl      required by openssl
 # net-tools useful to diagnose network issues
 # iptables  useful to simulated network issues
 # tc        useful to simulated network issues
