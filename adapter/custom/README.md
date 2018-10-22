@@ -1,4 +1,4 @@
-# Adapter : Custom - Aggregator
+# Adapter : Custom
 
 How to use a custom Java adapter in EventFlow.
 

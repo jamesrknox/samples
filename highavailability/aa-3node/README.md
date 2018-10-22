@@ -1,4 +1,4 @@
-# HA : 3-node active active - Aggregator
+# HA : 3-node active active
 
 How to build a 3-node active active deployment with dynamic data distribution policy.
 

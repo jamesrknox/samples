@@ -1,4 +1,4 @@
-# HA : 2-node active standby - Aggregator
+# HA : 2-node active standby
 
 How to build a 2-node active standby deployment with static data distribution policy.
 

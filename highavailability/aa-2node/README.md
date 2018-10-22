@@ -1,4 +1,4 @@
-# HA : 2-node active active - Aggregator
+# HA : 2-node active active
 
 How to build a 2-node active active deployment with dynamic data distribution policy.
 
