@@ -1,10 +1,9 @@
 # HA : 2-node active active with proxy discovery
 
-This sample describes how to deploy an EventFlow fragment in a 2-node active active configuration.
+This sample describes how to deploy an EventFlow fragment in a 2-node active active configuration with proxy discovery.
 
 * [Machines and nodes](#machines-and-nodes)
 * [Data partitioning](#data-partitioning)
-* [Define the application definition configuration](#define-the-application-definition-configuration)
 * [Define the node deployment configuration](#define-the-node-deployment-configuration)
 * [Design notes](#design-notes)
 * [Failure scenarios](#failure-scenarios)
@@ -15,9 +14,16 @@ This sample describes how to deploy an EventFlow fragment in a 2-node active act
 In this sample we name the machines as **A**,  which hosts the StreamBase node **A**, 
 and **B**, which hosts the StreamBase node **B**.
 
-![nodes](images/two-node-active-active-nodes.svg)
+![nodes](images/two-node-active-active-nodes-pd.svg)
 
 A client that uses the service can connect to either machine **A** or **B**.
+
+Note that UDP discovery is blocked between the machines, this might be due to :
+
+* Running the machines on different subnets - for example different data centres
+* Firewall between the machines
+* UDP not supported by the network - for example cloud virtual networks
+
 
 ( service names are omitted in descriptions for clarity )
 
@@ -27,40 +33,15 @@ To support an active active configuration, the query table data must be replicat
 In this sample the default **default-cluster-wide-availability-zone** is used - a number of virtual
 partitions are created to evenly balance and replicate data around the cluster :
 
-![partitions](images/two-node-active-active-partitions.svg)
+![partitions](images/two-node-active-active-partitions-pd.svg)
 
 ( only 2 virtual partitions are shown - the default is 64 )
 
-## Define the application definition configuration
-
-Since this sample uses the default data distribution policy, it doesn't need to be specified again,
-so the application definition configuration is :
-
-
-```scala
-name = "aa-2node-app"
-version = "1.0.0"
-type = "com.tibco.ep.dtm.configuration.application"
-
-configuration = {
-    ApplicationDefinition = {
-        execution {
-            nodeTypes {
-                docker {
-                    sharedMemory = {
-                        memoryType = SYSTEM_V_SHARED_MEMORY
-                    }
-                }
-            }
-        }
-    }
-}
-```
 
 ## Define the node deployment configuration
 
-Since this sample uses the default availability zone, it doesn't need to be specified again, so
-the node deployment configuration is :
+In this sample we include the proxyDiscovery setting and specify hostnames and ports so that the nodes can be made 
+aware of each other.
 
 ```scala
 name = "aa-2node-app"
@@ -70,11 +51,48 @@ type = "com.tibco.ep.dtm.configuration.node"
 configuration = {
     NodeDeploy = {
         nodes = {
-            "${EP_NODE_NAME}" = { 
+            "A.pd-2node-app" = { 
                 engines = {
-                    aa-2node-ef = {
-                        fragmentIdentifier = "com.tibco.ep.samples.highavailability.aa-2node-ef"                                                                
+                    pd-2node-ef = {
+                        fragmentIdentifier = "com.tibco.ep.samples.highavailability.pd-2node-ef"                                                                
                     }                                                    
+                }
+                communication = {
+                    numberSearchPorts = 5
+                    administration = {
+                        address = ${A_HOSTNAME:-localhost}
+                        transportPort = ${A_ADMINPORT:-2000}
+                    }
+                    distributionListenerInterfaces = [ {
+                        address = ${A_HOSTNAME:-localhost}
+                        dataTransportPort = ${A_DATATRANSPORTPORT:-2001}
+                        secure = false
+                    } ]
+                    proxyDiscovery = {
+                        remoteNodes = [ ".*" ]
+                    }
+                }
+            }
+            "B.pd-2node-app" = { 
+                engines = {
+                    pd-2node-ef = {
+                        fragmentIdentifier = "com.tibco.ep.samples.highavailability.pd-2node-ef"                                                                
+                    }                                                    
+                }
+                communication = {
+                    numberSearchPorts = 5
+                    administration = {
+                        address = ${B_HOSTNAME:-localhost}
+                        transportPort = ${B_ADMINPORT:-3000}
+                    }
+                    distributionListenerInterfaces = [ {
+                        address = ${B_HOSTNAME:-localhost}
+                        dataTransportPort = ${B_DATATRANSPORTPORT:-3001}
+                        secure = false
+                    } ]
+                    proxyDiscovery = {
+                        remoteNodes = [ ".*" ]
+                    }
                 }
             }
         }
@@ -86,7 +104,7 @@ configuration = {
 
 * The default dynamic data distribution policy is chosen to distribute the data across the cluster
 * Most of the data distribution policy and the availability zone configuration values are not set since defaults work well
-
+* Proxy discovery is used
 
 ## Failure scenarios
 

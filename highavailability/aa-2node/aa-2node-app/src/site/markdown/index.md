@@ -4,7 +4,6 @@ This sample describes how to deploy an EventFlow fragment in a 2-node active act
 
 * [Machines and nodes](#machines-and-nodes)
 * [Data partitioning](#data-partitioning)
-* [Define the application definition configuration](#define-the-application-definition-configuration)
 * [Define the node deployment configuration](#define-the-node-deployment-configuration)
 * [Design notes](#design-notes)
 * [Failure scenarios](#failure-scenarios)
@@ -30,32 +29,6 @@ partitions are created to evenly balance and replicate data around the cluster :
 ![partitions](images/two-node-active-active-partitions.svg)
 
 ( only 2 virtual partitions are shown - the default is 64 )
-
-## Define the application definition configuration
-
-Since this sample uses the default data distribution policy, it doesn't need to be specified again,
-so the application definition configuration is :
-
-
-```scala
-name = "aa-2node-app"
-version = "1.0.0"
-type = "com.tibco.ep.dtm.configuration.application"
-
-configuration = {
-    ApplicationDefinition = {
-        execution {
-            nodeTypes {
-                docker {
-                    sharedMemory = {
-                        memoryType = SYSTEM_V_SHARED_MEMORY
-                    }
-                }
-            }
-        }
-    }
-}
-```
 
 ## Define the node deployment configuration
 
