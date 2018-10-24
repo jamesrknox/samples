@@ -1,4 +1,4 @@
-# Native : NAR - Aggregator
+# Native : NAR
 
 How to build and use native libraries with NAR.
 

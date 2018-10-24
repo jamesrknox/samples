@@ -1,4 +1,4 @@
-# HA : 2-node active active + proxy discovery - Application
+# HA : proxy discovery - Application
 
 How to build a 2-node active active deployment + proxy discovery. - Application
 
