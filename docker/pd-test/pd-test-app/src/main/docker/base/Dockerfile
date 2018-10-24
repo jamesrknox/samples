@@ -40,8 +40,6 @@ RUN yum --assumeyes install \
     iptables \
     tc \
     sudo \
-    telnet \
-    lsof \
     && yum clean all
 
 #

@@ -1,44 +1,28 @@
-# HA : 2-node active active with proxy discovery
+# Docker : 2-node active active with proxy discovery
 
-This sample describes how to deploy an EventFlow fragment in a 2-node active active configuration.
+Testing proxy discovery configurations can be difficult since often in test hardware, networks
+do not block the discovery messages.  This sample describes how to use docker to test proxy discovery.
 
 * [Machines and nodes](#machines-and-nodes)
-* [Data partitioning](#data-partitioning)
 * [Define the application definition configuration](#define-the-application-definition-configuration)
 * [Define the node deployment configuration](#define-the-node-deployment-configuration)
-* [Design notes](#design-notes)
-* [Failure scenarios](#failure-scenarios)
+* [Changes to the default docker configurations](#changes-to-the-default-docker-configurations)
 * [Building this sample from the command line and running the integration test cases](#building-this-sample-from-the-command-line-and-running-the-integration-test-cases)
 
 ## Machines and nodes
 
-In this sample we name the machines as **A**,  which hosts the StreamBase node **A**, 
-and **B**, which hosts the StreamBase node **B**.
+In this sample we name the docker machines as **A.example.com**,  which hosts the StreamBase node **A.pd-test-app**, 
+and **B.example.com**, which hosts the StreamBase node **B.pd-test-app**.
 
-![nodes](images/two-node-active-active-nodes.svg)
-
-A client that uses the service can connect to either machine **A** or **B**.
-
-( service names are omitted in descriptions for clarity )
-
-## Data partitioning
-
-To support an active active configuration, the query table data must be replicated between the nodes.  
-In this sample the default **default-cluster-wide-availability-zone** is used - a number of virtual
-partitions are created to evenly balance and replicate data around the cluster :
-
-![partitions](images/two-node-active-active-partitions.svg)
-
-( only 2 virtual partitions are shown - the default is 64 )
+![nodes](images/two-node-active-active-nodes-pd.svg)
 
 ## Define the application definition configuration
 
-Since this sample uses the default data distribution policy, it doesn't need to be specified again,
-so the application definition configuration is :
+For running in a docker container, we use System V shared memory for performance :
 
 
 ```scala
-name = "aa-2node-app"
+name = "pd-test-app"
 version = "1.0.0"
 type = "com.tibco.ep.dtm.configuration.application"
 
@@ -59,61 +43,167 @@ configuration = {
 
 ## Define the node deployment configuration
 
-Since this sample uses the default availability zone, it doesn't need to be specified again, so
-the node deployment configuration is :
+In this sample we include the proxyDiscovery setting and specify hostnames and ports so that the nodes can be made 
+aware of each other.
 
 ```scala
-name = "aa-2node-app"
+name = "pd-test-app"
 version = "1.0.0"
 type = "com.tibco.ep.dtm.configuration.node"
 
 configuration = {
     NodeDeploy = {
         nodes = {
-            "${EP_NODE_NAME}" = { 
+            "A.pd-test-app" = { 
+            	nodeType = docker
                 engines = {
-                    aa-2node-ef = {
-                        fragmentIdentifier = "com.tibco.ep.samples.highavailability.aa-2node-ef"                                                                
+                    pd-test-ef = {
+                        fragmentIdentifier = "com.tibco.ep.samples.docker.pd-test-ef"                                                                
                     }                                                    
                 }
+                communication = {
+                    administration = {
+                        address = ${A_HOSTNAME:-A.example.com}
+                        transportPort = ${A_ADMINPORT:-2000}
+                    }
+                    distributionListenerInterfaces = [ {
+                        address = ${A_HOSTNAME:-A.example.com}
+                        dataTransportPort = ${A_DATATRANSPORTPORT:-3000}
+                    } ]
+                    proxyDiscovery = {
+                        remoteNodes = [ ".*" ]
+                    }
+                }
+                availabilityZoneMemberships = {
+                    default-cluster-wide-availability-zone = {
+                    }
+                }
+            }
+            "B.pd-test-app" = { 
+            	nodeType = docker
+                engines = {
+                    pd-test-ef = {
+                        fragmentIdentifier = "com.tibco.ep.samples.docker.pd-test-ef"                                                                
+                    }                                                    
+                }
+                communication = {
+                    administration = {
+                        address = ${B_HOSTNAME:-B.example.com}
+                        transportPort = ${B_ADMINPORT:-2000}
+                    }
+                    distributionListenerInterfaces = [ {
+                        address = ${B_HOSTNAME:-B.example.com}
+                        dataTransportPort = ${B_DATATRANSPORTPORT:-3000}
+                    } ]
+                    proxyDiscovery = {
+                        remoteNodes = [ ".*" ]
+                    }
+                }
+                availabilityZoneMemberships = {
+                    default-cluster-wide-availability-zone = {
+                    }
+                }
+            }
+        }
+        availabilityZones = {
+            default-cluster-wide-availability-zone = {
+                dataDistributionPolicy = "default-dynamic-data-distribution-policy"
             }
         }
     }
 }
+
 ```
 
-## Design notes
+## Changes to the default docker configurations
 
-* The default dynamic data distribution policy is chosen to distribute the data across the cluster
-* Most of the data distribution policy and the availability zone configuration values are not set since defaults work well
+The base image [Dockerfile](../../src/main/docker/base/Dockerfile) is updated to include the sudo tool and its configuration :
 
+```dockerfile
+RUN yum --assumeyes install \
+    sysstat \
+    gdb \
+    java-1.8.0-openjdk \
+    zip \
+    unzip \
+    perl \
+    net-tools \
+    iptables \
+    tc \
+    sudo \
+    && yum clean all
+...
+RUN echo "${USER_NAME} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+```
 
-## Failure scenarios
+The [start-node](../../src/main/docker/base/start-node) script is updated to set firewall rules to drop in-bound discovery :
 
-The main failure cases for this deployment are outlined below :
+```shell
+sudo iptables -I INPUT ! -s ${HOSTNAME} -p udp --dport 54321 -j DROP
+```
 
-Failure case   | Behaviour on failure | Steps to resolve | Notes
---- | --- | --- | ---
-Machine A fails | 1 Client is disconnected<br/>2 Virtual partitions become active on B<br/>3 Client may connect to B and continue  | 1 Fix machine A<br/>2 Use **epadmin install node** and **epadmin start node** | 1 No data loss<br/>2 No service loss
-Machine B fails | 1 Client is disconnected<br/>2 Virtual partitions become active on A<br/>3 Client may connect to A and continue  | 1 Fix machine B<br/>2 Use **epadmin install node** and **epadmin start node** | 1 No data loss<br/>2 No service loss
-Network fails  | 1 irtual partitions become active on both A and B<br/>**multi-master** scenario | 1 Fix network<br/>2 Use **epadmin restore availabilityzone** | 1 **Possible data loss**<br/>2 No service loss
+The maven [pom.xml](../../pom.xml) file is updated to detect if docker is installed :
 
-With a 2 node configuration node quorums don't apply hence a multi-master scenario is possible on network failure.  
-To avoid the risk of data loss when restoring the availability zone, multiple network paths ( such as network bonding )
-is recommended.
+```xml
+    <properties>
+        <dockerDomain>example.com</dockerDomain>
+        <skipApplicationDocker>true</skipApplicationDocker>
+        <skipStreamBaseDockerBase>true</skipStreamBaseDockerBase>
+        <skipDockerTests>true</skipDockerTests>
+    </properties>
+    ...
+    <!-- if docker is available, build docker projects -->
+    <profile>
+        <id>Docker in local</id>
+        <activation>
+            <file>
+                <exists>/usr/local/bin/docker</exists>
+            </file>
+        </activation>
+        <properties>
+            <skipApplicationDocker>false</skipApplicationDocker>
+            <skipStreamBaseDockerBase>false</skipStreamBaseDockerBase>
+            <skipDockerTests>${skipTests}</skipDockerTests>
+        </properties>
+    </profile>
+    <profile>
+        <id>Docker in bin</id>
+        <activation>
+            <file>
+                <exists>/usr/bin/docker</exists>
+            </file>
+        </activation>
+        <properties>
+            <skipApplicationDocker>false</skipApplicationDocker>
+            <skipStreamBaseDockerBase>false</skipStreamBaseDockerBase>
+            <skipDockerTests>${skipTests}</skipDockerTests>
+        </properties>
+    </profile>
+    <profile>
+        <id>Docker in C:</id>
+        <activation>
+            <file>
+                <exists>C:\Program Files\Docker\Docker\resources\bin\docker.exe</exists>
+            </file>
+        </activation>
+        <properties>
+            <skipApplicationDocker>false</skipApplicationDocker>
+            <skipStreamBaseDockerBase>false</skipStreamBaseDockerBase>
+            <skipDockerTests>${skipTests}</skipDockerTests>
+        </properties>
+    </profile>
+``` 
+
+and include running **epadmin display cluster** when the nodes are started - this shows if the nodes are connected to
+each other via the proxy discovery configuration :
+
+```xml
+    <exec>
+        <postStart>epadmin servicename=B.${project.artifactId} display cluster</postStart>
+    </exec>
+```
 
 ## Building this sample from the command line and running the integration test cases
-
-In this sample, some HA integration test cases are defined in the pom.xml that :
-
-* start nodes A & B
-* use **epadmin start playback** to inject tuples to node A
-* use **epadmin read querytable** on node A to verify query table contents
-* stop node A
-* use **epadmin read querytable** on node B to verify no data loss
-* stop node B
-
-:warning: This does not constitute an exhaustive non-functional test plan
 
 Use the [maven](https://maven.apache.org) as **mvn install** to build from the command line or Continuous Integration system :
 

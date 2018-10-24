@@ -7,8 +7,8 @@ This component is available via maven.  Include in your pom.xml file the followi
         ...
         <dependencies>
             <dependency>
-                <groupId>com.tibco.ep.samples.highavailability</groupId>
-                <artifactId>two-node-active-active-application</artifactId>
+                <groupId>com.tibco.ep.samples.docker</groupId>
+                <artifactId>pd-test-app</artifactId>
                 <type>application-archive</type>
             </dependency>
             ...
@@ -17,8 +17,8 @@ This component is available via maven.  Include in your pom.xml file the followi
         <dependencyManagement>
             <dependencies>
                 <dependency>
-                     <groupId>com.tibco.ep.samples.highavailability</groupId>
-                     <artifactId>two-node-active-active-application</artifactId>
+                     <groupId>com.tibco.ep.samples.docker</groupId>
+                     <artifactId>pd-test-app</artifactId>
                      <version>1.0.0</version>
                  </dependency>
                  ...

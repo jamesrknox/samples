@@ -1,4 +1,4 @@
-# HA : 2-node active active with proxy discovery
+# Docker : 2-node active active with proxy discovery
 
 This sample describes how to build an EventFlow fragment suitable for 2-node active active deployment.
 
