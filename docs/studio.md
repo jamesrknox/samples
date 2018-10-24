@@ -12,7 +12,13 @@ Use **Import -> Git -> Projects from Git ( with smart import )** menu option.  S
 
 ![smartimport](studioimport.gif)
 
-:warning: This does require the **Git integration for eclipse - auto-import for Eclipse** to be installed.   
+:warning: This does require the **Git integration for Eclipse - auto-import for Eclipse** to be installed - this can
+be installed by :
+
+1.  Help -> Install new software
+2.  In the Work with field enter **http://download.eclipse.org/egit/updates-5.1**
+3.  Find and select **Git integration for Eclipse - auto-import for Eclipse >= 4.6**
+4.  Select next and Finish
 
 ## Using TIBCO menu
 
