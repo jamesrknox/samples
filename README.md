@@ -16,3 +16,4 @@ Sample categories:
 * [How to invoke Java from TIBCO StreamBase&reg; 10.4.0 projects.](java)
 * [How to use adapters in TIBCO StreamBase&reg; 10.4.0 projects.](adapter)
 * [How to build Highly Available TIBCO StreamBase&reg; 10.4.0 projects.](highavailability)
+* [How to use docker in TIBCO StreamBase&reg; 10.4.0 projects.](docker)
