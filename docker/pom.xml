@@ -5,21 +5,15 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep</groupId>
-    <artifactId>samples</artifactId>
+    <groupId>com.tibco.ep.samples</groupId>
+    <artifactId>docker</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>TIBCO StreamBase Samples</name>
-    <description>This github repository contains a number of TIBCO StreamBase samples that can be cloned to your local workspace.</description>
+    <name>Docker</name>
+    <description>How to use docker in TIBCO StreamBase projects.</description>
 
     <modules>
-        <module>structure</module>
-        <module>testing</module>
-        <module>nativelibrary</module>
-        <module>java</module>
-        <module>adapter</module>
-        <module>highavailability</module>
-        <module>docker</module>
+        <module>pd-test</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->

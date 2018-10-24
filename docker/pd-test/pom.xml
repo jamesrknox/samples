@@ -5,21 +5,34 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tibco.ep</groupId>
-    <artifactId>samples</artifactId>
+    <groupId>com.tibco.ep.samples.docker</groupId>
+    <artifactId>pd-test</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>TIBCO StreamBase Samples</name>
-    <description>This github repository contains a number of TIBCO StreamBase samples that can be cloned to your local workspace.</description>
+    <name>Docker : proxy discovery test</name>
+    <description>How to user docker to test proxy discovery.</description>
 
+    <url>https://github.com/plord12/samples</url>
+
+    <inceptionYear>2018</inceptionYear>
+
+    <organization>
+        <name>TIBCO Software Inc.</name>
+        <url>http://www.tibco.com</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>BSD 3-Clause License</name>
+            <url>https://raw.githubusercontent.com/plord12/samples/master/docs/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
+    <!-- Aggregator pom -->
     <modules>
-        <module>structure</module>
-        <module>testing</module>
-        <module>nativelibrary</module>
-        <module>java</module>
-        <module>adapter</module>
-        <module>highavailability</module>
-        <module>docker</module>
+        <module>pd-test-ef</module>
+        <module>pd-test-app</module>
     </modules>
 
     <!-- skip site docs in this aggregator -->
