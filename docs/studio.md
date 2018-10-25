@@ -41,3 +41,4 @@ With multiple projects ( such as importing all the samples ) this can become con
 * [GitHub Flavored Markdown viewer plugin](https://marketplace.eclipse.org/content/github-flavored-markdown-viewer-plugin)
 * [Mylyn WikiText](https://marketplace.eclipse.org/content/mylyn-wikitext)
 * [Docker tooling](https://marketplace.eclipse.org/content/eclipse-docker-tooling) ( requires [TM Terminal](https://marketplace.eclipse.org/content/tm-terminal) )
+* [Eclipse Copyright Generator](https://jmini.github.io/Eclipse-Copyright-Generator/)

@@ -53,8 +53,8 @@
         </dependency>
     </dependencies>
 
-    <!-- use mvn -P uml install to re-generate svg from source ( then commit ) -->
     <profiles>
+        <!-- use mvn -P uml install to re-generate svg from source ( then commit ) -->
         <profile>
             <id>uml</id>
             <build>

@@ -13,6 +13,8 @@
     <description>How to use Docker in TIBCO Streaming projects.</description>
 
     <modules>
+        <module>ef-2node</module>
+        <module>lv-1node</module>
         <module>pd-test</module>
     </modules>
 

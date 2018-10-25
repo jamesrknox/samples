@@ -117,7 +117,7 @@ configuration = {
 
 ## Changes to the default docker configurations
 
-The base image [Dockerfile](../../src/main/docker/base/Dockerfile) is updated to include the sudo tool and its configuration :
+The base image [Dockerfile](../../main/docker/base/Dockerfile) is updated to include the sudo tool and its configuration :
 
 ```dockerfile
 RUN yum --assumeyes install \
@@ -136,13 +136,13 @@ RUN yum --assumeyes install \
 RUN echo "${USER_NAME} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 ```
 
-The [start-node](../../src/main/docker/base/start-node) script is updated to set firewall rules to drop in-bound discovery :
+The [start-node](../../main/docker/base/start-node) script is updated to set firewall rules to drop in-bound discovery :
 
 ```shell
 sudo iptables -I INPUT ! -s ${HOSTNAME} -p udp --dport 54321 -j DROP
 ```
 
-The maven [pom.xml](../../pom.xml) file is updated to detect if docker is installed :
+The maven [pom.xml](../../../pom.xml) file is updated to detect if docker is installed :
 
 ```xml
     <properties>
