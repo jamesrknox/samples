@@ -1,6 +1,6 @@
 # Testing
 
-How to test TIBCO StreamBase&reg; 10.4.0 projects.
+How to test TIBCO&reg; Streaming 10.4.0 projects.
 
 Samples :
 

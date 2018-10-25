@@ -1,6 +1,6 @@
 # Docker : proxy discovery test
 
-How to user docker to test proxy discovery.
+How to user Docker to test proxy discovery.
 
 This is a maven aggregator project consisting of the following maven modules :
 

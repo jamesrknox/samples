@@ -1,6 +1,6 @@
 # Java
 
-How to invoke Java from TIBCO StreamBase&reg; 10.4.0 projects.
+How to invoke Java from TIBCO&reg; Streaming 10.4.0 projects.
 
 Samples :
 

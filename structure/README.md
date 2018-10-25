@@ -1,6 +1,6 @@
 # Structure
 
-How to structure TIBCO StreamBase&reg; 10.4.0 projects.
+How to structure TIBCO&reg; Streaming 10.4.0 projects.
 
 Samples :
 

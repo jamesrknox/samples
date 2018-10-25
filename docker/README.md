@@ -1,7 +1,7 @@
 # Docker
 
-How to use docker in TIBCO StreamBase&reg; 10.4.0 projects.
+How to use Docker in TIBCO&reg; Streaming 10.4.0 projects.
 
 Samples :
 
-* [How to user docker to test proxy discovery.](pd-test)
+* [How to user Docker to test proxy discovery.](pd-test)
