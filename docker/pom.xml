@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>Docker</name>
-    <description>How to use docker in TIBCO StreamBase projects.</description>
+    <description>How to use Docker in TIBCO Streaming projects.</description>
 
     <modules>
         <module>pd-test</module>
