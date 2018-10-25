@@ -71,7 +71,7 @@
     ><g transform="translate(380,70)"
     ><rect fill="none" x="0.5" width="280" height="228.5" y="10.5" clip-path="url(#clipPath3)"
       /><text x="56" font-size="14" y="27.8174" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >Container B.pd-test_app</text
+      >Container B.pd-test-app</text
       ><text x="51" font-size="14" y="43.6348" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >Hostname B.example.com</text
     ></g
@@ -125,7 +125,7 @@
     ><g transform="translate(50,70)"
     ><rect fill="none" x="0.5" width="280" height="228.5" y="10.5" clip-path="url(#clipPath3)"
       /><text x="55" font-size="14" y="27.8174" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >Container A.pd-test_app</text
+      >Container A.pd-test-app</text
       ><text x="50" font-size="14" y="43.6348" clip-path="url(#clipPath3)" font-family="sans-serif" stroke="none" xml:space="preserve"
       >Hostname A.example.com</text
     ></g

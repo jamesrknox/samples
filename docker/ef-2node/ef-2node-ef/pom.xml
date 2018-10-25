@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tibco.ep.samples.docker</groupId>
-    <artifactId>ef-2node_ef</artifactId>
+    <artifactId>ef-2node-ef</artifactId>
     <packaging>ep-eventflow-fragment</packaging>
     <version>1.0.0</version>
     <name>Docker : 2-node EventFlow - EventFlow Fragment</name>

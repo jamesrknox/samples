@@ -45,7 +45,7 @@ public class TestCase extends UnitTest {
         // create a StreamBase server and load modules once for all tests in this class
         server = ServerManagerFactory.getEmbeddedServer();
         server.startServer();
-        server.loadApp("com.tibco.ep.samples.docker.ef_2node.ef-2node_ef");
+        server.loadApp("com.tibco.ep.samples.docker.ef_2node.ef-2node-ef");
     }
 
     /**

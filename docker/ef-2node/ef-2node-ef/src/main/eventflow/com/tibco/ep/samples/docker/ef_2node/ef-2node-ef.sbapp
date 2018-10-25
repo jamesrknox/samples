@@ -6,7 +6,7 @@
         </annotations>
         <type-metadata>
             <param name="type" value="module"/>
-            <param name="fully-qualified-name" value="com.tibco.ep.samples.docker.ef_2node.ef-2node_ef"/>
+            <param name="fully-qualified-name" value="com.tibco.ep.samples.docker.ef_2node.ef-2node-ef"/>
         </type-metadata>
         <memory-model-settings/>
         <dynamic-variables/>

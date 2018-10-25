@@ -8,7 +8,7 @@ This component is available via maven.  Include in your pom.xml file the followi
         <dependencies>
             <dependency>
                 <groupId>com.tibco.ep.samples.docker</groupId>
-                <artifactId>lv-1node_lv</artifactId>
+                <artifactId>lv-1node-lv</artifactId>
                 <type>ep-liveview-fragment</type>
             </dependency>
             ...
@@ -18,7 +18,7 @@ This component is available via maven.  Include in your pom.xml file the followi
             <dependencies>
                 <dependency>
                      <groupId>com.tibco.ep.samples.docker</groupId>
-                     <artifactId>lv-1node_lv</artifactId>
+                     <artifactId>lv-1node-lv</artifactId>
                      <version>1.0.0</version>
                  </dependency>
                  ...

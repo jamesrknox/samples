@@ -35,7 +35,7 @@ Note that whilst this project will create a simple Docker image, changes to the 
 
 ## Containers and nodes
 
-In this sample we name the docker container as **A.ef-2node_app**,  which hosts the StreamBase node **A.ef-2node_app**, and **B.ef-2node_app**, which hosts the StreamBase node **B.ef-2node_app**.  A Docker network **example.com** connects the nodes together :
+In this sample we name the docker container as **A.ef-2node-app**,  which hosts the StreamBase node **A.ef-2node-app**, and **B.ef-2node-app**, which hosts the StreamBase node **B.ef-2node-app**.  A Docker network **example.com** connects the nodes together :
 
 ![nodes](images/two-node-docker.svg)
 
@@ -140,14 +140,14 @@ Use the [docker run](https://docs.docker.com/engine/reference/run/) command.  In
 
 * **--detach** - run in the background
 * **--hostname=A.example.com --network-alias=A.example.com --network=example.com** - set the container hostname and network name. This must match the docker network name and the [Trusted hosts HOCON configuration](../../main/configurations/security.conf)
-* **--name=A.ef-2node_app** - container name
-* **--env=NODENAME=A.ef-2node_app** - node name
-* **docker/ef-2node_app:1.0.0** - Docker image name
+* **--name=A.ef-2node-app** - container name
+* **--env=NODENAME=A.ef-2node-app** - node name
+* **docker/ef-2node-app:1.0.0** - Docker image name
 
 ```shell
-$ docker run --detach --hostname=A.example.com --network-alias=A.example.com --name=A.ef-2node_app --network=example.com --env=NODENAME=A.ef-2node_app docker/ef-2node_app:1.0.0
+$ docker run --detach --hostname=A.example.com --network-alias=A.example.com --name=A.ef-2node-app --network=example.com --env=NODENAME=A.ef-2node-app docker/ef-2node-app:1.0.0
 d8d73429fa8097d313b95b64f96aaf5c09a8bae385429d84858c1aeaa2753e05
-$ docker run --detach --hostname=B.example.com --network-alias=B.example.com --name=B.ef-2node_app --network=example.com --env=NODENAME=B.ef-2node_app docker/ef-2node_app:1.0.0
+$ docker run --detach --hostname=B.example.com --network-alias=B.example.com --name=B.ef-2node-app --network=example.com --env=NODENAME=B.ef-2node-app docker/ef-2node-app:1.0.0
 6f3053e69eeeda61ae48c98bbcd037aae60e7555570cf810e7de856d550d66bc
 ```
 
@@ -158,8 +158,8 @@ Use the [docker ps](https://docs.docker.com/engine/reference/ps/) command :
 ```shell
 $ docker ps
 CONTAINER ID        IMAGE                       COMMAND                  CREATED             STATUS              PORTS               NAMES
-6f3053e69eee        docker/ef-2node_app:1.0.0   "/bin/sh -c ${PRODUC…"   5 minutes ago       Up 4 minutes                            B.ef-2node_app
-d8d73429fa80        docker/ef-2node_app:1.0.0   "/bin/sh -c ${PRODUC…"   5 minutes ago       Up 5 minutes                            A.ef-2node_app
+6f3053e69eee        docker/ef-2node-app:1.0.0   "/bin/sh -c ${PRODUC…"   5 minutes ago       Up 4 minutes                            B.ef-2node-app
+d8d73429fa80        docker/ef-2node-app:1.0.0   "/bin/sh -c ${PRODUC…"   5 minutes ago       Up 5 minutes                            A.ef-2node-app
 ```
 
 ### View the container console logs
@@ -167,32 +167,32 @@ d8d73429fa80        docker/ef-2node_app:1.0.0   "/bin/sh -c ${PRODUC…"   5 min
 Use the [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) command :
 
 ```shell
-$ docker logs A.ef-2node_app
-[A.ef-2node_app] 	Installing node
-[A.ef-2node_app] 		PRODUCTION executables
-[A.ef-2node_app] 		Memory shared memory
-[A.ef-2node_app] 		4 concurrent allocation segments
-[A.ef-2node_app] 		Host name A.example.com
-[A.ef-2node_app] 		Container tibco/sb
-[A.ef-2node_app] 		Starting container services
-[A.ef-2node_app] 		Loading node configuration
-[A.ef-2node_app] 		Auditing node security
-[A.ef-2node_app] 		Deploying application
-[A.ef-2node_app] 			Engine default-engine-for-com.tibco.ep.samples.docker.ef-2node_ef
-[A.ef-2node_app] 		Application deployed
-[A.ef-2node_app] 		Administration port is 2000
-[A.ef-2node_app] 		Discovery Service running on port 54321
-[A.ef-2node_app] 		Service name is A.ef-2node_app
-[A.ef-2node_app] 	Node installed
-[A.ef-2node_app] 	Starting node
-[A.ef-2node_app] 		Engine application::default-engine-for-com.tibco.ep.samples.docker.ef-2node_ef started
-[A.ef-2node_app] 		Loading node configuration
-[A.ef-2node_app] 		Auditing node security
-[A.ef-2node_app] 		Host name A.example.com
-[A.ef-2node_app] 		Administration port is 2000
-[A.ef-2node_app] 		Discovery Service running on port 54321
-[A.ef-2node_app] 		Service name is A.ef-2node_app
-[A.ef-2node_app] 	Node started
+$ docker logs A.ef-2node-app
+[A.ef-2node-app] 	Installing node
+[A.ef-2node-app] 		PRODUCTION executables
+[A.ef-2node-app] 		Memory shared memory
+[A.ef-2node-app] 		4 concurrent allocation segments
+[A.ef-2node-app] 		Host name A.example.com
+[A.ef-2node-app] 		Container tibco/sb
+[A.ef-2node-app] 		Starting container services
+[A.ef-2node-app] 		Loading node configuration
+[A.ef-2node-app] 		Auditing node security
+[A.ef-2node-app] 		Deploying application
+[A.ef-2node-app] 			Engine default-engine-for-com.tibco.ep.samples.docker.ef-2node-ef
+[A.ef-2node-app] 		Application deployed
+[A.ef-2node-app] 		Administration port is 2000
+[A.ef-2node-app] 		Discovery Service running on port 54321
+[A.ef-2node-app] 		Service name is A.ef-2node-app
+[A.ef-2node-app] 	Node installed
+[A.ef-2node-app] 	Starting node
+[A.ef-2node-app] 		Engine application::default-engine-for-com.tibco.ep.samples.docker.ef-2node-ef started
+[A.ef-2node-app] 		Loading node configuration
+[A.ef-2node-app] 		Auditing node security
+[A.ef-2node-app] 		Host name A.example.com
+[A.ef-2node-app] 		Administration port is 2000
+[A.ef-2node-app] 		Discovery Service running on port 54321
+[A.ef-2node-app] 		Service name is A.ef-2node-app
+[A.ef-2node-app] 	Node started
 COMMAND FINISHED
 ```
 
@@ -201,23 +201,23 @@ COMMAND FINISHED
 Use the [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) command on one of the containers :
 
 ```shell
-$ docker exec A.ef-2node_app epadmin --servicename=ef-2node_app display cluster
-[A.ef-2node_app] Node Name = B.ef-2node_app
-[A.ef-2node_app] Network Address = IPv4:B.example.com:62155,IPv4:B.example.com:62154
-[A.ef-2node_app] Current State = Up
-[A.ef-2node_app] Last State Change = 2018-10-25 15:49:39
-[A.ef-2node_app] Number of Connections = 4
-[A.ef-2node_app] Number of Queued PDUs = 0
-[A.ef-2node_app] Discovered = Dynamic
-[A.ef-2node_app] Location Code = 14691765683598364398
-[B.ef-2node_app] Node Name = A.ef-2node_app
-[B.ef-2node_app] Network Address = IPv4:A.example.com:25580,IPv4:A.example.com:25579
-[B.ef-2node_app] Current State = Up
-[B.ef-2node_app] Last State Change = 2018-10-25 15:49:39
-[B.ef-2node_app] Number of Connections = 3
-[B.ef-2node_app] Number of Queued PDUs = 0
-[B.ef-2node_app] Discovered = Dynamic
-[B.ef-2node_app] Location Code = 7338854036213519437
+$ docker exec A.ef-2node-app epadmin --servicename=ef-2node-app display cluster
+[A.ef-2node-app] Node Name = B.ef-2node-app
+[A.ef-2node-app] Network Address = IPv4:B.example.com:62155,IPv4:B.example.com:62154
+[A.ef-2node-app] Current State = Up
+[A.ef-2node-app] Last State Change = 2018-10-25 15:49:39
+[A.ef-2node-app] Number of Connections = 4
+[A.ef-2node-app] Number of Queued PDUs = 0
+[A.ef-2node-app] Discovered = Dynamic
+[A.ef-2node-app] Location Code = 14691765683598364398
+[B.ef-2node-app] Node Name = A.ef-2node-app
+[B.ef-2node-app] Network Address = IPv4:A.example.com:25580,IPv4:A.example.com:25579
+[B.ef-2node-app] Current State = Up
+[B.ef-2node-app] Last State Change = 2018-10-25 15:49:39
+[B.ef-2node-app] Number of Connections = 3
+[B.ef-2node-app] Number of Queued PDUs = 0
+[B.ef-2node-app] Discovered = Dynamic
+[B.ef-2node-app] Location Code = 7338854036213519437
 ```
 
 ### Log in to the container to check node logs
@@ -225,10 +225,10 @@ $ docker exec A.ef-2node_app epadmin --servicename=ef-2node_app display cluster
 Use the [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) command to run bash :
 
 ```shell
-$ docker exec -it A.ef-2node_app bash
-[tibco@A /]$ cd /var/opt/tibco/streambase/node/A.ef-2node_app/logs/
+$ docker exec -it A.ef-2node-app bash
+[tibco@A /]$ cd /var/opt/tibco/streambase/node/A.ef-2node-app/logs/
 [tibco@A logs]$ ls
-System_administration.log  System_swcoordadmin.log  audit.log  bootstrap  deadlock.log  default-engine-for-com.tibco.ep.samples.docker.ef-2node_ef.log
+System_administration.log  System_swcoordadmin.log  audit.log  bootstrap  deadlock.log  default-engine-for-com.tibco.ep.samples.docker.ef-2node-ef.log
 ```
 
 ### Stop and remove the containers
@@ -236,8 +236,8 @@ System_administration.log  System_swcoordadmin.log  audit.log  bootstrap  deadlo
 Use the [docker stop](https://docs.docker.com/engine/reference/commandline/stop/) and [docker rm](https://docs.docker.com/engine/reference/commandline/rm/) commands :
 
 ```shell
-$ docker stop A.ef-2node_app
-$ docker rm A.ef-2node_app
-$ docker stop B.ef-2node_app
-$ docker rm B.ef-2node_app
+$ docker stop A.ef-2node-app
+$ docker rm A.ef-2node-app
+$ docker stop B.ef-2node-app
+$ docker rm B.ef-2node-app
 ```

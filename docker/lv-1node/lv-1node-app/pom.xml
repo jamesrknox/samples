@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tibco.ep.samples.docker</groupId>
-    <artifactId>lv-1node_app</artifactId>
+    <artifactId>lv-1node-app</artifactId>
     <packaging>ep-application</packaging>
     <version>1.0.0</version>
     <name>Docker : LiveView - Application</name>
@@ -47,7 +47,7 @@
     <dependencies>
         <dependency>
             <groupId>com.tibco.ep.samples.docker</groupId>
-            <artifactId>lv-1node_lv</artifactId>
+            <artifactId>lv-1node-lv</artifactId>
             <version>1.0.0</version>
             <type>ep-liveview-fragment</type>
         </dependency>

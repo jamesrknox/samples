@@ -6,7 +6,7 @@
         </annotations>
         <type-metadata>
             <param name="type" value="module"/>
-            <param name="fully-qualified-name" value="com.tibco.ep.samples.highavailability.pd_2node_ef.pd-test-ef"/>
+            <param name="fully-qualified-name" value="com.tibco.ep.samples.docker.pd-2node-ef.pd-test-ef"/>
         </type-metadata>
         <memory-model-settings/>
         <named-schemas>
