@@ -1,3 +1,4 @@
 # Docker : 2-node EventFlow
 
-How to deploy a 2-node EventFlow application in Docker - EventFlow Fragment
+This fragment contains an empty EventFlow application only - Docker deployment
+details are contained in the application archive maven module.

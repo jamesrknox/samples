@@ -184,6 +184,9 @@
                                         <wait>
                                             <log>COMMAND FINISHED</log>
                                             <time>100000</time>
+                                            <exec>
+                                                <postStart>epadmin servicename=A.${project.artifactId} display cluster</postStart>
+                                            </exec>
                                         </wait>
                                         <namingStrategy>alias</namingStrategy>
                                     </run>
@@ -206,6 +209,9 @@
                                         <wait>
                                             <log>COMMAND FINISHED</log>
                                             <time>100000</time>
+                                            <exec>
+                                                <postStart>epadmin servicename=B.${project.artifactId} display cluster</postStart>
+                                            </exec>
                                         </wait>
                                         <namingStrategy>alias</namingStrategy>
                                     </run>
