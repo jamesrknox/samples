@@ -1,3 +1,3 @@
-# Docker : LiveView
+# Docker : TIBCO LiveView&trade; Web
 
-How to deploy a LiveView application in Docker - LiveView Fragment
+This fragment is a copy of the **StreamBase LiveView Web Sample** available from TIBCO StreamBase Studio&trade;.

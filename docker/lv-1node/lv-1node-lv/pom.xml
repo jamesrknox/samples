@@ -9,8 +9,8 @@
     <artifactId>lv-1node-lv</artifactId>
     <packaging>ep-liveview-fragment</packaging>
     <version>1.0.0</version>
-    <name>Docker : LiveView - LiveView Fragment</name>
-    <description>How to deploy a LiveView application in Docker - LiveView Fragment</description>
+    <name>Docker : LiveView Web - LiveView Fragment</name>
+    <description>How to deploy a LiveView Web application in Docker - LiveView Fragment</description>
 
     <url>https://github.com/plord12/samples</url>
 
@@ -24,7 +24,7 @@
     <licenses>
         <license>
             <name>BSD 3-Clause License</name>
-            <url>https://raw.githubusercontent.com/plord12/samples/master/docs/LICENSE</url>
+            <url>https://raw.githubusercontent.com/plord12/samples/10.4.0/docs/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -59,6 +59,12 @@
     
     <dependencies>
 
+    	<dependency>
+    		<groupId>com.tibco.ep.sb.adapter</groupId>
+    		<artifactId>feedsim</artifactId>
+    		<version>10.4.0-SNAPSHOT</version>
+    	</dependency>
+    	
         <dependency>
             <groupId>com.tibco.ep.lvweb</groupId>
             <artifactId>lvweb</artifactId>

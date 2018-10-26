@@ -9,8 +9,8 @@
     <artifactId>lv-1node-app</artifactId>
     <packaging>ep-application</packaging>
     <version>1.0.0</version>
-    <name>Docker : LiveView - Application</name>
-    <description>How to deploy a LiveView application in Docker - Application</description>
+    <name>Docker : LiveView Web - Application</name>
+    <description>How to deploy a LiveView Web application in Docker - Application</description>
 
     <url>https://github.com/plord12/samples</url>
 
@@ -24,7 +24,7 @@
     <licenses>
         <license>
             <name>BSD 3-Clause License</name>
-            <url>https://raw.githubusercontent.com/plord12/samples/master/docs/LICENSE</url>
+            <url>https://raw.githubusercontent.com/plord12/samples/10.4.0/docs/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -178,9 +178,17 @@
                                         <log>
                                             <enabled>true</enabled>
                                         </log>
+                                        <ports> 
+                                            <port>10080:10080</port>
+                                        </ports>
                                         <wait>
-                                            <log>COMMAND FINISHED</log>
-                                            <time>100000</time>
+                                            <!-- <log>COMMAND FINISHED</log> -->
+                                            <http>
+                                                <url>http://localhost:10080</url>
+                                                <method>GET</method>
+                                                <status>200..399</status>
+                                            </http>
+                                            <time>500000</time>
                                         </wait>
                                         <namingStrategy>alias</namingStrategy>
                                     </run>

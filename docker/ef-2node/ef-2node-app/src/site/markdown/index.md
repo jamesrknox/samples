@@ -14,6 +14,9 @@ This sample describes how to deploy an application archive containing an EventFl
 
 Docker must first be downloaded and installed - see https://www.docker.com/ for further details.
 
+On MacOS, the resources available to docker may need to be increased beyond the default - see
+CPUs and Memory settings on the Advanced tab of Docker preferences.
+
 ## Creating an application archive project for Docker from TIBCO StreamBase Studio&trade;
 
 TIBCO StreamBase Studio&trade; can generate a project containing the necessary files to build and 
@@ -229,6 +232,14 @@ $ docker exec -it A.ef-2node-app bash
 [tibco@A /]$ cd /var/opt/tibco/streambase/node/A.ef-2node-app/logs/
 [tibco@A logs]$ ls
 System_administration.log  System_swcoordadmin.log  audit.log  bootstrap  deadlock.log  default-engine-for-com.tibco.ep.samples.docker.ef-2node-ef.log
+```
+
+Alternatively, use the [docker exec](https://docs.docker.com/engine/reference/commandline/exec/) command to run tail :
+
+```shell
+$ docker exec A.ef-2node-app tail -f /var/opt/tibco/streambase/node/A.ef-2node-app/logs/default-engine-for-com.tibco.ep.samples.docker.ef-2node-app.log
+2018-10-26 07:46:34.542000+0000 [171:main] INFO  com.tibco.ep.dtm.lifecycle: No user-defined Logback configuration, using product default configuration
+...
 ```
 
 ### Stop and remove the containers
