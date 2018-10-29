@@ -31,7 +31,7 @@ bring in the right dependencies :
     <parent>
         <groupId>com.tibco.ep.sb.parent</groupId>
         <artifactId>ep-eventflow-fragment</artifactId>
-        <version>10.4.0-SNAPSHOT</version>
+        <version>10.4.0</version>
         <relativePath/>
     </parent>
 
